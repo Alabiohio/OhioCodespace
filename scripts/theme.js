@@ -1,0 +1,56 @@
+const root = document.body;
+const toggleBtn = document.getElementById('themeToggle');
+
+function applyTheme(theme) {
+  root.classList.remove('theme-light', 'theme-dark', 'theme-default');
+  root.classList.add(`theme-${theme}`);
+  localStorage.setItem('theme', theme);
+  
+  if (root.classList.contains('theme-dark')) {
+        toggleBtn.innerHTML = `<i class="fa fa-sun"></i>`;
+      } else {
+        toggleBtn.innerHTML = `<i class="fa fa-moon"></i>`;
+      }
+}
+
+function detectSystemTheme() {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function initTheme() {
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme === 'light' || savedTheme === 'dark') {
+    applyTheme(savedTheme);
+  } else {
+    applyTheme(detectSystemTheme());
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const current = root.classList.contains('theme-dark') ? 'dark' : 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+      
+      if (root.classList.contains('theme-dark')) {
+        toggleBtn.innerHTML = `<i class="fa fa-sun"></i>`;
+      } else {
+        toggleBtn.innerHTML = `<i class="fa fa-moon"></i>`;
+      }
+    
+    });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
