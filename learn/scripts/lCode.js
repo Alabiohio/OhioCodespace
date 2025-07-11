@@ -7,9 +7,14 @@ const runBtn = document.querySelectorAll(".run-btn");
                 const rawHtml = codes.textContent;
                 const previewFrame = codeBox.querySelector(".tipPreview");
                 previewFrame.srcdoc = rawHtml;
-                //previewFrame.style.display = "block";
                 previewFrame.classList.toggle("show");
-                previewFrame.classList.contains("show")? runBtn.textContent = 'close' : runBtn.textContent = "run";
+                if (previewFrame.classList.contains("show")) {
+                    runBtn.textContent = 'Close';
+                    runBtn.setAttribute('aria-label', 'Close');
+                } else {
+                    runBtn.textContent = "Run";
+                    runBtn.setAttribute('aria-label', 'Run code');''
+                }
             });
         }
     });
@@ -21,6 +26,7 @@ const codeBox = document.querySelectorAll(".codeBox");
 codeBox.forEach(codeBox => {
     const copy = document.createElement("button");
     copy.classList.add("copy-btn");
+    copy.setAttribute('aria-label', 'copy code');
     copy.innerHTML = `<i class="fa fa-copy"></i>`;
     codeBox.appendChild(copy);
 });
