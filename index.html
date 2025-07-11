@@ -20,6 +20,7 @@
  		
 				 <link rel="stylesheet" href="styles/css/foundation.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 	 	<link rel="preconnect" href="https://fonts.gstatic.com">		
@@ -32,18 +33,19 @@
 				<link rel="apple-touch-icon" sizes="512x512" href="asset/drawable/favicon-512.png">
 
 				<meta property="og:type" content="website">
-				<meta property="og:url" content="https://ohiocodespace.netlify.app/">
+				<meta property="og:url" content="https://ohiocodespace.vercel.app/">
 			 <meta property="og:title" content="Ohio Codespace – Beautiful, Custom Websites">
 				<meta property="og:description" content="We help businesses and creators build modern, responsive websites that stand out online. Get discovered today.">
-				<meta property="og:image" content="https://ohiocodespace.netlify.app/asset/DCIM/ogImg.jpeg"> 
+				<meta property="og:image" content="https://ohiocodespace.vercel.app/asset/DCIM/ogImg.jpeg"> 
 
 		 	<meta name="twitter:card" content="summary_large_image">
-				<meta name="twitter:url" content="https://ohiocodespace.netlify.app/">
+				<meta name="twitter:url" content="https://ohiocodespace.vercel.app/">
 				<meta name="twitter:title" content="Ohio Codespace – Beautiful, Custom Websites">
 				<meta name="twitter:description" content="We help businesses and creators build modern, responsive websites that stand out online. Get discovered today.">
-			 <meta name="twitter:image" content="https://ohiocodespace.netlify.app/asset/DCIM/ogImg.jpeg">
+			 <meta name="twitter:image" content="https://ohiocodespace.vercel.app/asset/DCIM/ogImg.jpeg">
     
     <script src="scripts/home.js" defer></script>
+    <script src="scripts/theme.js" defer></script>
 
 </head>
 <body>
@@ -69,84 +71,110 @@
     
 		<main class="grid-container">
 					    		
-		    <div class="cell align-center-middle text-center brImg">
-		        <span id="introTxt"></span>
+		    <div  class="cell align-center-middle text-center brImg">        
+		        <span id="introTxt"></span>		          
 		    </div>
 			
-		     <header class="grid-container">
+		     	<header class="grid-container">
         <div class="grid-x grid-margin-x" style="align-items: center">
-		        <div class="cell small-4 medium-2 large-1">
-		            <img src="asset/DCIM/hdIc.png" class="responsive-img lazyload" alt="logo">
+		        <div class="cell small-4 medium-2 large-1 hdImg">
+		            <img src="asset/DCIM/hdIc.png" class="responsive-img" alt="logo">
 		        </div>	        
-		    											<span class="hi">OHIO</span>     
-		     </div>
+		    											<span class="hi cell small-6">OHIO</span>     
+		     
+            <div class="cell small-2 text-center">
+    	    <button id="themeToggle">
+    	        <i class="fa fa-moon"></i>
+    	    </button>
+            </div>
+        </div>
     </header>
 		    
+		    
+<section id="hero" class="grid-container text-center">
+  <div class="grid-x grid-padding-x align-center">
+    <div class="cell medium-10 large-8">
+      <h1 class="hero-heading">Welcome to <span class="highlight">Ohio Codespace</span></h1>
+      <p class="lead">We create beautiful, responsive websites that help businesses and creators stand out online. Whether you're starting fresh or need a redesign, we've got you covered.</p>
+      <a href="mailto:ohioalabi@gmail.com,ohiocheoyaalabi@gmail.com?subject=Website%20Development%20Inquiry&body=Dear%20Ohio%20Codespace,%0A%0AI%20am%20interested%20in%20creating%20a%20webpage%20and%20would%20like%20to%20discuss%20the%20details.%20Please%20let%20me%20know%20how%20we%20can%20proceed.%0A%0ABest%20regards,%0A[Your%20Name]" class="button primary">
+        <i class="fas fa-envelope"></i> Let’s Build Your Website
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="grid-container margin-top-3">
+  <div class="grid-x grid-padding-x align-center">
+    <div class="cell medium-10 large-8">
+      <h2 class="text-center subHd">What We Do</h2>
+      <p>At Ohio Codespace, we specialize in building fast, mobile-friendly websites that leave a lasting impression. Our focus is on clean design, smooth user experience, and results that matter — like more clicks, more views, and more growth for your brand.</p>
+      
+      <h3 class="text-center margin-top-2 subHd">Why Choose Us?</h3>
+      <ul class="fa-ul">
+        <li><span class="fa-li"><i class="fas fa-laptop-code"></i></span>Modern & responsive design</li>
+        <li><span class="fa-li"><i class="fas fa-search"></i></span>SEO-friendly structure</li>
+        <li><span class="fa-li"><i class="fas fa-rocket"></i></span>Fast performance & mobile optimization</li>
+        <li><span class="fa-li"><i class="fas fa-user-check"></i></span>Personalized approach for every client</li>
+      </ul>
+
+      <p class="text-center">Let your website work for you. Let’s bring your vision to life.</p>
+    </div>
+  </div>
+</section>
+		    
+		    		    
 		   <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-2 serSec">
-		     <div class="cell align-center-middle text-center ser" id="serI">	
-          <button class="serBut" id="serButI" aria-label="Email Us">              
-              <i class="fa fa-globe"></i> 
+		        <div class="cell align-center-middle text-center ser serButWeb" id="serButI" aria-label="Email us for a website">	         
+              <i class="fas fa-globe"></i> 
                 <span>Create a website</span>
               <span class="overlay-icon">
                   <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </span>
-          </button>
-					</div>
-		        
-		       <div class="cell align-center-middle text-center ser" id="serII">							 			 
-								     	<button class="align-center-middle text-center" id="serButII" aria-label="Boost your business">							          
-								     	    <i class="fa fa-rocket"></i> 
-                <span>Boost your business</span>
-								     	    <span class="overlay-icon">
-                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </span>
-								      </button>
-				 </div>
+              </span>          
+				      	</div>		        
 		       
-						<div class="cell smll-12 align-center-middle text-center ser">
-												<button class="serBut" id="serButIII" aria-label="Report an issue">
-              <i class="fa fa-bug"></i> 
-            <span>Report An Issue</span>
-												    <span class="overlay-icon">
+		       <div class="cell align-center-middle text-center ser" id="serButII" aria-label="Boost your business">	
+            <i class="fa fa-rocket"></i>
+            <span>Boost your business</span>
+              <span class="overlay-icon">
                   <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </span>
-          </button>
+              </span>          
+					       </div>       					
+		    </div>
+		    
+		    <div class="grid-x grid-margin-x small-up-2 medium-up-2 large-up-2">
+		        	<div class="cell align-center-middle text-center secII" id="serButIII" aria-label="Report an issue">
+       <i class="fa fa-bug"></i> 
+            <span>Report An Issue</span>          
 						</div>
 						    
-						 <div class="cell align-center-middle text-center ser" id="serIII">
-								       <button class="serBut" id="serButIV" aria-label="Email us">								          
-								          <i class="fa fa-comment"></i> 
-             <span>Give feedback</span>
-								           <span class="overlay-icon">
-                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </span>
-							     </button>
+						 <div class="cell align-center-middle text-center secII" id="serButIV" aria-label="Give us feedback"> 
+								     <i class="fa fa-comment"></i> 
+             <span>Give feedback</span>								           
 				 </div>		       
-		    </div>
-		    		        
-		 						    						    
+		    </div>      
+		    
 		</main>
 		
     <footer class="grid-container">
         	<div class="grid-x grid-margin-x">
-				<div class="cell align-center-middle align-items-center text-center ctBox">
-						
-						<h2>Contact Ohio</h2>
-						
-						<div class="cell medium-10 ct">
-								 <a href="https://wa.me/+2349079180317" class="contactLnk" target="_blank" rel="noopener noreferrer" aria-label="Message us on WhatsApp">
-             <i class="fab fa-whatsapp" id="ftWA"></i> <span class="nos">+2349079180317</span>
-            </a>
-						</div>
-						
-								<div class="cell medium-10 ct">
-              <a href="mailto:ohioalabi@gmail.com" class="contactLnk" aria-label="Email us" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-envelope" id="ftEm"></i> <span class="nos">ohioalabi@gmail.com</span>
-            </a>
-						</div>
-						
-				</div>		        
-		    </div>
+        	    <div class="cell align-center-middle align-items-center text-center ctBox">						
+        	        <h2>Contact Ohio</h2>					
+        	        <div class="cell medium-10 ct">
+        	            <a href="https://wa.me/+2349079180317" class="contactLnk" target="_blank" rel="noopener noreferrer" aria-label="Message us on WhatsApp">
+        	                <i class="fab fa-whatsapp" id="ftWA"></i> <span class="nos">+2349079180317</span>       	                
+        	            </a>
+        	        </div>					
+        	        <div class="cell medium-10 ct">
+        	            <a href="mailto:ohioalabi@gmail.com" class="contactLnk" aria-label="Email us" target="_blank" rel="noopener noreferrer">
+        	                <i class="fas fa-envelope" id="ftEm"></i> <span class="nos">ohioalabi@gmail.com</span>       	                
+        	            </a>
+        	        </div>						
+        	    </div>       	    
+        	    <div class="cell align-center-middle text-center">
+        	        <a href="learn/index.html" class="contactLnk" target="_blank" rel="noopener noreferrer">View Code Tips</a>
+                <p style="font-weight: 300;">&copy; Ohio 2025. All rights reserved</p>
+            </div>
+        	</div>
     </footer>
 		
 		
