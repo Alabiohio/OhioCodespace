@@ -14,15 +14,23 @@ font-style: normal;
 
 html {
   font-size: 16px;
-
 }
 :root {
   --background-color: rgba(30, 144, 255, 0.1);
   --color: #000;
+  --colorI: #fff;
+  --font-familyI: "Nova Round", system-ui;
+  --font-familyII: "Signika", open-sans;
+  --font-familyIII: "Texturina", serif;
+  --font-familyIV: "Lemon", serif;
 }
 body {
   background-color: var(--background-color);
 }
+p {
+  font-family: var(--font-familyII);
+}
+
 .loadS {
   height: 100%;
   position: fixed;
@@ -44,7 +52,15 @@ header {
   top: 0;
   z-index: 500;
 }
-
+.hdImg img {
+  background-size: cover;
+  height: 100px;
+  width: 100px
+}
+#themeToggle {
+  font-size: 1.5rem;
+  color: navy;
+}
 
 .brNm {
   margin-bottom: 4rem;
@@ -57,7 +73,7 @@ header {
   font-size: 2rem;
   font-weight: 800;
   font-style: normal;
-  font-family: "Lemon", serif
+  font-family: var(--font-familyIV);
 }
 
 
@@ -65,11 +81,11 @@ main {
   margin-top: 30px
 }
 .brImg {
-  background: rgba(125, 125, 125, 1) url("https://ohiocodespace.netlify.app/asset/DCIM/ogImg.jpeg") no-repeat center;
+  background: rgba(125, 125, 125, 1) url("https://ohiocodespace.vercel.app/asset/DCIM/ogImg.jpeg") no-repeat center;
   height: 450px;
   margin-bottom: 20px;
-  border-radius: 100px 20px 50px 20px;
   background-blend-mode: multiply;
+  border-radius: 15px 15px 20px 60px;
 }
 
 #introTxt {
@@ -78,6 +94,45 @@ main {
   color: deepskyblue;
   font-family: "Nova Round", system-ui;
 }
+
+.hero-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: var(--font-familyIII);
+}
+
+.hero-heading .highlight {
+  color: #007bff;
+}
+
+.fa-ul {
+  list-style: none;
+  padding-left: 2rem;
+}
+
+.fa-li {
+  position: absolute;
+  left: 0;
+  color: #007bff;
+}
+
+.fa-ul li {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  font-family: var(--font-familyII);
+}
+#hero .button {
+  border-radius: 30px;
+  background-color: navy;
+}
+.subHd {
+  font-family: var(--font-familyI);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: sienna;
+}
+
 
 
 .ser {
@@ -91,17 +146,30 @@ main {
 }
 
 .serSec .ser:nth-child(1) {
-  background: rgba(0, 0, 0, 0.5) url("https://ohiocodespace.netlify.app/asset/DCIM/brLgII.jpeg") no-repeat center;
+  background: rgba(0, 0, 0, 0.5) url("https://ohiocodespace.vercel.app/asset/DCIM/brLgII.jpeg") no-repeat center;
 }
 .serSec .ser:nth-child(2) {
-  background: rgba(0, 0, 0, 0.5) url("https://ohiocodespace.netlify.app/asset/DCIM/boost.jpeg") no-repeat center;
+  background: rgba(0, 0, 0, 0.5) url("https://ohiocodespace.vercel.app/asset/DCIM/boost.jpeg") no-repeat center;
 }
-.serSec .ser:nth-child(3) {
-  background: rgba(0, 0, 0, 0.5) url("https://ohiocodespace.netlify.app/asset/DCIM/report.jpeg") no-repeat center;
+
+.secII {
+  height: 50px;
+  color: var(--colorI);
+  font-weight: 600;
 }
-.serSec .ser:nth-child(4) {
-  background: rgba(0, 0, 0, 0.5) url("https://ohiocodespace.netlify.app/asset/DCIM/feedback.jpg") no-repeat center;
+.secII:hover {
+  filter: brightness(80%)
 }
+.secII:nth-child(1) {
+  background-color: maroon;
+  border-radius: 20px 0 0 20px;
+}
+.secII:nth-child(2) {
+  background-color: midnightblue;
+  border-radius: 0 20px 20px 0;
+}
+
+
 
 .ser button {
   display: flex;
@@ -117,7 +185,7 @@ main {
   font-size: 1.7rem;
   font-weight: 700;
   color: deepskyblue;
-  font-family: "Texturina", serif;
+  font-family: var(--font-familyIII);
   font-optical-sizing: auto;
 }
 .ser button:hover {
@@ -134,16 +202,9 @@ main {
   align-items: center;
   display: flex;
   background-blend-mode: multiply;
+  flex-direction: column;
 }
 
-.ser button {
-  padding: 10px 20px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 40px;
-  border-radius: 50px;
-}
 
 .overlay-icon {
   position: absolute;
@@ -191,13 +252,12 @@ main {
   font-weight: 600;
   font-size: 2rem;
   color: sienna;
-  font-family: "Nova Round", system-ui;
-
+  font-family: var(--font-familyI);
 }
 .contactLnk {
   color: navy;
   font-weight: 600;
-  font-family: "Signika", open-sans;
+  font-family: var(--font-familyII);
   font-variation-settings:
       "GARD" 0;
   font-optical-sizing: auto;
@@ -207,4 +267,9 @@ main {
   text-decoration: underline;
   color: navy
 }
+
+
+
+
+
 
