@@ -5,12 +5,25 @@ function applyTheme(theme) {
   root.classList.remove('theme-light', 'theme-dark', 'theme-default');
   root.classList.add(`theme-${theme}`);
   localStorage.setItem('theme', theme);
-  
-  if (root.classList.contains('theme-dark')) {
-        toggleBtn.innerHTML = `<i class="fa fa-sun"></i>`;
-      } else {
-        toggleBtn.innerHTML = `<i class="fa fa-moon"></i>`;
-      }
+
+  // Update button icon
+  toggleBtn.innerHTML = theme === 'dark'
+    ? `<i class="fa fa-sun"></i>`
+    : `<i class="fa fa-moon"></i>`;
+
+  // Switch Prism theme
+  const prismLight = document.getElementById('prism-light');
+  const prismDark = document.getElementById('prism-dark');
+
+  if (prismLight && prismDark) {
+    if (theme === 'dark') {
+      prismDark.disabled = false
+      prismLight.disabled = true;
+    } else {
+      prismDark.disabled = true;
+      prismLight.disabled = false;
+    }
+  }
 }
 
 function detectSystemTheme() {
