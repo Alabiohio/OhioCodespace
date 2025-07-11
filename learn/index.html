@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-		  <meta http-equiv="X-UA-Compatible" -content="IE=edge">
-    <meta name="description" content="From idea to launch, Ohio Codespace delivers clean, stylish websites that reflect your vision and connect with your audience.">    <meta name="author" content="Ohio Codespace">
-				<meta name="mobile-web-app-capable" content="yes">
-				<meta name="apple-mobile-web-app-capable" content="yes">
-				<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Ohio Codespace designs custom websites tailored for entrepreneurs, creatives, and businesses that want to make a strong impact online.">    <meta name="author" content="Ohio Codespace">
+				 <meta name="mobile-web-app-capable" content="yes">
+				 <meta name="apple-mobile-web-app-capable" content="yes">
+				 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-    <title>Ohio Codespace</title>
+    <title>Ohio Codespace | Code Tips</title>
 		
 	  	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
@@ -18,67 +18,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/2.0.3/motion-ui.min.css">
 
  		
-				 <link rel="stylesheet" href="styles/css/foundation.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/theme.css" />
+				 <link rel="stylesheet" href="../styles/css/foundation.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/theme.css" />
+    <link rel="stylesheet" href="styles/lCode.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+   
+<!-- Light mode Prism -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" media="(prefers-color-scheme: light)">
+<!-- Dark mode Prism -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" media="(prefers-color-scheme: dark)">
+    
 	 	<link rel="preconnect" href="https://fonts.gstatic.com">		
 	 	
-     <link rel="icon" type="image/png" sizes="32x32" href="asset/drawable/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="asset/drawable/favicon-192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="asset/drawable/favicon-180.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="asset/drawable/favicon-192.png">
-				<link rel="apple-touch-icon" sizes="256x256" href="asset/drawable/favicon-256.png">
-				<link rel="apple-touch-icon" sizes="512x512" href="asset/drawable/favicon-512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../asset/drawable/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../asset/drawable/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../asset/drawable/favicon-180.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../asset/drawable/favicon-192.png">
+				<link rel="apple-touch-icon" sizes="256x256" href="../asset/drawable/favicon-256.png">
+				<link rel="apple-touch-icon" sizes="512x512" href="../asset/drawable/favicon-512.png">
 
-				<meta property="og:type" content="website">
-				<meta property="og:url" content="https://ohiocodespace.vercel.app/">
-			 <meta property="og:title" content="Ohio Codespace – Beautiful, Custom Websites">
-				<meta property="og:description" content="We help businesses and creators build modern, responsive websites that stand out online. Get discovered today.">
+    <meta property="og:type" content="website">
+				<meta property="og:url" content="https://ohiocodespace.vercel.app/learn/">
+				<meta property="og:title" content="Ohio Codespace | HTML Code Tips">
+		 <meta property="og:description" content="Learn essential HTML & HTML5 tips with live examples and clear explanations. Boost your web skills and code better, faster — all in one place.">
 				<meta property="og:image" content="https://ohiocodespace.vercel.app/asset/DCIM/ogImg.jpeg"> 
 
-		 	<meta name="twitter:card" content="summary_large_image">
-				<meta name="twitter:url" content="https://ohiocodespace.vercel.app/">
-				<meta name="twitter:title" content="Ohio Codespace – Beautiful, Custom Websites">
-				<meta name="twitter:description" content="We help businesses and creators build modern, responsive websites that stand out online. Get discovered today.">
-			 <meta name="twitter:image" content="https://ohiocodespace.vercel.app/asset/DCIM/ogImg.jpeg">
-    
-    <script src="scripts/home.js" defer></script>
-    <script src="scripts/theme.js" defer></script>
+				<meta name="twitter:card" content="summary_large_image">
+				<meta name="twitter:url" content="https://ohiocodespace.vercel.app/learn/">
+				<meta name="twitter:title" content="Ohio Codespace | HTML Code Tips">
+			<meta name="twitter:description" content="Learn essential HTML & HTML5 tips with live examples and clear explanations. Boost your web skills and code better, faster — all in one place.">
+  <meta name="twitter:image" content="https://ohiocodespace.vercel.app/asset/DCIM/ogImg.jpeg">
 
+    <script src="../scripts/theme.js" defer></script>
 </head>
 <body>
-    <!--
-    <div class="align-center-middle loadS" id="loading-screen">
- 
-        <div class="align-center-middle text-center" style="height: 100vh;">
-  <video class="animated-logo" autoplay muted loop>
-    <source src="asset/load/vid/load2.mp4" type="video/mp4">
-  </video>
-        </div>
-        <div class="cell text-center">
-   <span class="loadText" id="ldT">Please connect to the internet</span>
-        </div>
-        </div>
-    <script>
-    const loadScr = document.querySelector(".loadS");
-    setTimeout( () => {
-        loadScr.style.display = "none";
-    }, 5000);
-  </script>
-		-->
-    
-		<main class="grid-container">
-					    		
-		    <div  class="cell align-center-middle text-center brImg">        
-		        <span id="introTxt"></span>		          
-		    </div>
-			
-		     	<header class="grid-container">
+		
+   
+    	<header class="grid-container">
         <div class="grid-x grid-margin-x" style="align-items: center">
 		        <div class="cell small-4 medium-2 large-1 hdImg">
-		            <img src="asset/DCIM/hdIc.png" class="responsive-img" alt="logo">
+		            <img src="../asset/DCIM/hdIc.png" class="responsive-img" alt="logo">
 		        </div>	        
 		    											<span class="hi cell small-6">OHIO</span>     
 		     
@@ -89,72 +69,1126 @@
             </div>
         </div>
     </header>
-		    
-		    
-<section id="hero" class="grid-container text-center">
-  <div class="grid-x grid-padding-x align-center">
+    
+    <main class="grid-container">
+    				
+
+       <section class="grid-container code-tips-intro-section">
+  <div class="grid-x grid-margin-x align-center text-center">
     <div class="cell medium-10 large-8">
-      <h1 class="hero-heading">Welcome to <span class="highlight">Ohio Codespace</span></h1>
-      <p class="lead">We create beautiful, responsive websites that help businesses and creators stand out online. Whether you're starting fresh or need a redesign, we've got you covered.</p>
-      <a href="mailto:ohioalabi@gmail.com,ohiocheoyaalabi@gmail.com?subject=Website%20Development%20Inquiry&body=Dear%20Ohio%20Codespace,%0A%0AI%20am%20interested%20in%20creating%20a%20webpage%20and%20would%20like%20to%20discuss%20the%20details.%20Please%20let%20me%20know%20how%20we%20can%20proceed.%0A%0ABest%20regards,%0A[Your%20Name]" class="button primary">
-        <i class="fas fa-envelope"></i> Let’s Build Your Website
-      </a>
+      <h1 class="code-tips-title">HTML Code Tips</h1>
+      <p class="lead code-tips-subtitle">
+        Master HTML and HTML5 with quick, practical tips. Learn the right tags, structure, and usage through live examples and best practices — all in one place.
+      </p>
     </div>
   </div>
 </section>
+               
+        
+<section class="code-demo">
 
-<section id="about" class="grid-container margin-top-3">
-  <div class="grid-x grid-padding-x align-center">
-    <div class="cell medium-10 large-8">
-      <h2 class="text-center subHd">What We Do</h2>
-      <p>At Ohio Codespace, we specialize in building fast, mobile-friendly websites that leave a lasting impression. Our focus is on clean design, smooth user experience, and results that matter — like more clicks, more views, and more growth for your brand.</p>
-      
-      <h3 class="text-center margin-top-2 subHd">Why Choose Us?</h3>
-      <ul class="fa-ul">
-        <li><span class="fa-li"><i class="fas fa-laptop-code"></i></span>Modern & responsive design</li>
-        <li><span class="fa-li"><i class="fas fa-search"></i></span>SEO-friendly structure</li>
-        <li><span class="fa-li"><i class="fas fa-rocket"></i></span>Fast performance & mobile optimization</li>
-        <li><span class="fa-li"><i class="fas fa-user-check"></i></span>Personalized approach for every client</li>
-      </ul>
+  <!-- Highlighted code block (read-only) -->
+     <div class="codeBox">
+         <div class="topic">
+            Gettting started
+        </div>
+  <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to Ohio Codespace&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <button class="run-btn">Run</button>
+         <iframe class="tipPreview"></iframe>
+</div>
+        
+    <div class="codeBox">
+         <div class="topic">
+            Comment
+        </div>
+  <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;!-- This is a comment --&gt;
+&lt;!-- Or you can comment out a
+large number of lines. --&gt;
+</code>
+  </pre>
+</div>
 
-      <p class="text-center">Let your website work for you. Let’s bring your vision to life.</p>
+<div class="codeBox">
+    <div class="topic">
+            Paragraph
+        </div>
+  <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;p&gt;Hello world&lt;/p&gt;
+&lt;p&gt;Welcome to Ohio.&lt;/p&gt;
+</code>
+  </pre>
+  <button class="run-btn">Run</button>
+  <iframe class="tipPreview"></iframe>
+</div>
+    
+   
+    <div class="codeBox">
+       <div class="topic">
+          HTML link
+     </div>
+  <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;a href="https://ohiocodespace.vercel.app"&gt;Ohio&lt;/a&gt;<br>
+&lt;a href="mailto:doe@xyz.com"&gt;Email&lt;/a&gt;<br>
+&lt;a href="tel:+234123456789"&gt;Call&lt;/a&gt;<br>
+&lt;a href="sms:+234123456789&amp;body=ha%20ha"&gt;Msg&lt;/a&gt;
+</code> 
+        </pre>
+        
+        <table class="infoTab">
+            <tr>
+                <td>href</td>                
+                <td>The URL that the hyperlink points to</td>
+            </tr>
+            <tr>
+                <td>rel</td>
+                <td>Relationship of the linked URL</td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>Link target location: _self, _blank, _top, _parent</td>
+            </tr>                   
+        </table>
+        
+        <button class="run-btn">Run</button>
+  <iframe class="tipPreview"></iframe>
     </div>
-  </div>
+    
+    <div class="codeBox">
+         <div class="topic">
+            Image tag
+      </div>
+  <pre class="preC">
+ <code class="language-html" data-code="true">
+&lt;img <br>
+&nbsp;&nbsp;loading="lazy" <br>
+&nbsp;&nbsp;src="https://placehold.co/300x400" <br>
+&nbsp;&nbsp;alt="Describe image here" <br>
+&nbsp;&nbsp;width="400" <br>
+&nbsp;&nbsp;height="400" <br>
+&gt;
+</code>
+        </pre>
+        
+        <table class="infoTab">
+            <tr>
+                <td>src</td>                
+                <td>Required, image location.  <span>(URL | Path)</span></td>
+            </tr>
+            <tr>
+                <td>alt</td>
+                <td>Describtion of the image</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>Width of the image</td>
+            </tr>
+																<tr>
+                <td>Height</td>
+                <td>Height of the image</td>
+            </tr>
+            <tr>
+                <td>Loading</td>
+                <td>How the browser should load</td>
+            </tr>
+        </table>
+        
+        <button class="run-btn">Run</button>
+  <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          Headings
+     </div>
+        <pre class="preC">
+												<code class="language-html" data-code="true">
+&lt;h1&gt;This is Heading 1&lt;/h1&gt;<br>
+&lt;h2&gt;This is Heading 2&lt;/h2&gt;<br>
+&lt;h3&gt;This is Heading 3&lt;/h3&gt;<br>
+&lt;h4&gt;This is Heading 4&lt;/h4&gt;<br>
+&lt;h5&gt;This is Heading 5&lt;/h5&gt;<br>
+&lt;h6&gt;This is Heading 6&lt;/h6&gt;	</code>
+        </pre>
+ <button class="run-btn">Run</button>
+    <iframe class="tipPreview"></iframe>
+    </div>
+   
+    
+    <div class="codeBox">
+        <div class="topic">
+          Text Formatting Tags
+     </div>
+        <pre class="preC">
+												<code class="language-html" data-code="true">
+&lt;b&gt;Bold Text&lt;/b&gt;
+&lt;strong&gt;This text is important&lt;/strong&gt;
+&lt;i&gt;Italic Text&lt;/i&gt;
+&lt;em&gt;This text is emphasized&lt;/em&gt;
+&lt;u&gt;Underline Text&lt;/u&gt;
+&lt;pre&gt;Pre-formatted Text&lt;/pre&gt;
+&lt;code&gt;Source code&lt;/code&gt;
+&lt;del&gt;Deleted text&lt;/del&gt;
+&lt;mark&gt;Highlighted text (HTML5)&lt;/mark&gt;
+&lt;ins&gt;Inserted text&lt;/ins&gt;
+&lt;sup&gt;Makes text superscripted&lt;/sup&gt;
+&lt;sub&gt;Makes text subscripted&lt;/sub&gt;
+&lt;small&gt;Makes text smaller&lt;/small&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;
+&lt;blockquote&gt;Text Block Quote&lt;/blockquote&gt;
+</code>
+        </pre>
+    <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+ 
+    
+    <div class="codeBox">
+        <div class="topic">
+          Section Divisions
+     </div>
+        <pre class="preC">
+		<code class="language-html" data-code="true">
+&lt;div&gt;&lt;/div&gt;   Division or Section of Page Content
+&lt;span&gt;&lt;/span&gt; Section of text within other content
+&lt;p&gt;&lt;/p&gt;       Paragraph of Text
+&lt;br&gt;           Line Break
+&lt;hr&gt;           Basic Horizontal Line
+</code>
+        </pre>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          Inline Frame 
+     </div>
+        <pre class="preC">
+	<code class="language-html" data-code="true">
+&lt;iframe title="New York"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;width="342"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;height="306"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id="gmap_canvas"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;scrolling="no"&gt;<br>
+&lt;/iframe&gt;
+</code>
+        </pre>
+         <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          JavaScript in HTML
+     </div>
+        <pre class="preC">
+	<code class="language-html" data-code="true">
+	 &lt;!-- INTERNAL JAVASCRIPT --&gt;
+&lt;script type="text/javascript"&gt;
+    let text = "Hello Ohio";
+    alert(text);
+&lt;/script&gt;
+	    
+	 &lt;!-- EXTERNAL JAVASCRIPT --&gt;	    
+&lt;script src="script.js"&gt;&lt;/script&gt;
+</code>
+        </pre>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          CSS in HTML
+     </div>
+        <pre class="preC">
+	<code class="language-html" data-code="true">
+	 &lt;!-- INTERNAL CSS --&gt;
+&lt;style type="text/css"&gt;
+    h1 {
+        color: blue;
+    }
+&lt;/style&gt;
+	    
+	 &lt;!-- EXTERNAL CSS --&gt;
+&lt;style rel="stylesheet" href="style.css"&gt;&lt;/style&gt;
+</code>
+        </pre>
+    </div>
+    
+    <h2 class="hdII">HTML 5 TAGS</h2>
+    
+    <div class="codeBox">
+        <div class="topic">
+          Document
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;header&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Edit Page&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          Header Navigation
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;h1&gt;Ohio Codespace&lt;/h1&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&copy;2025 Ohio Codespace&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBoxI">
+			<div class="topic">
+          HTML5 Tags
+     </div>									 
+        <table border="1" cellpadding="8" cellspacing="0" class="infoTab">
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Description</th>
+      <th>Tag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&lt;article&gt;</td>
+      <td>Content that’s independent</td>
+      <td>&lt;aside&gt;</td>
+      <td>Secondary content</td>
+    </tr>
+    <tr>
+      <td>&lt;audio&gt;</td>
+      <td>Embeds a sound, or an audio stream</td>
+      <td>&lt;bdi&gt;</td>
+      <td>The Bidirectional Isolate element</td>
+    </tr>
+    <tr>
+      <td>&lt;canvas&gt;</td>
+      <td>Draw graphics via JavaScript</td>
+      <td>&lt;data&gt;</td>
+      <td>Machine readable content</td>
+    </tr>
+    <tr>
+      <td>&lt;datalist&gt;</td>
+      <td>A set of pre-defined options</td>
+      <td>&lt;details&gt;</td>
+      <td>Additional information</td>
+    </tr>
+    <tr>
+      <td>&lt;dialog&gt;</td>
+      <td>A dialog box or sub-window</td>
+      <td>&lt;embed&gt;</td>
+      <td>Embeds external application</td>
+    </tr>
+    <tr>
+      <td>&lt;figcaption&gt;</td>
+      <td>A caption or legend for a figure</td>
+      <td>&lt;figure&gt;</td>
+      <td>A figure illustrated</td>
+    </tr>
+    <tr>
+      <td>&lt;footer&gt;</td>
+      <td>Footer or least important</td>
+      <td>&lt;header&gt;</td>
+      <td>Masthead or important information</td>
+    </tr>
+    <tr>
+      <td>&lt;main&gt;</td>
+      <td>The main content of the document</td>
+      <td>&lt;mark&gt;</td>
+      <td>Text highlighted</td>
+    </tr>
+    <tr>
+      <td>&lt;meter&gt;</td>
+      <td>A scalar value within a known range</td>
+      <td>&lt;nav&gt;</td>
+      <td>A section of navigation links</td>
+    </tr>
+    <tr>
+      <td>&lt;output&gt;</td>
+      <td>The result of a calculation</td>
+      <td>&lt;picture&gt;</td>
+      <td>A container for multiple image sources</td>
+    </tr>
+    <tr>
+      <td>&lt;progress&gt;</td>
+      <td>The completion progress of a task</td>
+      <td>&lt;rp&gt;</td>
+      <td>Provides fall-back parenthesis</td>
+    </tr>
+    <tr>
+      <td>&lt;rt&gt;</td>
+      <td>Defines the pronunciation of character</td>
+      <td>&lt;ruby&gt;</td>
+      <td>Represents a ruby annotation</td>
+    </tr>
+    <tr>
+      <td>&lt;section&gt;</td>
+      <td>A group in a series of related content</td>
+      <td>&lt;source&gt;</td>
+      <td>Resources for the media elements</td>
+    </tr>
+    <tr>
+      <td>&lt;summary&gt;</td>
+      <td>A summary for the &lt;details&gt; element</td>
+      <td>&lt;template&gt;</td>
+      <td>Defines the fragments of HTML</td>
+    </tr>
+    <tr>
+      <td>&lt;time&gt;</td>
+      <td>A time or date</td>
+      <td>&lt;track&gt;</td>
+      <td>Text tracks for the media elements</td>
+    </tr>
+    <tr>
+      <td>&lt;video&gt;</td>
+      <td>Embeds video</td>
+      <td>&lt;wbr&gt;</td>
+      <td>A line break opportunity</td>
+    </tr>
+  </tbody>
+</table>									
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          HTML5 Audio
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;audio controls
+    src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          HTML5 Video
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;video controls="" width="100%"&gt;
+  &lt;source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4"&gt;
+  Sorry, your browser doesn't support embedded videos.
+&lt;/video&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          HTML5 Progress
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;progress value="50" max="100"&gt;&lt;/progress&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          HTML5 mark
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;p&gt;I Love &lt;mark&gt;Ohio&lt;/mark&gt;&lt;/p&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          HTML5 Kdi
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;ul&gt;
+  &lt;li&gt;User &lt;bdi&gt;hrefs&lt;/bdi&gt;: 60 points&lt;/li&gt;
+  &lt;li&gt;User &lt;bdi&gt;jdoe&lt;/bdi&gt;: 80 points&lt;/li&gt;
+  &lt;li&gt;User &lt;bdi&gt;إيان&lt;/bdi&gt;: 90 points&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          HTML5 Ruby
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;ruby&gt;
+  汉 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;hàn&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+  字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;zì&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <h2 class="hdII">HTML TABLES</h2>
+    
+    <div class="codeBox">
+        <div class="topic">
+          Table Example
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;name&lt;/td&gt;
+      &lt;td&gt;age&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;John&lt;/td&gt;
+      &lt;td&gt;19&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Doe&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBoxI">
+        <div class="topic">
+          HTML5 Table Tags
+     </div>
+       <table cellpadding="8" cellspacing="0" class="infoTab">
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&lt;table&gt;</td>
+      <td>Defines a table</td>
+    </tr>
+    <tr>
+      <td>&lt;th&gt;</td>
+      <td>Defines a header cell in a table</td>
+    </tr>
+    <tr>
+      <td>&lt;tr&gt;</td>
+      <td>Defines a row in a table</td>
+    </tr>
+    <tr>
+      <td>&lt;td&gt;</td>
+      <td>Defines a cell in a table</td>
+    </tr>
+    <tr>
+      <td>&lt;caption&gt;</td>
+      <td>Defines a table caption</td>
+    </tr>
+    <tr>
+      <td>&lt;colgroup&gt;</td>
+      <td>Defines a group of columns</td>
+    </tr>
+    <tr>
+      <td>&lt;col&gt;</td>
+      <td>Defines a column within a table</td>
+    </tr>
+    <tr>
+      <td>&lt;thead&gt;</td>
+      <td>Groups the header content</td>
+    </tr>
+    <tr>
+      <td>&lt;tbody&gt;</td>
+      <td>Groups the body content</td>
+    </tr>
+    <tr>
+      <td>&lt;tfoot&gt;</td>
+      <td>Groups the footer content</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="codeBoxI">
+        <div class="topic">
+       &lt;th&gt; Attributes
+     </div>
+       <table cellpadding="8" cellspacing="0" class="infoTab">
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>colspan</code></td>
+      <td>Number of columns a cell should span</td>
+    </tr>
+    <tr>
+      <td><code>headers</code></td>
+      <td>One or more header cells a cell is related to</td>
+    </tr>
+    <tr>
+      <td><code>rowspan</code></td>
+      <td>Number of rows a cell should span</td>
+    </tr>
+    <tr>
+      <td><code>abbr</code></td>
+      <td>Description of the cell's content</td>
+    </tr>
+    <tr>
+      <td><code>scope</code></td>
+      <td>The header element relates to</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="codeBoxI">
+        <div class="topic">
+          &lt;td&gt; Attributes
+     </div>
+      <table class="infoTab" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>colspan</code></td>
+      <td>Number of columns a cell should span</td>
+    </tr>
+    <tr>
+      <td><code>headers</code></td>
+      <td>One or more header cells a cell is related to</td>
+    </tr>
+    <tr>
+      <td><code>rowspan</code></td>
+      <td>Number of rows a cell should span</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <h2 class="hdII">HTML LISTS</h2>
+    
+    <div class="codeBox">
+        <div class="topic">
+          Unordered list
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;ul&gt;
+  &lt;li&gt;I'm an item&lt;/li&gt;
+  &lt;li&gt;I'm another item&lt;/li&gt;
+  &lt;li&gt;I'm another item&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          Ordered list
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;ol&gt;
+  &lt;li&gt;I'm the first item&lt;/li&gt;
+  &lt;li&gt;I'm the second item&lt;/li&gt;
+  &lt;li&gt;I'm the third item&lt;/li&gt;
+&lt;/ol&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+           Definition list
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;dl&gt;
+  &lt;dt&gt;A Term&lt;/dt&gt;
+  &lt;dd&gt;Definition of a term&lt;/dd&gt;
+  &lt;dt&gt;Another Term&lt;/dt&gt;
+  &lt;dd&gt;Definition of another term&lt;/dd&gt;
+&lt;/dl&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <h2 class="hdII">HTML Forms</h2>
+    
+    <div class="codeBox">
+        <div class="topic">
+          Form Tags
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;form method="POST" action="api/login"&gt;
+  &lt;label for="mail"&gt;Email: &lt;/label&gt;
+  &lt;input type="email" id="mail" name="mail"&gt;
+  &lt;br/&gt;
+  &lt;label for="pw"&gt;Password: &lt;/label&gt;
+  &lt;input type="password" id="pw" name="pw"&gt;
+  &lt;br/&gt;
+  &lt;input type="submit" value="Login"&gt;
+  &lt;br/&gt;
+  &lt;input type="checkbox" id="ck" name="ck"&gt;
+  &lt;label for="ck"&gt;Remember me&lt;/label&gt;
+&lt;/form&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBoxI">
+        <div class="topic">
+          Form Attribute
+     </div>
+        <table class="infoTab" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>name</code></td>
+      <td>Name of form for scripting</td>
+    </tr>
+    <tr>
+      <td><code>action</code></td>
+      <td>URL of form script</td>
+    </tr>
+    <tr>
+      <td><code>method</code></td>
+      <td>HTTP method, POST / GET (default)</td>
+    </tr>
+    <tr>
+      <td><code>enctype</code></td>
+      <td>Media type</td>
+    </tr>
+    <tr>
+      <td><code>onsubmit</code></td>
+      <td>Runs when the form was submit</td>
+    </tr>
+    <tr>
+      <td><code>onreset</code></td>
+      <td>Runs when the form was reset</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+         Label Tags
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;!-- Nested label --&gt;
+&lt;label&gt;Click me 
+  &lt;input type="text" id="user" name="name"/&gt;
+&lt;/label&gt;
+
+&lt;!-- 'for' attribute --&gt;
+&lt;label for=&quot;user&quot;&gt;Click me&lt;/label&gt;
+&lt;input id=&quot;user&quot; type=&quot;text&quot; name=&quot;name&quot;/&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+         <div class="topic">
+           Input Tag
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;label for=&quot;Name&quot;&gt;Name:&lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;Name&quot; id=&quot;&quot;&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+          Textarea Tag
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;textarea rows=&quot;2&quot; cols=&quot;30&quot; name=&quot;address&quot; id=&quot;address&quot;&gt;&lt;/textarea&gt;
+</code> </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+       Checkboxes
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;input type="checkbox" name="s" id="soc"&gt;
+&lt;label for="soc"&gt;Soccer&lt;/label&gt;
+
+&lt;input type="checkbox" name="s" id="bas"&gt;
+&lt;label for="bas"&gt;Baseball&lt;/label&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+            Radio Buttons
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;input type="radio" name="gender" id="m"&gt;
+&lt;label for="m"&gt;Male&lt;/label&gt;
+
+&lt;input type="radio" name="gender" id="f"&gt;
+&lt;label for="f"&gt;Female&lt;/label&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+       Fieldset Tags
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;fieldset&gt;
+  &lt;legend&gt;Your favorite monster&lt;/legend&gt;
+
+  &lt;input type="radio" id="kra" name="m"&gt;
+  &lt;label for="kra"&gt;Kraken&lt;/label&gt;&lt;br/&gt;
+
+  &lt;input type="radio" id="sas" name="m"&gt;
+  &lt;label for="sas"&gt;Sasquatch&lt;/label&gt;
+
+&lt;/fieldset&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+       Select Tags
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;label for="city"&gt;City:&lt;/label&gt;
+&lt;select name="city" id="city"&gt;
+  &lt;option value="1"&gt;Sydney&lt;/option&gt;
+  &lt;option value="2"&gt;Melbourne&lt;/option&gt;
+  &lt;option value="3"&gt;Cromwell&lt;/option&gt;
+&lt;/select&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+       Datalist Tags(HTML5)
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;label for="b"&gt;Choose a browser: &lt;/label&gt;
+&lt;input list="list" id="b" name="browser"/&gt;
+
+&lt;datalist id="list"&gt;
+  &lt;option value="Chrome"&gt;
+  &lt;option value="Firefox"&gt;
+  &lt;option value="Internet Explorer"&gt;
+  &lt;option value="Opera"&gt;
+  &lt;option value="Safari"&gt;
+  &lt;option value="Microsoft Edge"&gt;
+&lt;/datalist&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+       Submit and Reset Buttons
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;form action="register.php" method="post"&gt;
+  &lt;label for="foo"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" name="name" id="foo"&gt;
+
+  &lt;input type="submit" value="Submit"&gt;
+  &lt;input type="reset" value="Reset"&gt;
+&lt;/form&gt;
+</code>
+        </pre>
+        <button class="run-btn">Run</button>
+      <iframe class="tipPreview"></iframe>
+    </div>
+    
+    <div class="codeBox">        
+        <div class="topic">
+         Input Attributes
+     </div>
+        <pre class="preC">
+            
+<code class="language-html" data-code="true">
+&lt;input type="text" name="username" value="Ohio" minlength="6" required /&gt;</code>
+        </pre>
+       
+        <table class="infoTab" cellpadding="6" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>type="…"</td><td>The type of data that is being input</td></tr>
+    <tr><td>value="…"</td><td>Default value</td></tr>
+    <tr><td>name="…"</td><td>Used to describe this data in the HTTP request</td></tr>
+    <tr><td>id="…"</td><td>Unique identifier that other HTML elements refer to</td></tr>
+    <tr><td>readonly</td><td>Stops the user from modifying</td></tr>
+    <tr><td>disabled</td><td>Stops any interaction</td></tr>
+    <tr><td>checked</td><td>Checkbox or radio is selected</td></tr>
+    <tr><td>required</td><td>Makes the field compulsory</td></tr>
+    <tr><td>placeholder="…"</td><td>Temporary hint text shown inside input</td></tr>
+    <tr><td>autocomplete="off"</td><td>Disables browser auto-completion</td></tr>
+    <tr><td>autocapitalize="none"</td><td>Prevents auto capitalization</td></tr>
+    <tr><td>inputmode="…"</td><td>Specifies keyboard type for mobile</td></tr>
+    <tr><td>list="…"</td><td>Associates input with a &lt;datalist&gt; ID</td></tr>
+    <tr><td>maxlength="…"</td><td>Max number of characters</td></tr>
+    <tr><td>minlength="…"</td><td>Minimum number of characters</td></tr>
+    <tr><td>min="…"</td><td>Minimum numeric value (for number/range)</td></tr>
+    <tr><td>max="…"</td><td>Maximum numeric value (for number/range)</td></tr>
+    <tr><td>step="…"</td><td>Numeric step increment (e.g., 1, 0.1)</td></tr>
+    <tr><td>pattern="…"</td><td>Regular expression pattern to match</td></tr>
+    <tr><td>autofocus</td><td>Input gets focus when page loads</td></tr>
+    <tr><td>spellcheck</td><td>Enables browser spell checking</td></tr>
+    <tr><td>multiple</td><td>Allows multiple values (e.g., file uploads)</td></tr>
+    <tr><td>accept=""</td><td>Specifies file types accepted for uploads</td></tr>
+  </tbody>
+</table>
+             
+    </div>
+    
+    <div class="codeBoxI">
+        <div class="topic">
+       Input types
+     </div>
+     <table class="infoTab" cellpadding="6" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Input Type</th>
+      <th>Preview</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>type="checkbox"</td><td><input type="checkbox"></td></tr>
+    <tr><td>type="radio"</td><td><input type="radio"></td></tr>
+    <tr><td>type="file"</td><td><input type="file"></td></tr>
+    <tr><td>type="hidden"</td><td>(hidden)</td></tr>
+    <tr><td>type="text"</td><td><input type="text" placeholder="Text input"></td></tr>
+    <tr><td>type="password"</td><td><input type="password" placeholder="••••••"></td></tr>
+    <tr><td>type="image"</td><td><input type="image" src="https://via.placeholder.com/60" alt="Submit"></td></tr>
+    <tr><td>type="reset"</td><td><input type="reset" value="Reset"></td></tr>
+    <tr><td>type="button"</td><td><input type="button" value="Button"></td></tr>
+    <tr><td>type="submit"</td><td><input type="submit" value="Submit"></td></tr>
+
+    <!-- HTML5 Inputs -->
+    <tr id="ht5"><th colspan="2">New Input Types in HTML5</th></tr>
+    <tr><td>type="color"</td><td><input type="color"></td></tr>
+    <tr><td>type="date"</td><td><input type="date"></td></tr>
+    <tr><td>type="time"</td><td><input type="time"></td></tr>
+    <tr><td>type="month"</td><td><input type="month"></td></tr>
+    <tr><td>type="datetime-local"</td><td><input type="datetime-local"></td></tr>
+    <tr><td>type="week"</td><td><input type="week"></td></tr>
+    <tr><td>type="email"</td><td><input type="email" placeholder="you@example.com"></td></tr>
+    <tr><td>type="tel"</td><td><input type="tel" placeholder="+1234567890"></td></tr>
+    <tr><td>type="url"</td><td><input type="url" placeholder="https://example.com"></td></tr>
+    <tr><td>type="number"</td><td><input type="number" min="0" max="100"></td></tr>
+    <tr><td>type="search"</td><td><input type="search" placeholder="Search..."></td></tr>
+    <tr><td>type="range"</td><td><input type="range" min="0" max="100"></td></tr>
+  </tbody>
+</table>
+    </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+       Meta tags
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+
+&lt;!-- title --&gt;
+&lt;title&gt;···&lt;/title&gt;
+&lt;meta property=&quot;og:title&quot; content=&quot;···&quot;&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;···&quot;&gt;
+
+&lt;!-- url --&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://···&quot;&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;https://···&quot;&gt;
+&lt;meta name=&quot;twitter:url&quot; content=&quot;https://···&quot;&gt;
+
+&lt;!-- description --&gt;
+&lt;meta name=&quot;description&quot; content=&quot;···&quot;&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;···&quot;&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;···&quot;&gt;
+
+&lt;!-- image --&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;https://···&quot;&gt;
+&lt;meta name=&quot;twitter:image&quot; content=&quot;https://···&quot;&gt;
+
+&lt;!-- ua --&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+
+&lt;!-- viewport --&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+												</code>
+        </pre>
+          </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+       Open Graph
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
+&lt;meta property=&quot;og:locale&quot; content=&quot;en_CA&quot;&gt;
+&lt;meta property=&quot;og:title&quot; content=&quot;HTML Cheatsheet&quot;&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;https://quickref.me/html&quot;&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;https://xxx.com/image.jpg&quot;&gt;
+&lt;meta property=&quot;og:site_name&quot; content=&quot;QuickRef.ME&quot;&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;A handy HTML cheatsheet for developers and learners.&quot;&gt;
+												</code>
+        </pre>
+           </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+       Twitter Cards
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary&quot;&gt;
+&lt;meta name=&quot;twitter:site&quot; content=&quot;@FechinLi&quot;&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;HTML cheatsheet&quot;&gt;
+&lt;meta name=&quot;twitter:url&quot; content=&quot;https://quickref.me/html&quot;&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;Description of this page&quot;&gt;
+&lt;meta name=&quot;twitter:image&quot; content=&quot;https://xxx.com/image.jpg&quot;&gt;
+												</code>
+        </pre>
+      </div>
+    
+    <div class="codeBox">
+        <div class="topic">
+       Geotagging
+     </div>
+        <pre class="preC">
+<code class="language-html" data-code="true">
+&lt;meta name=&quot;ICBM&quot; content=&quot;45.416667,-75.7&quot;&gt;
+&lt;meta name=&quot;geo.position&quot; content=&quot;45.416667;-75.7&quot;&gt;
+&lt;meta name=&quot;geo.region&quot; content=&quot;ca-on&quot;&gt;
+&lt;meta name=&quot;geo.placename&quot; content=&quot;Ottawa&quot;&gt;
+												</code>
+        </pre>
+        </div>
+                   
 </section>
-		    
-		    		    
-		   <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-2 serSec">
-		        <div class="cell align-center-middle text-center ser serButWeb" id="serButI" aria-label="Email us for a website">	         
-              <i class="fas fa-globe"></i> 
-                <span>Create a website</span>
-              <span class="overlay-icon">
-                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </span>          
-				      	</div>		        
-		       
-		       <div class="cell align-center-middle text-center ser" id="serButII" aria-label="Boost your business">	
-            <i class="fa fa-rocket"></i>
-            <span>Boost your business</span>
-              <span class="overlay-icon">
-                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              </span>          
-					       </div>       					
-		    </div>
-		    
-		    <div class="grid-x grid-margin-x small-up-2 medium-up-2 large-up-2">
-		        	<div class="cell align-center-middle text-center secII" id="serButIII" aria-label="Report an issue">
-       <i class="fa fa-bug"></i> 
-            <span>Report An Issue</span>          
-						</div>
-						    
-						 <div class="cell align-center-middle text-center secII" id="serButIV" aria-label="Give us feedback"> 
-								     <i class="fa fa-comment"></i> 
-             <span>Give feedback</span>								           
-				 </div>		       
-		    </div>      
-		    
-		</main>
-		
+        
+			
+        </main>
+   
     <footer class="grid-container">
         	<div class="grid-x grid-margin-x">
         	    <div class="cell align-center-middle align-items-center text-center ctBox">						
@@ -171,20 +1205,27 @@
         	        </div>						
         	    </div>       	    
         	    <div class="cell align-center-middle text-center">
-        	        <a href="learn/index.html" class="contactLnk" target="_blank" rel="noopener noreferrer" aria-label="View Code Tips">View Code Tips</a>
+        	        <a href="../index.html" class="contactLnk" target="_blank" rel="noopener noreferrer" aria-label="Create a Website">Create a site</a>
+        	        <span>•</span>
+        	          <a href="../business/index.html" class="contactLnk" target="_blank" rel="noopener noreferrer" aria-label="Boost your business">Boost your business</a>
                 <p style="font-weight: 300;">&copy; Ohio 2025. All rights reserved</p>
             </div>
         	</div>
     </footer>
-		
-		
-			      <script src="scripts/js/vendor/jquery.js"></script>
-        <script src="scripts/js/vendor/what-input.js"></script>
-        <script src="scripts/js/vendor/foundation.min.js"></script>
-        <script>
-            $(document).foundation();
-        </script>
-
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<!-- Language component for HTML -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+    
+    
+				<script src="scripts/lCode.js"></script>
+				<script src="../scripts/js/vendor/jquery.js"></script>
+    <script src="../scripts/js/vendor/what-input.js"></script>
+    <script src="../scripts/js/vendor/foundation.min.js"></script>
+     <script>
+													$(document).foundation();
+     </script>
+    
+  
 </body>
 </html>
