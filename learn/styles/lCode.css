@@ -1,0 +1,125 @@
+/* Intro section spacing and styling */
+.code-tips-intro-section {
+  padding: 3rem 1rem;
+  background-color: transparent;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.code-tips-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-familyIII);
+}
+
+.code-tips-subtitle {
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 650px;
+  margin: 0 auto;
+  font-family: var(--font-familyII);
+}
+
+
+body.theme-dark .code-tips-title {
+  color: #f1f1f1;
+}
+
+body.theme-dark .code-tips-subtitle {
+  color: #ccc;
+}
+
+
+  .code-demo {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+.topic {
+  background-color: aquamarine;
+  text-indent: 5px;
+  padding: 5px;
+  border-radius: 0 0 20px 0px;
+  max-width: 50%; 
+  font-family: var(--font-familyII);
+}
+code {
+  border: none;
+}
+
+  .preC[class*="language-"] {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: transparent; /*#f5f5f5;*/
+    overflow-x: auto;
+  }
+
+  iframe {
+    width: 100%;
+    min-height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+        
+
+  button.run-btn {
+    background-color: navy;
+    color: aliceblue;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  button.run-btn:hover {
+    border: 2px solid navy;
+    background-color: cornflowerblue;
+    color: black;
+    font-weight: 600;
+    border-bottom-left-radius: 20px
+  }
+.tipPreview {
+  display: none;
+  background-color: skyblue;
+}
+.tipPreview.show {
+  display: block;
+}
+
+.codeBox, .codeBoxI {
+  position: relative;
+  overflow: auto;
+  background: rgba(30, 144, 255, 0.2);
+  border-radius: 20px;
+  flex-direction: column;
+}
+
+.copy-btn {
+  position: absolute;
+  left: 88%;
+  top: 2%;
+  padding: 8.5px 8.5px;
+  background-color: navy;
+  color: aliceblue;
+  border-radius: 8px;
+ }
+.copy-btn:hover {
+  background-color: darkgreen;
+}
+
+.infoTab td, .infoTab thead {
+  background: rgba(20, 104, 195, 0.4);
+  border-bottom: aliceblue 1px solid
+}
+.infoTab code {
+  background-color: transparent;
+  font-weight: 700;
+  border: none;
+}
+table {
+  font-family: var(--font-familyII);
+}
+
