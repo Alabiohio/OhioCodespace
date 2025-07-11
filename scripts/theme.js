@@ -6,11 +6,14 @@ function applyTheme(theme) {
   root.classList.add(`theme-${theme}`);
   localStorage.setItem('theme', theme);
 
-  // Update button icon
-  toggleBtn.innerHTML = theme === 'dark'
-    ? `<i class="fa fa-sun"></i>`
-    : `<i class="fa fa-moon"></i>`;
-
+ if (theme === 'dark') {
+  toggleBtn.innerHTML = `<i class="fa fa-sun"></i>`;
+  toggleBtn.setAttribute('aria-label', 'Switch to light mode');
+} else {
+  toggleBtn.innerHTML = `<i class="fa fa-moon"></i>`;
+  toggleBtn.setAttribute('aria-label', 'Switch to dark mode');
+}
+ 
   // Switch Prism theme
   const prismLight = document.getElementById('prism-light');
   const prismDark = document.getElementById('prism-dark');
