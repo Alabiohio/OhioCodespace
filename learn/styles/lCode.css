@@ -21,6 +21,11 @@
   margin: 0 auto;
   font-family: var(--font-familyII);
 }
+.hdII {
+  font-family: var(--font-familyIII);
+  font-size: 2.1rem;
+  font-weight: 200;
+}
 
 
 body.theme-dark .code-tips-title {
