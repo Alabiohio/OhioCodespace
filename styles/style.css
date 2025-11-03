@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&family=Nova+Round&family=Signika:wght@300..700&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+/*
+font-family: "Nova Round", system-ui;
+  font-family: "Texturina", serif;
+  font-optical-sizing: auto;
+
+font-family: "Signika", open-sans;
+font-variation-settings:
+      "GARD" 0;
+  font-optical-sizing: auto;
+font-style: normal;
+
+*/
+
+html {
+  font-size: 16px;
+}
+
+:root {
+  --background-color: rgba(30, 144, 255, 0.1);
+  --color: #000;
+  --colorI: #fff;
+  --font-familyI: "Nova Round", system-ui;
+  --font-familyII: "Signika", open-sans;
+  --font-familyIII: "Texturina", serif;
+  --font-familyIV: "Lemon", serif;
+}
+
+body {
+  background-color: rgb(5, 20, 40);
+  ;
+}
+
+p {
+  font-family: var(--font-familyII);
+}
+
+.loadS {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  align-items: center;
+  z-index: 1000;
+}
+
+.animated-logo {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-color: transparent;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+header.scrolled {
+  background: rgb(5, 20, 40);
+  transition: background 0.3s ease;
+}
+
+.hdImg img {
+  background-size: cover;
+  height: 80px;
+  width: 80px
+}
+
+#themeToggle {
+  font-size: 1.5rem;
+  color: navy;
+}
+
+.brNm {
+  margin-bottom: 4rem;
+}
+
+.brNm .h1 {
+  margin-left: 1rem;
+}
+
+.hi {
+  color: lightcyan;
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-style: normal;
+  font-family: var(--font-familyIV);
+  margin-left: 1rem;
+}
+
+
+.brImg {
+  background: rgba(125, 125, 125, 1) url("https://ohiocodespace.vercel.app/asset/DCIM/ogImg.jpeg") no-repeat center center/cover;
+  height: 450px;
+  background-blend-mode: multiply;
+}
+
+#introTxt {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: deepskyblue;
+  font-family: "Nova Round", system-ui;
+}
+
+.hero-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: var(--font-familyIII);
+}
+
+.hero-heading .highlight {
+  color: #007bff;
+}
+
+.fa-ul {
+  list-style: none;
+  padding-left: 2rem;
+}
+
+.fa-li {
+  position: absolute;
+  left: 0;
+  color: #28a745;
+}
+
+.fa-ul li {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  font-family: var(--font-familyII);
+  color: #fff;
+}
+
+
+#ctUsBt {
+  border-radius: 30px;
+  background-color: navy;
+}
+
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)),
+    url('http://127.0.0.1:5502/asset/DCIM/bgi.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 6rem 1rem;
+}
+
+#hero .button {
+  color: black;
+  border-radius: 2rem;
+  background-color: #49db00;
+  font-weight: 600;
+}
+
+.subHd {
+  font-family: var(--font-familyI);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: rgb(157, 85, 51);
+}
+
+#about {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600') center/cover no-repeat;
+  color: #fff;
+  padding: 5rem 1rem;
+}
+
+
+
+.ser {
+  height: 200px;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  align-items: center;
+  align-items: center;
+  display: flex;
+  background-blend-mode: multiply;
+}
+
+.serSec .ser:nth-child(1) {
+  background: rgba(0, 0, 0, 0.5) url("https://ohiocodespace.vercel.app/asset/DCIM/brLgII.jpeg") no-repeat center;
+}
+
+.serSec .ser:nth-child(2) {
+  background: rgba(0, 0, 0, 0.5) url("https://ohiocodespace.vercel.app/asset/DCIM/boost.jpeg") no-repeat center;
+}
+
+.bottomBtnSec {
+  padding: 2rem;
+}
+
+.secII {
+  height: 50px;
+  color: lightcyan;
+  font-weight: 600;
+}
+
+.secII button {
+  color: #000;
+  font-weight: 600;
+}
+
+
+.secII:nth-child(1) {
+  background-color: rgb(168, 103, 0);
+  border-radius: 2rem 0 0 2rem;
+}
+
+.secII:nth-child(2) {
+  background-color: rgb(86, 197, 21);
+  border-radius: 0 2rem 2rem 0;
+}
+
+.secII:hover {
+  filter: brightness(80%);
+  border-radius: 2rem;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.ser button {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 60px;
+  border-radius: 50px;
+}
+
+.ser i {
+  font-size: 5rem;
+  color: antiquewhite;
+}
+
+.ser span {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: deepskyblue;
+  font-family: var(--font-familyIII);
+  font-optical-sizing: auto;
+}
+
+.ser button:hover,
+#hero .button:hover {
+  scale: 1.03;
+  transition: 0.7s ease-in-out;
+}
+
+.ser {
+  position: relative;
+  justify-content: center;
+  height: 200px;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  align-items: center;
+  display: flex;
+  background-blend-mode: multiply;
+  flex-direction: column;
+}
+
+
+.overlay-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.overlay-icon i {
+  color: #fff;
+  font-size: 1.5rem
+}
+
+.ser:hover .overlay-icon {
+  opacity: 1;
+}
+
+.ser:hover .ser button i {
+  opacity: 0;
+}
+
+#cta {
+  padding: 2rem 2rem;
+}
+
+#cta .button {
+  color: #000;
+  font-weight: 600;
+  border-radius: 2rem;
+  background-color: #49db00;
+}
+
+#services {
+  padding: 2rem 2rem;
+}
+
+#cta p {
+  color: white
+}
+
+
+/* BUSINESS */
+
+.business-hero {
+  padding: 3rem 1rem;
+  background-color: rgba(30, 144, 255, 0.12);
+  border-radius: 10px;
+}
+
+#getSt {
+  border-radius: 20px;
+}
+
+body.theme-dark .business-hero {
+  background-color: rgb(20, 36, 65);
+}
+
+.business-benefits ul.fa-ul {
+  padding-left: 2rem;
+}
+
+.business-benefits .fa-li {
+  color: #28a745;
+}
+
+.business-benefits h2 {
+  font-weight: 800;
+  font-family: var(--font-familyIII);
+  color: midnightblue;
+}
+
+.theme-dark .business-benefits h2 {
+  color: #28a745;
+}
+
+.business-benefits li {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.bizH1 {
+  font-weight: 800;
+  font-family: var(--font-familyI);
+  color: sienna;
+}
+
+.gmb-ads {
+  padding: 2.5rem 1rem;
+  background-color: rgba(30, 144, 255, 0.12);
+  border-radius: 10px;
+}
+
+.gmb-ads h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  font-family: var(--font-familyI);
+  color: sienna;
+}
+
+.gmb-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+body.theme-dark .gmb-ads {
+  background-color: rgb(20, 36, 65);
+}
+
+body.theme-dark .gmb-img {
+  border: 1px solid #444;
+}
+
+
+
+#ftEm {
+  color: maroon;
+  font-size: 2rem
+}
+
+#ftWA {
+  color: green;
+  font-size: 2rem
+}
+
+.ctBox h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: sienna;
+  font-family: var(--font-familyI);
+}
+
+.contactLnk {
+  color: lightcyan;
+  font-weight: 600;
+  font-family: var(--font-familyII);
+  font-variation-settings:
+    "GARD" 0;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.contactLnk:hover {
+  text-decoration: underline;
+  color: navy
+}
+
+
+.footer p {
+  color: lightcyan;
+  font-weight: 300;
+}
