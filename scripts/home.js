@@ -89,6 +89,10 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
-
+const hdImg = document.querySelector(".hdImg");
+if (hdImg) {
+    hdImg.addEventListener("click", () => {
+        window.location.href = 'index.html';
+    });
+}
 

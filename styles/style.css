@@ -137,15 +137,9 @@ header.scrolled {
   color: #fff;
 }
 
-
-#ctUsBt {
-  border-radius: 30px;
-  background-color: navy;
-}
-
 #hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)),
-    url('http://127.0.0.1:5502/asset/DCIM/bgi.jpg') center/cover no-repeat;
+    url('https://ohiocodespace.vercel.app/asset/DCIM/bgi.jpg') center/cover no-repeat;
   color: #fff;
   padding: 6rem 1rem;
 }
@@ -162,6 +156,7 @@ header.scrolled {
   font-weight: 800;
   font-size: 1.5rem;
   color: rgb(157, 85, 51);
+  padding: 1rem 1rem;
 }
 
 #about {
@@ -243,8 +238,7 @@ header.scrolled {
   font-optical-sizing: auto;
 }
 
-.ser button:hover,
-#hero .button:hover {
+.ser button:hover {
   scale: 1.03;
   transition: 0.7s ease-in-out;
 }
@@ -301,6 +295,15 @@ header.scrolled {
   background-color: #49db00;
 }
 
+#cta .button:hover,
+#hero .button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  background-color: #145600;
+  color: #fff;
+}
+
+
 #services {
   padding: 2rem 2rem;
 }
@@ -313,17 +316,24 @@ header.scrolled {
 /* BUSINESS */
 
 .business-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1600') center/cover no-repeat;
+
   padding: 3rem 1rem;
   background-color: rgba(30, 144, 255, 0.12);
   border-radius: 10px;
+}
+
+.business-hero p {
+  color: white;
 }
 
 #getSt {
   border-radius: 20px;
 }
 
-body.theme-dark .business-hero {
-  background-color: rgb(20, 36, 65);
+.business-benefits {
+  padding: 4rem 0rem;
 }
 
 .business-benefits ul.fa-ul {
@@ -337,7 +347,11 @@ body.theme-dark .business-hero {
 .business-benefits h2 {
   font-weight: 800;
   font-family: var(--font-familyIII);
-  color: midnightblue;
+  color: sienna;
+}
+
+.business-benefits p {
+  color: white;
 }
 
 .theme-dark .business-benefits h2 {
@@ -349,6 +363,39 @@ body.theme-dark .business-hero {
   font-size: 1.05rem;
 }
 
+.startNow {
+  padding: 5rem 2rem;
+}
+
+.startNow h3 {
+  color: sienna;
+  font-family: var(--font-familyI);
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.startNow p {
+  color: white;
+}
+
+.startNow .button,
+.gmb-ads .button,
+.business-hero .button {
+  background-color: #49db00;
+  color: #000;
+  font-weight: 600;
+  border-radius: 2rem;
+}
+
+.startNow .button:hover,
+.gmb-ads .button:hover,
+.business-hero .button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  background-color: #145600;
+  color: #fff;
+}
+
 .bizH1 {
   font-weight: 800;
   font-family: var(--font-familyI);
@@ -356,8 +403,10 @@ body.theme-dark .business-hero {
 }
 
 .gmb-ads {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url('https://ohiocodespace.vercel.app/asset/DCIM/bgii.jpg') center/cover no-repeat;
   padding: 2.5rem 1rem;
-  background-color: rgba(30, 144, 255, 0.12);
   border-radius: 10px;
 }
 
@@ -368,6 +417,10 @@ body.theme-dark .business-hero {
   color: sienna;
 }
 
+.gmb-ads p {
+  color: #fff;
+}
+
 .gmb-img {
   width: 100%;
   max-width: 450px;
@@ -375,14 +428,9 @@ body.theme-dark .business-hero {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-body.theme-dark .gmb-ads {
-  background-color: rgb(20, 36, 65);
+.gmb-adsIII {
+  padding: 2rem 2rem;
 }
-
-body.theme-dark .gmb-img {
-  border: 1px solid #444;
-}
-
 
 
 #ftEm {
@@ -414,7 +462,7 @@ body.theme-dark .gmb-img {
 
 .contactLnk:hover {
   text-decoration: underline;
-  color: navy
+  color: rgb(142, 142, 245)
 }
 
 
