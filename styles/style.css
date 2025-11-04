@@ -35,21 +35,14 @@ p {
   font-family: var(--font-familyII);
 }
 
-.loadS {
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  align-items: center;
-  z-index: 1000;
+[data-aos] {
+  transform-box: fill-box;
 }
 
-.animated-logo {
-  width: 100%;
-  height: 100%;
+[data-aos] {
+  overflow: hidden;
 }
+
 
 header {
   background-color: transparent;
@@ -142,6 +135,7 @@ header.scrolled {
     url('https://ohiocodespace.vercel.app/asset/DCIM/bgi.jpg') center/cover no-repeat;
   color: #fff;
   padding: 6rem 1rem;
+  overflow: hidden;
 }
 
 #hero .button {
@@ -163,6 +157,7 @@ header.scrolled {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600') center/cover no-repeat;
   color: #fff;
   padding: 5rem 1rem;
+  overflow: hidden;
 }
 
 
@@ -187,6 +182,7 @@ header.scrolled {
 
 .bottomBtnSec {
   padding: 2rem;
+  overflow: hidden;
 }
 
 .secII {
@@ -286,6 +282,7 @@ header.scrolled {
 
 #cta {
   padding: 2rem 2rem;
+  overflow: hidden;
 }
 
 #cta .button {
@@ -306,6 +303,8 @@ header.scrolled {
 
 #services {
   padding: 2rem 2rem;
+  transform-box: fill-box;
+  overflow: hidden;
 }
 
 #cta p {
@@ -318,10 +317,10 @@ header.scrolled {
 .business-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
     url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1600') center/cover no-repeat;
-
   padding: 3rem 1rem;
   background-color: rgba(30, 144, 255, 0.12);
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .business-hero p {
@@ -334,6 +333,7 @@ header.scrolled {
 
 .business-benefits {
   padding: 4rem 0rem;
+  overflow: hidden;
 }
 
 .business-benefits ul.fa-ul {
@@ -364,7 +364,8 @@ header.scrolled {
 }
 
 .startNow {
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
+  overflow: hidden;
 }
 
 .startNow h3 {
@@ -408,6 +409,7 @@ header.scrolled {
     url('https://ohiocodespace.vercel.app/asset/DCIM/bgii.jpg') center/cover no-repeat;
   padding: 2.5rem 1rem;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .gmb-ads h2 {

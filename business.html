@@ -14,12 +14,7 @@
 
     <title>Ohio Codespace | Boost your business</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/2.0.3/motion-ui.min.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/css/foundation.css" />
     <link rel="stylesheet" href="styles/style.css" />
@@ -76,11 +71,13 @@
         <section class="business-hero">
             <div class="grid-x grid-margin-x align-center text-center">
                 <div class="cell medium-10 large-8">
-                    <h1 class="bizH1">The Digital Engine for Your Revenue.</h1>
-                    <p class="lead">Stop leaving money on the table. We engineer high-performance web platforms designed
+                    <h1 class="bizH1" data-aos="zoom-out" data-aos-duration="1200">The Digital Engine for Your Revenue.
+                    </h1>
+                    <p class="lead" data-aos="fade-up-left" data-aos-duration="1100">Stop leaving money on the table. We
+                        engineer high-performance web platforms designed
                         to convert visitors into clients, drive sales, and scale your operations.</p>
                     <a href="mailto:ohiocodespace@gmail.com,ohioalabi@gmail.com?subject=I%20Want%20To%20Boost%20My%20Business"
-                        class="button">
+                        class="button" data-aos="fade-up" data-aos-duration="1100">
                         <i class="fa fa-rocket"></i> Launch Your Growth
                     </a>
                 </div>
@@ -90,8 +87,9 @@
         <section class="business-benefits margin-top-3">
             <div class="grid-x align-center">
                 <div class="cell medium-10 large-8">
-                    <h2 class="text-center subHd">How We Help Your Business Grow</h2>
-                    <ul class="fa-ul benefit-list">
+                    <h2 class="text-center subHd" data-aos="zoom-out" data-aos-duration="1200">How We Help Your Business
+                        Grow</h2>
+                    <ul class="fa-ul benefit-list" data-aos="fade-up-right" data-aos-duration="1100">
                         <li>
                             <span class="fa-li"><i class="fas fa-bolt"></i></span>
                             Lightning-fast websites that keep customers engaged
@@ -121,11 +119,13 @@
         <section class="grid-container text-center margin-top-3 startNow">
             <div class="grid-x align-center">
                 <div class="cell medium-10 large-8">
-                    <h3>Your Next Level Starts Now.</h3>
-                    <p>Don't let a weak website hold back your business. Reach out today to unlock the potential of a
+                    <h3 data-aos="zoom-out" data-aos-duration="1200">Your Next Level Starts Now.</h3>
+                    <p data-aos="fade-up-left" data-aos-duration="1100" data-aos="fade-up-right"
+                        data-aos-duration="1100">Don't let a weak website hold back your business. Reach out today to
+                        unlock the potential of a
                         custom, high-converting web platform.</p>
                     <a href="mailto:ohiocodespace@gmail.com,ohioalabi@gmail.com?subject=I%20Want%20To%20Boost%20My%20Business"
-                        class="button">
+                        class="button" data-aos="zoom-in-up">
                         <i class="fas fa-handshake"></i> Claim Your Consultation
                     </a>
                 </div>
@@ -136,19 +136,23 @@
         <section class="gmb-ads margin-top-3">
             <div class="grid-x align-center">
                 <div class="cell medium-9 large-8 text-center">
-                    <h2>Dominate Local Search & Maps</h2>
-                    <p class="lead">We go beyond setup. We <strong>optimize your Google Business Profile</strong> for
+                    <h2 data-aos="zoom-out" data-aos-duration="1200">Dominate Local Search & Maps</h2>
+                    <p class="lead" data-aos="fade-up-right" data-aos-duration="1100">We go beyond setup. We
+                        <strong>optimize your Google Business Profile</strong> for
                         local SEO
                         dominance, ensuring your brand is the first name customers see on Search and Maps when they need
-                        your service.</p>
-                    <p class="small"><strong>Be the immediate, trusted answer</strong> when customers search for your
+                        your service.
+                    </p>
+                    <p class="small" data-aos="fade-up-left" data-aos-duration="1100"><strong>Be the immediate, trusted
+                            answer</strong> when customers search for your
                         services
                         nearby.</p>
                 </div>
 
 
                 <div class="cell small-7 medium-3 large-2">
-                    <img src="asset/DCIM/exe.png" alt="Google Search Business Listing" class="gmb-img">
+                    <img src="asset/DCIM/exe.png" alt="Google Search Business Listing" class="gmb-img"
+                        data-aos="fade-up-right" data-aos-duration="1100">
                 </div>
             </div>
 
@@ -167,7 +171,7 @@
     </main>
 
     <footer class="footer">
-        <div>
+        <div data-aos="zoom-in-up">
             <div class="cell align-center-middle align-items-center text-center ctBox">
                 <h2>Contact Ohio</h2>
                 <div class="cell medium-10 ct">
@@ -189,6 +193,12 @@
     <script src="scripts/js/vendor/foundation.min.js"></script>
     <script>
         $(document).foundation();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+        });
     </script>
 </body>
 
