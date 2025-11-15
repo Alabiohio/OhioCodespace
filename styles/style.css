@@ -567,5 +567,5 @@ header.scrolled {
 }
 
 #submitBtn.unsent {
-  background-color: red;
+  background-color: red !important;
 }
