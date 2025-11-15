@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional runtime files
+dist/
+build/
+.tmp/
+.cache/
+
+# VSCode settings
+.vscode/
+
+# Lock files (optional — keep if you want deterministic builds)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

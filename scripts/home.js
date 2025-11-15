@@ -98,3 +98,67 @@ if (hdImg) {
 
 
 
+const submitButton = document.getElementById("submitBtn");
+
+if (submitButton) {
+    document.getElementById("contactForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // Disable button and show loading
+        submitButton.disabled = true;
+        submitButton.innerHTML = `<l-dot-wave size="47" speed="1" color="black"></l-dot-wave>`;
+
+        const form = e.target;
+        const data = {
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value
+        };
+
+        try {
+            const res = await fetch("http://localhost:3000/send", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+
+            const result = await res.json();
+
+            if (result.success) {
+                submitButton.innerHTML = `<i class="fas fa-check"></i> Message Sent`;
+                submitButton.classList.add("sent");
+
+                // Reset after 3s
+                setTimeout(() => {
+                    submitButton.innerHTML = `<i class="fas fa-paper-plane"></i> Send Message`;
+                    submitButton.classList.remove("sent");
+                    submitButton.disabled = false;
+                    form.reset();
+                }, 3000);
+
+            } else {
+                submitButton.innerHTML = `<i class="fas fa-times"></i> Failed to Send`;
+                submitButton.classList.add("unsent");
+
+                setTimeout(() => {
+                    submitButton.innerHTML = `<i class="fas fa-paper-plane"></i> Send Message`;
+                    submitButton.classList.remove("unsent");;
+                    submitButton.disabled = false;
+                }, 3000);
+            }
+
+        } catch (error) {
+            console.error(error);
+            submitButton.innerHTML = `<i class="fas fa-times"></i> Error Sending`;
+            submitButton.classList.remove("warning");
+            submitButton.classList.add("alert");
+
+            setTimeout(() => {
+                submitButton.innerHTML = `<i class="fas fa-paper-plane"></i> Send Message`;
+                submitButton.classList.remove("alert");
+                submitButton.classList.add("warning");
+                submitButton.disabled = false;
+            }, 3000);
+        }
+    });
+}
