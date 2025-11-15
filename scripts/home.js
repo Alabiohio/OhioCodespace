@@ -97,7 +97,7 @@ if (hdImg) {
 }
 
 
-
+/*
 const submitButton = document.getElementById("submitBtn");
 
 if (submitButton) {
@@ -161,4 +161,5 @@ if (submitButton) {
             }, 3000);
         }
     });
-}
+} 
+    */
