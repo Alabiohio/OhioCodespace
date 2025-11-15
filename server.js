@@ -3,12 +3,16 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
 
-
 dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Root endpoint — check if server is online
+app.get("/", (req, res) => {
+    res.send("Ohio Codespace Email API is online!");
+});
 
 // POST /send message
 app.post("/send", async (req, res) => {
@@ -74,7 +78,7 @@ app.post("/send", async (req, res) => {
 
     } catch (err) {
         console.error(err);
-        return res.status(500).json({ error: "Failed to send email" });
+        return res.status(500).json({ error: err.message }); // show real error for debugging
     }
 });
 
