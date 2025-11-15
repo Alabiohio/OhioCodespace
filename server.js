@@ -11,31 +11,31 @@ app.use(express.json());
 
 // Root endpoint — check if server is online
 app.get("/", (req, res) => {
-    res.send("Ohio Codespace Email API is online!");
+  res.send("Ohio Codespace Email API is online!");
 });
 
 // POST /send message
 app.post("/send", async (req, res) => {
-    const { name, email, message } = req.body;
+  const { name, email, message } = req.body;
 
-    if (!name || !email || !message) {
-        return res.status(400).json({ error: "All fields required" });
-    }
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: "All fields required" });
+  }
 
-    try {
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS,
-            },
-        });
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
-        await transporter.sendMail({
-            from: `"Contact Form" <${process.env.EMAIL_USER}>`,
-            to: process.env.EMAIL_USER,
-            subject: "New Message From Ohio Codespace Website",
-            html: `
+    await transporter.sendMail({
+      from: `"Contact Form" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER,
+      subject: "New Message From Ohio Codespace Website",
+      html: `
   <div style="font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5;">
     <div style="max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; border: 1px solid #ddd;">
       
@@ -72,14 +72,14 @@ app.post("/send", async (req, res) => {
     </div>
   </div>
 `,
-        });
+    });
 
-        return res.json({ success: true, message: "Email sent successfully" });
+    return res.json({ success: true, message: "Email sent successfully" });
 
-    } catch (err) {
-        console.error(err);
-        return res.status(500).json({ error: err.message }); // show real error for debugging
-    }
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ error: err.message }); // show real error for debugging
+  }
 });
 
 const PORT = process.env.PORT || 3000;
