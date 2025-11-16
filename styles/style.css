@@ -569,3 +569,26 @@ header.scrolled {
 #submitBtn.unsent {
   background-color: red !important;
 }
+
+
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(5, 0, 47) rgb(1, 108, 120);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(5, 0, 47);
+  border-radius: 20px;
+  border: 3px solid rgb(5, 0, 47);
+}
