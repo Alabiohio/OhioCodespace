@@ -1,6 +1,6 @@
 /* Light Theme (default) */
-/*body.theme-light {
-  background: #ffffff;
+body.theme-light {
+  background: #D2E9FF;
   color: #111;
 }
 
@@ -13,7 +13,7 @@ body.theme-light .tipPreview {
   background-color: #fff;
   border-color: #ccc;
 }
-*/
+
 /* Dark Theme */
 body.theme-dark {
   background: rgb(5, 20, 40);

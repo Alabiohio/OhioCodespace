@@ -88,6 +88,7 @@ header.scrolled {
 }
 
 
+
 .brImg {
   background: rgba(125, 125, 125, 1) url("https://ohiocodespace.vercel.app/asset/DCIM/ogImg.jpeg") no-repeat center center/cover;
   height: 450px;
@@ -138,7 +139,8 @@ header.scrolled {
   overflow: hidden;
 }
 
-#hero .button {
+#hero .button,
+.busLnk {
   color: black;
   border-radius: 2rem;
   background-color: #49db00;
