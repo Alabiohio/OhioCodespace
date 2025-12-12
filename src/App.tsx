@@ -6,6 +6,7 @@ import Portfolio from "./pages/Portfolio";
 import AOSScrollManager from "./components/ScrollToTop";
 
 
+
 function App() {
   return (
     <Router>
