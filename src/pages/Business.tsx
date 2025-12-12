@@ -5,7 +5,7 @@ import BookStackSidePerspective from "../components/BookSlide";
 import Footer from "../components/Footer";
 import exeImg from "../assets/img/exe.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRocket, faBolt, faMobileAlt, faChartLine, faShoppingCart, faHeadset, faHandshake, faBullseye, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faRocket, faBolt, faMobileAlt, faChartLine, faShoppingCart, faHeadset, faHandshake, faBullseye } from '@fortawesome/free-solid-svg-icons';
 
 const Business: React.FC = () => {
     return (
