@@ -1,0 +1,955 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&family=Nova+Round&family=Signika:wght@300..700&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+
+#hdImg {
+    height: 70px;
+    width: 70px;
+}
+
+.hi {
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: normal;
+    font-family: var(--font-familyIV);
+}
+
+#brImg {
+    background: rgba(125, 125, 125, 1) url("https://ohiocodespace.vercel.app/asset/DCIM/ogImg.jpeg") no-repeat center center/cover;
+    height: 100vh;
+    background-blend-mode: multiply;
+}
+
+#brImg::before,
+#brImg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Fade at the beginning */
+#brImg::before {
+    left: 0;
+    background: linear-gradient(to top, rgb(5, 20, 40) 0%, transparent 18%);
+}
+
+#brImg::after {
+    right: 0;
+    background: linear-gradient(to bottom, rgb(5, 20, 40) 0%, transparent 18%);
+}
+
+
+.tyTxt {
+    position: absolute;
+    top: 30vh;
+}
+
+.imgSlide {
+    top: 50vh;
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+}
+
+
+#introText {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: deepskyblue;
+    font-family: var(--font-familyIII)
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        border-color: transparent;
+    }
+
+    25%,
+    75% {
+        border-color: black;
+    }
+}
+
+.animate-blink {
+    animation: blink 1s infinite;
+}
+
+
+#hero {
+    background-color: rgb(5, 20, 40);
+    color: #fff;
+    padding: 6rem 1rem;
+    overflow: hidden;
+}
+
+
+
+
+#hero::before,
+#hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Fade at the beginning */
+#hero::before {
+    left: 0;
+    background: linear-gradient(to top, rgb(5, 20, 40) 0%, transparent 18%);
+}
+
+#hero::after {
+    right: 0;
+    background: linear-gradient(to bottom, rgb(5, 20, 40) 0%, transparent 18%);
+}
+
+
+
+
+
+#hero .button,
+.busLnk {
+    color: black;
+    background-color: #b0f98b;
+    font-weight: 600;
+}
+
+.subHd {
+    font-family: var(--font-familyI);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: rgb(157, 85, 51);
+    padding: 1rem 1rem;
+}
+
+#about {
+    background: linear-gradient(rgba(5, 20, 40, 0.9), rgba(0, 0, 0, 0.65)), url('http://localhost:5173/bg1.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 5rem 1rem;
+    overflow: hidden;
+    position: relative;
+    background-blend-mode: darken;
+}
+
+
+
+
+#about::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#about::after {
+    right: 0;
+    background: linear-gradient(to bottom, rgb(5, 20, 40) 0%, transparent 18%);
+}
+
+#about h2, #services h3, #gmbIntro h2 {
+    font-family: var(--font-familyIII);
+    color: rgb(226, 151, 46);
+}
+
+
+
+.ser {
+    height: 200px;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    align-items: center;
+    align-items: center;
+    display: flex;
+    background-blend-mode: multiply;
+}
+
+.serSec .ser:nth-child(1) {
+    background: rgba(0, 0, 0, 0.5) url("https://ohiocodespace.vercel.app/asset/DCIM/brLgII.jpeg") no-repeat center;
+}
+
+.serSec .ser:nth-child(2) {
+    background: rgba(0, 0, 0, 0.5) url("https://ohiocodespace.vercel.app/asset/DCIM/boost.jpeg") no-repeat center;
+}
+
+.bottomBtnSec {
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.secII {
+    height: 50px;
+    color: lightcyan;
+    font-weight: 600;
+}
+
+.secII a {
+    color: #000;
+    font-weight: 600;
+}
+
+
+.secII:nth-child(1) {
+    background-color: rgb(168, 103, 0);
+    border-radius: 2rem 0 0 2rem;
+}
+
+.secII:nth-child(2) {
+    background-color: rgb(86, 197, 21);
+    border-radius: 0 2rem 2rem 0;
+}
+
+.secII:hover {
+    filter: brightness(80%);
+    border-radius: 2rem;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.ser button {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 60px;
+    border-radius: 50px;
+}
+
+.ser i {
+    font-size: 5rem;
+    color: antiquewhite;
+}
+
+.ser span {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: deepskyblue;
+    font-family: var(--font-familyIII);
+    font-optical-sizing: auto;
+}
+
+.ser button:hover {
+    scale: 1.03;
+    transition: 0.7s ease-in-out;
+}
+
+.ser {
+    position: relative;
+    justify-content: center;
+    height: 200px;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    align-items: center;
+    display: flex;
+    background-blend-mode: multiply;
+    flex-direction: column;
+}
+
+
+.overlay-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.overlay-icon i {
+    color: #fff;
+    font-size: 1.5rem
+}
+
+.ser:hover .overlay-icon {
+    opacity: 1;
+}
+
+.ser:hover .ser button i {
+    opacity: 0;
+}
+
+#cta {
+    padding: 2rem 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#cta::before,
+#cta::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Fade at the beginning */
+#cta::before {
+    left: 0;
+    background: linear-gradient(to top, rgb(5, 20, 40) 0%, transparent 8%);
+}
+#cta::after {
+    right: 0;
+    background: linear-gradient(to bottom, rgb(5, 20, 40) 0%, transparent 8%);
+}
+
+
+#cta .button {
+    color: #000;
+    font-weight: 600;
+    border-radius: 2rem;
+    background-color: #49db00;
+}
+
+#cta .button:hover,
+#hero .button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    background-color: #145600;
+    color: #fff;
+}
+
+
+#service {
+    padding: 2rem 2rem;
+    transform-box: fill-box;
+    overflow: hidden;
+    padding: 2rem;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('http://localhost:5173/bg1.jpg') center/cover no-repeat;
+
+}
+
+#service::before,
+#service::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Fade at the beginning */
+#service::before {
+    left: 0;
+    background: linear-gradient(to top, rgb(5, 20, 40) 0%, transparent 18%);
+}
+
+#service::after {
+    right: 0;
+    background: linear-gradient(to bottom, rgb(5, 20, 40) 0%, transparent 3%);
+}
+
+#service h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: rgb(226, 151, 46);
+    font-family: var(--font-familyIII);
+}
+
+#service .items {
+    flex: 1 1 250px;
+    height: 200px;
+    border-radius: 30px;
+    background-color: #142850;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #00bfff;
+    transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+}
+
+#service .items:hover {
+    transform: scale(1.05);
+    background-color: #0d1b2a;
+    border: 2px solid #49db00;
+    cursor: pointer;
+}
+
+#service .items h4 {
+    font-family: var(--font-familyII);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: rgb(220, 178, 78);
+}
+
+#service .items p {
+    font-family: var(--font-familyIII);
+    font-weight: 500;
+    color: lightcyan;
+}
+
+
+
+#cta p {
+    color: white
+}
+
+#services {
+    padding: 2rem 2rem;
+    transform-box: fill-box;
+    overflow: hidden;
+    padding: 2rem;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('http://localhost:5173/bg1.jpg') center/cover no-repeat;
+
+}
+
+
+#services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Fade at the beginning */
+#services::before {
+    left: 0;
+    background: linear-gradient(to top, rgb(5, 20, 40) 0%, transparent 18%);
+}
+
+#services .icon {
+    color: lime;
+}
+
+
+
+
+
+/* BUSINESS */
+
+.business-hero {
+    padding: 3rem 1rem;
+    background-color: rgb(5, 20, 40);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+
+
+.business-hero::before,
+.business-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Fade at the beginning */
+.business-hero::before {
+    left: 0;
+    background: linear-gradient(to top, rgb(5, 20, 40) 0%, transparent 18%);
+}
+
+.business-hero::after {
+    right: 0;
+    background: linear-gradient(to bottom, rgb(5, 20, 40) 0%, transparent 18%);
+}
+
+
+.business-hero p {
+    color: white;
+}
+
+.business-hero h1 {
+    color: cadetblue;
+}
+
+#getSt {
+    border-radius: 20px;
+}
+
+.business-benefits {
+    overflow: hidden;
+}
+
+.business-benefits ul.fa-ul {
+    padding-left: 2rem;
+}
+
+.business-benefits .fa-li {
+    color: #28a745;
+}
+
+.business-benefits h2 {
+    font-weight: 800;
+    font-family: var(--font-familyIII);
+    color: sienna;
+}
+
+.business-benefits p {
+    color: white;
+}
+
+.theme-dark .business-benefits h2 {
+    color: #28a745;
+}
+
+.business-benefits li {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.service-icon {
+    color: chartreuse;
+}
+
+
+.startNow {
+    padding: 2rem 2rem;
+    overflow: hidden;
+}
+
+.startNow h3 {
+    color: sienna;
+    font-family: var(--font-familyIII);
+    font-weight: 800;
+    font-size: 1.9rem;
+}
+
+.startNow p {
+    color: white;
+}
+
+.startNow .button,
+.gmb-ads .button,
+.business-hero .button {
+    background-color: #49db00;
+    color: #000;
+    font-weight: 600;
+}
+
+.startNow .button:hover,
+.gmb-ads .button:hover,
+.business-hero .button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    background-color: #145600;
+    color: #fff;
+}
+
+.bizH1 {
+    font-weight: 800;
+    font-family: var(--font-familyI);
+    color: sienna;
+}
+
+.gmb-ads {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url('https://ohiocodespace.vercel.app/asset/DCIM/bgii.jpg') center/cover no-repeat;
+    padding: 2.5rem 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gmb-ads h2 {
+    font-weight: 700;
+    font-size: 1.9rem;
+    font-family: var(--font-familyIII);
+    color: sienna;
+}
+
+.gmb-ads p {
+    color: #fff;
+}
+
+.gmb-img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.gmb-adsIII {
+    padding: 2rem 2rem;
+}
+
+
+#ftEm {
+    color: maroon;
+    font-size: 2rem
+}
+
+#ftWA {
+    color: green;
+    font-size: 2rem
+}
+
+.ctBox h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    color: sienna;
+    font-family: var(--font-familyI);
+}
+
+.contactLnk {
+    color: lightcyan;
+    font-weight: 600;
+    font-family: var(--font-familyII);
+    font-variation-settings:
+        "GARD" 0;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.contactLnk:hover {
+    text-decoration: underline;
+    color: rgb(142, 142, 245)
+}
+
+
+.footer p {
+    color: lightcyan;
+    font-weight: 300;
+}
+
+
+
+
+
+/* Contact Form Styling */
+.contact-form {
+    background: rgba(1, 1, 69, 0.807);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    max-width: 650px;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+#msgUs {
+    padding: 1rem 1rem;
+}
+
+#msgUs span {
+    color: #ddd;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--font-familyI);
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: #fcbd00;
+    font-family: var(--font-familyIII);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-top: 6px;
+    transition: all .25s ease;
+    background-color: rgb(11, 11, 38);
+    color: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ffb347;
+    box-shadow: 0 0 0 2px rgba(255, 179, 71, 0.25);
+    background-color: #000 !important;
+    color: #fff;
+}
+
+.contact-form input:-webkit-autofill,
+.contact-form textarea:-webkit-autofill {
+    background-color: #000 !important;
+    color: #fff;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.contact-form button {
+    padding: 0.9rem 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* Icon spacing */
+.contact-form button i {
+    margin-right: 6px;
+}
+
+#submitBtn {
+    background-color: #fca800;
+    color: #000;
+    font-family: var(--font-familyIII);
+    font-weight: 800;
+}
+
+#submitBtn:disabled {
+    background-color: #fa9200 !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+#submitBtn.sent {
+    background-color: #49db00 !important;
+}
+
+#submitBtn.unsent {
+    background-color: red !important;
+}
+
+#footer {
+    position: relative;
+}
+
+#footer::before,
+#footer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Fade at the beginning */
+#footer::before {
+    left: 0;
+    background: linear-gradient(to top, rgb(5, 20, 40) 0%, transparent 18%);
+}
+
+#footer::after {
+    right: 0;
+    background: linear-gradient(to bottom, rgb(5, 20, 40) 0%, transparent 18%);
+}
+
+
+#footer h2 {
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: sienna;
+    font-family: var(--font-familyI);
+}
+
+#footer p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*portfolio*/
+.projectss {
+    overflow: hidden;
+}
+
+.portfolio .hero {
+    background: rgba(5, 20, 40, 0.5) url('http://localhost:5173/bg1.jpg') center/cover no-repeat;
+    padding: 2rem 2rem;
+    background-blend-mode: multiply;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.portfolio .hero::before,
+.portfolio .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Fade at the beginning */
+.portfolio .hero::before {
+    left: 0;
+    background: linear-gradient(to top, rgb(5, 20, 40) 0%, transparent 20%);
+}
+
+.portfolio .hero::after {
+    right: 0;
+    background: linear-gradient(to bottom, rgb(22, 8, 83) 0%, transparent 20%);
+}
+
+.portfolio .hero h1 {
+    color: rgb(0, 255, 162);
+    font-family: var(--font-familyIV);
+}
+
+.portfolio .hero p {
+    font-family: var(--font-familyII);
+}
+
+.portfolio .hero a {
+    font-family: var(--font-familyII);
+    font-weight: 700;
+}
+
+.portfolio .about {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.portfolio .about::before,
+.portfolio .about::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.portfolio .about::before {
+    left: 0;
+    background: linear-gradient(to top, rgb(5, 20, 40) 0%, transparent 8%);
+}
+
+.portfolio .about::after {
+    right: 0;
+    background: linear-gradient(to bottom, rgb(5, 20, 40) 0%, transparent 8%);
+}
+
+.portfolio .about h2 {
+color: rgb(219, 131, 43);
+font-family: var(--font-familyIII);
+font-weight: 800;
+font-size: 2.2rem;
+}
+
+.portfolio .about p {
+font-family: var(--font-familyII);
+}
+
+.portfolio .about h3 {
+  color: #ffc430;
+  font-family: var(--font-familyI);
+}
+
+.portfolio #projects {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio #projects::before,
+.portfolio #projects::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.portfolio #projects::before {
+  left: 0;
+  background: linear-gradient(to top, rgb(5, 20, 40) 0%, transparent 8%);
+}
+
+.portfolio #projects::after {
+  right: 0;
+  background: linear-gradient(to bottom, rgb(5, 20, 40) 0%, transparent 8%);
+}
+
+.portfolio #projects h2 {
+  color: rgb(219, 131, 43);
+  font-family: var(--font-familyIII);
+  font-weight: 800;
+  font-size: 2.2rem;
+}
+
+.portfolio #projects p {
+font-family: var(--font-familyII);
+}
+
+.portfolio .touch {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .touch::before,
+.portfolio .touch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.portfolio .touch::before {
+  left: 0;
+  background: linear-gradient(to top, rgb(5, 20, 40) 0%, transparent 8%);
+}
+
+.portfolio .touch::after {
+  right: 0;
+  background: linear-gradient(to bottom, rgb(5, 20, 40) 0%, transparent 8%);
+}
+
+.portfolio .touch h2 {
+  color: rgb(219, 131, 43);
+  font-family: var(--font-familyIII);
+  font-weight: 800;
+  font-size: 2.2rem;
+}
+
+.portfolio .touch p {
+font-family: var(--font-familyII);
+}
+
+.portfolio .touch a {
+font-family: var(--font-familyII);
+font-weight: 700;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(5, 0, 47) rgb(1, 108, 120);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: inherit;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(5, 0, 47);
+    border-radius: 20px;
+    border: 3px solid rgb(5, 0, 47);
+}
