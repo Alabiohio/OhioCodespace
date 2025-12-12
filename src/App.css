@@ -13,7 +13,7 @@
 }
 
 #brImg {
-    background: rgba(125, 125, 125, 1) url("https://ohiocodespace.vercel.app/asset/DCIM/ogImg.jpeg") no-repeat center center/cover;
+    background: rgba(125, 125, 125, 1) url("https://ohiocodespace.vercel.app/ogImg.jpeg") no-repeat center center/cover;
     height: 100vh;
     background-blend-mode: multiply;
 }
@@ -172,13 +172,6 @@
     background-blend-mode: multiply;
 }
 
-.serSec .ser:nth-child(1) {
-    background: rgba(0, 0, 0, 0.5) url("https://ohiocodespace.vercel.app/asset/DCIM/brLgII.jpeg") no-repeat center;
-}
-
-.serSec .ser:nth-child(2) {
-    background: rgba(0, 0, 0, 0.5) url("https://ohiocodespace.vercel.app/asset/DCIM/boost.jpeg") no-repeat center;
-}
 
 .bottomBtnSec {
     padding: 2rem;
