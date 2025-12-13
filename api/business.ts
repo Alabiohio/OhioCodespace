@@ -25,7 +25,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
       <meta name="twitter:image" content="${ogImage}" />
 
       <!-- Instant Redirect to React Page -->
-      <meta http-equiv="refresh" content="0; url=/business" />
+      <meta http-equiv="refresh" content="0; url=https://ohiocodespace.vercel.app/business" />
       <title>${ogTitle}</title>
     </head>
     <body></body>
