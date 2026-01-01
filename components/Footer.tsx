@@ -54,10 +54,6 @@ const Footer: React.FC<FooterProps> = ({ linkTo = "/business", linkText = "Busin
                     <p className="text-gray-500 text-sm">
                         &copy; {new Date().getFullYear()} Ohio Codespace. All rights reserved.
                     </p>
-                    <div className="flex gap-6">
-                        <Link href="/privacy" className="text-gray-500 hover:text-gray-300 text-sm">Privacy</Link>
-                        <Link href="/terms" className="text-gray-500 hover:text-gray-300 text-sm">Terms</Link>
-                    </div>
                 </div>
             </div>
         </footer>

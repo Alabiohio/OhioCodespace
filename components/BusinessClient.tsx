@@ -234,7 +234,7 @@ const BusinessClient: React.FC = () => {
                                     ].map((stat, i) => (
                                         <div key={i} className="p-6 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-sm text-center">
                                             <FontAwesomeIcon icon={stat.icon} className="text-accent text-2xl mb-3" data-aos="fade-left" data-aos-duration="1200" />
-                                            <div className="text-3xl font-black text-white mb-1" data-aos="zoom-out" data-aos-duration="1400">{stat.value}</div>
+                                            <div className="text-2xl font-black text-white mb-1" data-aos="zoom-out" data-aos-duration="1400">{stat.value}</div>
                                             <div className="text-xs text-gray-500 uppercase tracking-wider" data-aos="fade-up" data-aos-duration="1600">{stat.label}</div>
                                         </div>
                                     ))}
