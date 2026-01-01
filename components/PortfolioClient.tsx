@@ -231,7 +231,7 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                     title: "Core Technologies",
                                     aosTitle: "fade-left",
                                     aosDuration: "1000",
-                                    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "JavaScript", "HTML", "CSS", "Foundation 6", "Bootstrap", "PostgreSQL"],
+                                    skills: ["React", "Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "JavaScript", "HTML", "CSS", "Foundation 6", "Bootstrap"],
                                     accent: "bg-accent/5"
                                 },
                                 {
