@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
                         <div className="absolute -inset-1 bg-gradient-to-r from-accent to-secondary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                         <Image src={hdIc} alt="Ohio Codespace" className="relative h-10 w-10 object-contain" />
                     </div>
-                    <span className="text-2xl font-bold text-white tracking-tight">
+                    <span className="text-2xl font-bold text-foreground tracking-tight">
                         OHIO<span className="text-accent">Codespace</span>
                     </span>
                 </div>
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
                 <div className="hidden md:flex gap-8 items-center">
                     <NavLink
                         href="/"
-                        className="text-gray-300 hover:text-accent font-medium transition-colors px-3 py-1.5 rounded-lg"
+                        className="text-muted-foreground hover:text-accent font-medium transition-colors px-3 py-1.5 rounded-lg"
                         activeClassName="!text-accent font-bold !bg-accent/20"
                     >
                         Home
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
 
                     <NavLink
                         href="/portfolio"
-                        className="text-gray-300 hover:text-accent font-medium transition-colors px-3 py-1.5 rounded-lg"
+                        className="text-muted-foreground hover:text-accent font-medium transition-colors px-3 py-1.5 rounded-lg"
                         activeClassName="!text-accent font-bold !bg-accent/20"
                     >
                         Portfolio
@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
 
                     <NavLink
                         href="/business"
-                        className="text-gray-300 hover:text-accent font-medium transition-colors px-3 py-1.5 rounded-lg"
+                        className="text-muted-foreground hover:text-accent font-medium transition-colors px-3 py-1.5 rounded-lg"
                         activeClassName="!text-accent font-bold !bg-accent/20"
                     >
                         Business Solutions
@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
                     >
                         <FontAwesomeIcon
                             icon={isOpen ? faXmark : faBarsStaggered}
-                            className={`text-xl transition-all duration-300 ${isOpen ? "rotate-90 text-accent" : "text-white"}`}
+                            className={`text-xl transition-all duration-300 ${isOpen ? "rotate-90 text-accent" : "text-foreground"}`}
                         />
                     </button>
                 </div>
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
                     <NavLink
                         href="/"
                         onClick={() => setIsOpen(false)}
-                        className="block text-xl text-gray-300 py-3 px-4 transition-all duration-300 rounded-xl"
+                        className="block text-xl text-muted-foreground py-3 px-4 transition-all duration-300 rounded-xl"
                         activeClassName="text-accent font-bold bg-accent/10 border-l-4 border-accent"
                     >
                         Home
@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
                     <NavLink
                         href="/portfolio"
                         onClick={() => setIsOpen(false)}
-                        className="block text-xl text-gray-300 py-3 px-4 transition-all duration-300 rounded-xl"
+                        className="block text-xl text-muted-foreground py-3 px-4 transition-all duration-300 rounded-xl"
                         activeClassName="text-accent font-bold bg-accent/10 border-l-4 border-accent"
                     >
                         Portfolio
@@ -112,7 +112,7 @@ const Navbar: React.FC = () => {
                     <NavLink
                         href="/business"
                         onClick={() => setIsOpen(false)}
-                        className="block text-xl text-gray-300 py-3 px-4 transition-all duration-300 rounded-xl"
+                        className="block text-xl text-muted-foreground py-3 px-4 transition-all duration-300 rounded-xl"
                         activeClassName="text-accent font-bold bg-accent/10 border-l-4 border-accent"
                     >
                         Business Solutions

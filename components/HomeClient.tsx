@@ -146,7 +146,7 @@ const HomeClient: React.FC = () => {
                         </div>
 
                         <h1 className="text-6xl md:text-8xl font-black mb-8 tracking-tighter leading-none" data-aos="zoom-out" data-aos-duration="1000">
-                            <span className="block text-white">Building</span>
+                            <span className="block text-foreground">Building</span>
                             <span
                                 className="bg-gradient-to-r from-accent via-secondary to-accent bg-[length:200%_auto] animate-gradient-x bg-clip-text text-transparent italic font-serif"
                                 style={{ fontFamily: "var(--font-familyIII)" }}
@@ -155,9 +155,9 @@ const HomeClient: React.FC = () => {
                             </span>
                         </h1>
 
-                        <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed font-light" data-aos="fade-up" data-aos-duration="1000">
+                        <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-light" data-aos="fade-up" data-aos-duration="1000">
                             Ohio Codespace creates
-                            <span className="text-white font-medium"> fast, responsive, and conversion-focused websites </span>
+                            <span className="text-foreground font-medium"> fast, responsive, and conversion-focused websites </span>
                             for businesses and creators who want to stand out online. Every project is built with performance,
                             clarity, and growth in mind.
                         </p>
@@ -171,7 +171,7 @@ const HomeClient: React.FC = () => {
                                     data-aos-duration="1000"
                                     className={`group px-10 py-5 rounded-2xl font-bold transition-all text-center flex items-center justify-center gap-3 text-lg hover:scale-105 active:scale-95 hover:-translate-y-0.5 ${btn.primary
                                         ? "bg-accent text-accent-foreground shadow-2xl shadow-accent/30 hover:shadow-accent/40"
-                                        : "bg-white/5 border border-white/10 text-white hover:bg-white/10 backdrop-blur-sm"
+                                        : "bg-foreground/5 border border-foreground/10 text-foreground hover:bg-foreground/10 backdrop-blur-sm"
                                         }`}
                                 >
                                     <FontAwesomeIcon
@@ -199,7 +199,7 @@ const HomeClient: React.FC = () => {
                 </section>
 
                 {/* Interactive Services Grid: Performance Optimized Design */}
-                <section id="services" className="py-32 px-4 relative z-10 overflow-hidden bg-black">
+                <section id="services" className="py-32 px-4 relative z-10 overflow-hidden bg-background">
                     {/* Layered Background Glows- Optimized */}
                     <div className="absolute inset-0 z-0">
                         <div className="absolute -top-24 -left-24 w-[500px] h-[500px] bg-indigo-500/5 rounded-full" />
@@ -216,9 +216,9 @@ const HomeClient: React.FC = () => {
                                 Our Solutions
                             </div>
                             <h2 className="text-5xl md:text-6xl font-black mb-8 tracking-tighter" data-aos="zoom-out" data-aos-duration="1000">
-                                Strategic <span className="text-white">Expertise</span> for the <span className="text-accent italic font-serif" style={{ fontFamily: 'var(--font-familyIII)' }}>Modern</span> Web
+                                Strategic <span className="text-foreground">Expertise</span> for the <span className="text-accent italic font-serif" style={{ fontFamily: 'var(--font-familyIII)' }}>Modern</span> Web
                             </h2>
-                            <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-duration="1000">
+                            <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-duration="1000">
                                 We combine technical excellence with creative strategy to build digital ecosystems that outperform the competition.
                             </p>
                         </div>
@@ -235,11 +235,11 @@ const HomeClient: React.FC = () => {
                                         <FontAwesomeIcon icon={service.icon} className="text-2xl group-hover:scale-110 transition-transform duration-500" />
                                     </div>
 
-                                    <h4 className="text-2xl font-bold mb-4 text-white group-hover:text-accent transition-colors">
+                                    <h4 className="text-2xl font-bold mb-4 text-foreground group-hover:text-accent transition-colors">
                                         {service.title}
                                     </h4>
 
-                                    <p className="text-gray-400 leading-relaxed mb-8 flex-grow">
+                                    <p className="text-muted-foreground leading-relaxed mb-8 flex-grow">
                                         {service.description}
                                     </p>
 
@@ -272,7 +272,7 @@ const HomeClient: React.FC = () => {
                             </h3>
 
 
-                            <p className="text-xl text-gray-400 mb-10 leading-relaxed font-light" data-aos="fade-up" data-aos-duration="1000">
+                            <p className="text-xl text-muted-foreground mb-10 leading-relaxed font-light" data-aos="fade-up" data-aos-duration="1000">
                                 We build custom, high-performance websites designed to convert and deliver results. Each site focuses on clean design, fast performance, and a seamless user experience.
                             </p>
 
@@ -283,11 +283,11 @@ const HomeClient: React.FC = () => {
                                     { title: "Blazing Performance", desc: "Lightning-fast load times across all devices.", aosHead: "zoom-in", durationHead: 1000, aosDesc: "fade-left", durationDesc: 1000 }
                                 ].map((item, i) => (
                                     <div key={i} className="space-y-2">
-                                        <h4 className="text-white font-bold flex items-center gap-2" data-aos={item.aosHead} data-aos-duration={item.durationHead}>
+                                        <h4 className="text-foreground font-bold flex items-center gap-2" data-aos={item.aosHead} data-aos-duration={item.durationHead}>
                                             <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                                             {item.title}
                                         </h4>
-                                        <p className="text-sm text-gray-500" data-aos={item.aosDesc} data-aos-duration={item.durationDesc}>{item.desc}</p>
+                                        <p className="text-sm text-muted-foreground" data-aos={item.aosDesc} data-aos-duration={item.durationDesc}>{item.desc}</p>
                                     </div>
                                 ))}
                             </div>
@@ -295,7 +295,7 @@ const HomeClient: React.FC = () => {
 
                             <Link
                                 href="/portfolio"
-                                className="group inline-flex items-center gap-4 px-8 py-4 bg-white/5 border border-white/10 rounded-2xl text-white font-bold hover:bg-white/10 transition-all overflow-hidden relative"
+                                className="group inline-flex items-center gap-4 px-8 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground font-bold hover:bg-foreground/10 transition-all overflow-hidden relative"
                             >
                                 <span className="relative z-10">Learn More</span>
                                 <FontAwesomeIcon icon={faArrowRight} className="relative z-10 group-hover:translate-x-2 transition-transform" />
@@ -308,7 +308,7 @@ const HomeClient: React.FC = () => {
                             <div
                                 data-aos="zoom-in"
                                 data-aos-duration="800"
-                                className="md:col-span-2 md:row-span-2 relative p-8 rounded-[2.5rem] bg-gradient-to-br from-white/[0.05] to-transparent border border-white/10 overflow-hidden group"
+                                className="md:col-span-2 md:row-span-2 relative p-8 rounded-[2.5rem] bg-gradient-to-br from-foreground/[0.05] to-transparent border border-foreground/10 overflow-hidden group"
                             >
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 blur-3xl -mr-32 -mt-32" />
                                 <div className="relative z-10 h-full flex flex-col justify-between">
@@ -316,8 +316,8 @@ const HomeClient: React.FC = () => {
                                         <FontAwesomeIcon icon={faPalette} size="2x" />
                                     </div>
                                     <div>
-                                        <h4 className="text-3xl font-bold text-white mb-4 transition-colors group-hover:text-accent">Uncompromising Premium UI</h4>
-                                        <p className="text-gray-400 leading-relaxed">
+                                        <h4 className="text-3xl font-bold text-foreground mb-4 transition-colors group-hover:text-accent">Uncompromising Premium UI</h4>
+                                        <p className="text-muted-foreground leading-relaxed">
                                             Custom interfaces designed for clarity, elegance, and seamless user interaction—setting a high standard for modern web experiences.
                                         </p>                                    </div>
                                 </div>
@@ -327,10 +327,10 @@ const HomeClient: React.FC = () => {
                             <div
                                 data-aos="fade-up"
                                 data-aos-delay="200"
-                                className="relative p-6 rounded-[2.5rem] bg-white/[0.03] border border-white/10 flex flex-col items-center justify-center text-center group hover:bg-white/[0.06] transition-all"
+                                className="relative p-6 rounded-[2.5rem] bg-foreground/[0.03] border border-foreground/10 flex flex-col items-center justify-center text-center group hover:bg-foreground/[0.06] transition-all"
                             >
                                 <FontAwesomeIcon icon={faChartLine} className="text-emerald-400 text-3xl mb-4 group-hover:scale-110 transition-transform" />
-                                <span className="font-bold text-white block">SEO Excellence</span>
+                                <span className="font-bold text-foreground block">SEO Excellence</span>
                                 <span className="text-xs text-emerald-400/60 mt-1 uppercase tracking-widest font-mono">+420% Increased Visibility</span>
                             </div>
 
@@ -356,14 +356,14 @@ const HomeClient: React.FC = () => {
                             <div
                                 data-aos="fade-up"
                                 data-aos-delay="400"
-                                className="md:col-span-2 relative p-6 rounded-[2.5rem] bg-white/[0.03] border border-white/10 flex items-center gap-6 px-10 hover:bg-white/[0.06] transition-all group"
+                                className="md:col-span-2 relative p-6 rounded-[2.5rem] bg-foreground/[0.03] border border-foreground/10 flex items-center gap-6 px-10 hover:bg-foreground/[0.06] transition-all group"
                             >
                                 <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
                                     <FontAwesomeIcon icon={faTachometerAlt} />
                                 </div>
                                 <div className="flex-grow">
-                                    <span className="font-bold text-white block">Accelerated Delivery</span>
-                                    <span className="text-sm text-gray-500">Transform your ideas into production-ready websites quickly and efficiently.</span>                                </div>
+                                    <span className="font-bold text-foreground block">Accelerated Delivery</span>
+                                    <span className="text-sm text-muted-foreground">Transform your ideas into production-ready websites quickly and efficiently.</span>                                </div>
                             </div>
                         </div>
                     </div>
@@ -374,7 +374,7 @@ const HomeClient: React.FC = () => {
                 {/* Final CTA: Impact Split Design */}
                 <section className="py-24 px-4 bg-background relative">
                     <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none" />
-                    <div className="max-w-7xl mx-auto overflow-hidden rounded-[3rem] border border-white/5 bg-gradient-to-r from-accent/10 to-transparent">
+                    <div className="max-w-7xl mx-auto overflow-hidden rounded-[3rem] border border-foreground/5 bg-gradient-to-r from-accent/10 to-transparent">
                         <div className="grid grid-cols-1">
                             {/* Left: Message & Action */}
                             <div className="p-12 md:p-20 flex flex-col justify-center items-start text-left relative overflow-hidden">
@@ -398,7 +398,7 @@ const HomeClient: React.FC = () => {
                                         Ready to Elevate <span className="block text-accent">Your Brand?</span>
                                     </h2>
 
-                                    <p className="text-xl text-gray-400 mb-12 max-w-lg leading-relaxed">
+                                    <p className="text-xl text-muted-foreground mb-12 max-w-lg leading-relaxed">
                                         Transform your online presence with websites designed to captivate, convert, and scale your business effortlessly.
                                     </p>
 
@@ -412,7 +412,7 @@ const HomeClient: React.FC = () => {
                                         </a>
                                         <Link
                                             href="/business"
-                                            className="px-10 py-5 bg-white/5 border border-white/10 text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all text-center backdrop-blur-sm"
+                                            className="px-10 py-5 bg-foreground/5 border border-foreground/10 text-foreground rounded-2xl font-bold text-lg hover:bg-foreground/10 transition-all text-center backdrop-blur-sm"
                                         >
                                             Solutions Deck
                                         </Link>

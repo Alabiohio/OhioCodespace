@@ -58,13 +58,13 @@ const SkillBadge: React.FC<SkillBadgeProps> = ({ name, large }) => {
                 ) : (
                     <FontAwesomeIcon icon={icon} className="text-4xl md:text-7xl text-accent group-hover:scale-110 transition-all duration-500 mb-4" />
                 )}
-                <span className="text-xs md:text-sm font-bold text-gray-400 group-hover:text-white transition-colors tracking-widest uppercase" data-aos="fade-left" data-aos-duration="1600">{name}</span>
+                <span className="text-xs md:text-sm font-bold text-muted-foreground group-hover:text-foreground transition-colors tracking-widest uppercase" data-aos="fade-left" data-aos-duration="1600">{name}</span>
             </div>
         );
     }
 
     return (
-        <span className="flex items-center gap-2.5 px-4 py-2 bg-white/5 text-gray-300 rounded-xl text-sm font-medium transition-all hover:bg-accent/10 hover:text-white group" data-aos="fade-up" data-aos-duration="1600">
+        <span className="flex items-center gap-2.5 px-4 py-2 bg-foreground/5 text-muted-foreground rounded-xl text-sm font-medium transition-all hover:bg-accent/10 hover:text-foreground group" data-aos="fade-up" data-aos-duration="1600">
             {isUrl ? (
                 <img src={icon} alt={name} className="w-5 h-5 object-contain group-hover:scale-110 transition-transform" data-aos="fade-up" data-aos-duration="1600" />
             ) : (

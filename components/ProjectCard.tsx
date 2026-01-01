@@ -22,8 +22,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imgUrl, s
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             <div className="p-8">
-                <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-accent transition-colors" data-aos="fade-up" data-aos-duration="1200">{title}</h3>
-                <p className="text-gray-400 mb-6 leading-relaxed line-clamp-3" data-aos="fade-up" data-aos-duration="1400">{description}</p>
+                <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-accent transition-colors" data-aos="fade-up" data-aos-duration="1200">{title}</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed line-clamp-3" data-aos="fade-up" data-aos-duration="1400">{description}</p>
                 {skillsUsed && skillsUsed.length > 0 && (
                     <div className="flex flex-wrap gap-2" data-aos="fade-up" data-aos-duration="1600">
                         {skillsUsed.map((skill, index) => (

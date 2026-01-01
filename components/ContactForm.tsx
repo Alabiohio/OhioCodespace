@@ -34,52 +34,52 @@ const ContactForm: React.FC = () => {
                         Get In Touch
                     </div>
                     <h2 className="text-5xl md:text-6xl font-black mb-6 tracking-tighter" data-aos="zoom-out">
-                        Let's Start a <span className="text-white italic font-serif" style={{ fontFamily: 'var(--font-familyIII)' }}>Conversation</span>
+                        Let's Start a <span className="text-foreground italic font-serif" style={{ fontFamily: 'var(--font-familyIII)' }}>Conversation</span>
                     </h2>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed" data-aos="fade-up">
+                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed" data-aos="fade-up">
                         Interested in collaborating or have a question? Kindly send a message.
                     </p>
                 </div>
 
                 <div
-                    className="glass-card p-8 md:p-12 rounded-[2.5rem] border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl"
+                    className="glass-card p-8 md:p-12 rounded-[2.5rem] border border-foreground/10 bg-foreground/[0.02] backdrop-blur-xl shadow-2xl"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                 >
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label htmlFor="name" className="text-sm font-bold text-gray-400 ml-1 uppercase tracking-widest">Name</label>
+                                <label htmlFor="name" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest">Name</label>
                                 <input
                                     type="text"
                                     id="name"
                                     name="name"
                                     required
-                                    placeholder="John Doe"
-                                    className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-gray-600 focus:outline-none focus:border-accent/50 focus:bg-white/10 transition-all"
+                                    placeholder="Your Name"
+                                    className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label htmlFor="email" className="text-sm font-bold text-gray-400 ml-1 uppercase tracking-widest">Email</label>
+                                <label htmlFor="email" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest">Email</label>
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
                                     required
-                                    placeholder="john@example.com"
-                                    className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-gray-600 focus:outline-none focus:border-accent/50 focus:bg-white/10 transition-all"
+                                    placeholder="Your Email"
+                                    className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all"
                                 />
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <label htmlFor="message" className="text-sm font-bold text-gray-400 ml-1 uppercase tracking-widest">Message</label>
+                            <label htmlFor="message" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest">Message</label>
                             <textarea
                                 id="message"
                                 name="message"
                                 required
                                 rows={5}
-                                placeholder="Tell us about your project..."
-                                className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-gray-600 focus:outline-none focus:border-accent/50 focus:bg-white/10 transition-all resize-none"
+                                placeholder="Write a Message..."
+                                className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all resize-none"
                             ></textarea>
                         </div>
 
@@ -104,8 +104,8 @@ const ContactForm: React.FC = () => {
                         {status && (
                             <div
                                 className={`flex items-center gap-3 p-4 rounded-xl text-sm font-medium animate-fade-in ${status.type === "success"
-                                        ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
-                                        : "bg-rose-500/10 text-rose-400 border border-rose-500/20"
+                                    ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
+                                    : "bg-rose-500/10 text-rose-400 border border-rose-500/20"
                                     }`}
                             >
                                 <FontAwesomeIcon icon={status.type === "success" ? faCheckCircle : faExclamationCircle} />
