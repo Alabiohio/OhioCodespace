@@ -230,7 +230,7 @@ const BusinessClient: React.FC = () => {
                                         { label: "Performance Improvement", value: "3x Faster", icon: faBolt },
                                         { label: "Client Satisfaction", value: "98%", icon: faHandshake },
                                         { label: "Search Visibility", value: "Top Results", icon: faChartLine },
-                                        { label: "Mobile Engagement", value: "+%", icon: faMobileAlt }
+                                        { label: "Mobile Engagement", value: "+80%", icon: faMobileAlt }
                                     ].map((stat, i) => (
                                         <div key={i} className="p-6 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-sm text-center">
                                             <FontAwesomeIcon icon={stat.icon} className="text-accent text-2xl mb-3" data-aos="fade-left" data-aos-duration="1200" />
