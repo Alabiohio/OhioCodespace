@@ -49,36 +49,42 @@ const ContactForm: React.FC = () => {
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label htmlFor="name" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest">Name</label>
+                                <label htmlFor="name" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest" data-aos="fade-left" data-aos-duration="1000">Name</label>
                                 <input
                                     type="text"
                                     id="name"
                                     name="name"
                                     required
                                     placeholder="Your Name"
+                                    data-aos="zoom-in"
+                                    data-aos-duration="1000"
                                     className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label htmlFor="email" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest">Email</label>
+                                <label htmlFor="email" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest" data-aos="fade-right" data-aos-duration="1200">Email</label>
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
                                     required
                                     placeholder="Your Email"
+                                    data-aos="zoom-in"
+                                    data-aos-duration="1200"    
                                     className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all"
                                 />
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <label htmlFor="message" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest">Message</label>
+                            <label htmlFor="message" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest" data-aos="fade-up" data-aos-duration="1400">Message</label>
                             <textarea
                                 id="message"
                                 name="message"
                                 required
                                 rows={5}
                                 placeholder="Write a Message..."
+                                data-aos="zoom-in"
+                                data-aos-duration="1400"
                                 className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all resize-none"
                             ></textarea>
                         </div>
@@ -86,6 +92,8 @@ const ContactForm: React.FC = () => {
                         <button
                             type="submit"
                             disabled={isSubmitting}
+                            data-aos="fade-up"
+                            data-aos-duration="1600"
                             className="group w-full py-5 bg-accent text-accent-foreground rounded-2xl font-bold text-lg shadow-2xl shadow-accent/20 flex items-center justify-center gap-3 transition-all hover:scale-[1.02] active:scale-95 disabled:opacity-70 disabled:hover:scale-100"
                         >
                             {isSubmitting ? (
