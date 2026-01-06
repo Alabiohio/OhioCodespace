@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
@@ -8,6 +9,7 @@ import SkillBadge from "@/components/SkillBadge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import profilePic from "../assets/img/profileImg.png";
 
 // Projects data
 interface Project {
@@ -68,6 +70,16 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                 {/* Mock Developer Card */}
                                 <div className="bg-background/90 p-12 rounded-[2.8rem] space-y-8 relative z-10">
                                     <div className="flex items-center gap-6 mb-8">
+                                        <Image
+                                            src={profilePic}
+                                            alt="Ohiocheoya Alabi"
+                                            width={96}
+                                            height={96}
+                                            style={{ objectFit: 'contain' }}
+                                            className="w-24 h-24 rounded-full border-2 border-accent"
+                                            data-aos="zoom-in"
+                                            data-aos-duration="600"
+                                        />
                                         <div>
                                             <h3 className="text-2xl font-black text-foreground mb-1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="50">Ohiocheoya Alabi</h3>
                                             <p className="text-accent font-mono text-sm" data-aos="fade-left" data-aos-duration="2000">Full-Stack Developer</p>
@@ -308,10 +320,10 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                 className="flex flex-col justify-center"
                             >
                                 <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight" data-aos="zoom-out" data-aos-duration="1600">
-                                    Let's Build Something <span className="text-accent">Amazing</span>
+                                    Let&apos;s Build Something <span className="text-accent">Amazing</span>
                                 </h2>
                                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1600">
-                                    Have a project in mind? Whether it's a new website, a redesign, or custom development work, I'm here to help bring your vision to life.
+                                    Have a project in mind? Whether it&apos;s a new website, a redesign, or custom development work, I&apos;m here to help bring your vision to life.
                                 </p>
 
                                 <div className="space-y-4">
