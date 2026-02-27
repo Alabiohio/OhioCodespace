@@ -20,22 +20,22 @@ const SkillBadge: React.FC<SkillBadgeProps> = ({ name, large }) => {
         const lower = skill.toLowerCase();
 
         // Devicons (CDN)
-        if (lower.includes("react")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg";
-        if (lower.includes("next.js") || lower.includes("nextjs")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg";
-        if (lower.includes("typescript")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg";
-        if (lower.includes("tailwind")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg";
-        if (lower.includes("javascript")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg";
-        if (lower.includes("html")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg";
-        if (lower.includes("css")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg";
-        if (lower.includes("git") && !lower.includes("github")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg";
-        if (lower.includes("github")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg";
-        if (lower.includes("vercel")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg";
-        if (lower.includes("firebase")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg";
-        if (lower.includes("foundation")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/foundation/foundation-original.svg";
-        if (lower.includes("bootstrap")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg";
-        if (lower.includes("postgresql") || lower.includes("postgres")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg";
-        if (lower.includes("figma")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg";
-        if (lower.includes("adobe") || lower.includes("photoshop")) return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg";
+        if (lower.includes("react")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg";
+        if (lower.includes("next.js") || lower.includes("nextjs")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg";
+        if (lower.includes("typescript")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg";
+        if (lower.includes("tailwind")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg";
+        if (lower.includes("javascript")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg";
+        if (lower.includes("html")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg";
+        if (lower.includes("css")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg";
+        if (lower.includes("git") && !lower.includes("github")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg";
+        if (lower.includes("github")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg";
+        if (lower.includes("vercel")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg";
+        if (lower.includes("firebase")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg";
+        if (lower.includes("foundation")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/foundation/foundation-original.svg";
+        if (lower.includes("bootstrap")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg";
+        if (lower.includes("postgresql") || lower.includes("postgres")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg";
+        if (lower.includes("figma")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg";
+        if (lower.includes("adobe") || lower.includes("photoshop")) return "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg";
 
         // FontAwesome Icons (Components)
         if (lower.includes("ui/ux")) return faPalette;

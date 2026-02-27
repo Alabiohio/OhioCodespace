@@ -11,14 +11,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import profilePic from "../assets/img/profileImg.png";
 
-// Projects data
-interface Project {
-    id: number;
-    title: string;
-    description: string;
-    imgUrl: string;
-    skillsUsed: string[];
-}
+import { Project } from "@/types";
 
 interface PortfolioClientProps {
     projects: Project[];
@@ -75,8 +68,8 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                             alt="Ohiocheoya Alabi"
                                             width={96}
                                             height={96}
-                                            style={{ objectFit: 'contain' }}
-                                            className="w-24 h-24 rounded-full border-2 border-accent"
+                                            priority
+                                            className="w-24 h-24 rounded-full border-2 border-accent object-cover shrink-0"
                                             data-aos="zoom-in"
                                             data-aos-duration="600"
                                         />
@@ -92,14 +85,14 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                             { label: "Experience", value: "3+ Years", aosLabel: "fade-left", aosDuration: "1800", },
                                             { label: "Portfolio", value: "15+ Completed", aosLabel: "fade-left", aosDuration: "2000", }
                                         ].map((item, i) => (
-                                            <div key={i} className="flex justify-between items-center p-4 rounded-2xl bg-foreground/5 border border-foreground/5">
+                                            <div key={i} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 rounded-2xl bg-foreground/5 border border-foreground/5 gap-2 sm:gap-0">
                                                 <span className="text-sm text-muted-foreground uppercase tracking-wider" data-aos={item.aosLabel} data-aos-duration={item.aosDuration}>{item.label}</span>
                                                 <span className="font-bold text-foreground" data-aos="fade-right" data-aos-duration={item.aosDuration}>{item.value}</span>
                                             </div>
                                         ))}
                                     </div>
 
-                                    <div className="pt-6 border-t border-foreground/5 flex gap-3">
+                                    <div className="pt-6 border-t border-foreground/5 flex flex-col sm:flex-row gap-3">
                                         <a
                                             href="https://github.com/Alabiohio"
                                             target="_blank"
@@ -191,6 +184,38 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                     </div>
                                 ))}
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Experience Timeline */}
+                <section className="py-24 px-4 bg-background border-t border-foreground/5 relative overflow-hidden">
+                    <div className="max-w-4xl mx-auto relative z-10">
+                        <div className="text-center mb-20">
+                            <h2 className="text-accent font-semibold tracking-widest uppercase text-sm mb-3" data-aos="fade-up" data-aos-duration="1000">My Journey</h2>
+                            <h3 className="text-4xl md:text-5xl font-bold mb-6" data-aos="zoom-out" data-aos-duration="1000">Professional Experience</h3>
+                            <div className="w-20 h-1.5 bg-accent mx-auto rounded-full" data-aos="fade-left" data-aos-duration="1000" />
+                        </div>
+
+                        <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-accent/20 before:to-transparent">
+                            {[
+                                { title: "Freelance Full-Stack Developer", company: "Ohio Codespace", date: "2023 - Present", desc: "Building performant, accessible, and scalable web applications for a variety of businesses and startups." },
+                                { title: "Frontend Developer", company: "Various Clients", date: "2021 - 2023", desc: "Developed responsive landing pages, e-commerce solutions, and digital portfolios, driving increased client engagement." },
+                                { title: "Graphic Designer & Web Consultant", company: "Local Businesses", date: "2020 - 2021", desc: "Helped small businesses establish their initial digital footprint through branding, graphic design, and simple websites." }
+                            ].map((job, index) => (
+                                <div key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-duration="1000">
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-full border border-accent/20 bg-background text-accent shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 ring-4 ring-background z-10 transition-transform duration-500 group-hover:scale-110">
+                                        <div className="w-2 h-2 rounded-full bg-accent"></div>
+                                    </div>
+                                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-8 rounded-3xl bg-foreground/5 border border-foreground/10 hover:border-accent/30 hover:bg-foreground/10 transition-all duration-300 shadow-xl">
+                                        <div className="mb-3">
+                                            <h4 className="font-bold text-xl text-foreground group-hover:text-accent transition-colors">{job.title}</h4>
+                                        </div>
+                                        <div className="text-foreground/70 font-bold mb-4 uppercase text-xs tracking-widest">{job.company}</div>
+                                        <p className="text-muted-foreground text-base leading-relaxed">{job.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -288,20 +313,41 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                 </section>
 
                 {/* Projects Section */}
-                <section id="projects" className="py-24 px-4 bg-accent/5 relative overflow-hidden">
+                <section id="projects" className="py-32 px-4 bg-accent/5 relative overflow-hidden">
                     <div className="max-w-6xl mx-auto">
-                        <div className="text-center mb-16">
+                        <div className="text-center mb-20">
                             <h2 className="text-accent font-semibold tracking-widest uppercase text-sm mb-3" data-aos="fade-up" data-aos-duration="1600">Selected Works</h2>
-                            <h3 className="text-4xl md:text-5xl font-bold mb-6" data-aos="zoom-out" data-aos-duration="1600">Proven Digital Success</h3>
+                            <h3 className="text-4xl md:text-5xl font-bold mb-6" data-aos="zoom-out" data-aos-duration="1600">Featured Case Studies</h3>
                             <div className="w-20 h-1.5 bg-accent mx-auto rounded-full" data-aos="fade-left" data-aos-duration="1600" />
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12">
-                            {projects.map((project, index) => (
+                        {/* Featured Projects - Big Cards */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-24">
+                            {projects.filter(p => p.isFeatured).map((project, index) => (
                                 <div
                                     key={project.id}
                                     data-aos="fade-up"
                                     data-aos-delay={index * 100}
+                                    data-aos-duration="1200"
+                                >
+                                    <ProjectCard {...project} />
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Other Projects - Smaller Grid */}
+                        <div className="text-center mb-16">
+                            <h3 className="text-2xl md:text-3xl font-bold text-foreground/90" data-aos="zoom-out" data-aos-duration="1200">Other Notable Projects</h3>
+                            <div className="w-12 h-1 bg-foreground/10 mx-auto mt-6 rounded-full" data-aos="fade-up" />
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                            {projects.filter(p => !p.isFeatured).map((project, index) => (
+                                <div
+                                    key={project.id}
+                                    data-aos="fade-up"
+                                    data-aos-delay={index * 50}
+                                    data-aos-duration="1000"
                                 >
                                     <ProjectCard {...project} />
                                 </div>

@@ -1,55 +1,6 @@
 import type { Metadata } from "next";
 import PortfolioClient from "@/components/PortfolioClient";
-import lizzysunique from '@/assets/img/lizzysunique.png';
-import lexa from '@/assets/img/lexa.png';
-import unibenClearance from '@/assets/img/uniben-clearance.png';
-import destinyArt from '@/assets/img/destiny-art.png';
-import engineBlog from '@/assets/img/engineBlog.png';
-
-// Projects data
-const projects = [
-    {
-        id: 5,
-        title: "Engine Blog",
-        description:
-            "Engine Blog is a modern, dynamic web platform designed to keep engineering students updated with campus news, academic resources, and opportunities. Built with a focus on speed, aesthetics, and user experience.",
-        imgUrl: engineBlog.src,
-        skillsUsed: ["React", "Next.js", "Typescript", "Tailwind CSS", "PostgreSQL", "Responsive Design", "UI/UX"],
-    },
-    {
-        id: 4,
-        title: "Lexa",
-        description:
-            "AI-powered chatbot web app built with React and Node.js, featuring text & image inputs, real-time responses, web search integration, and interactive user interface.",
-        imgUrl: lexa.src,
-        skillsUsed: ["React", "JavaScript", "PostgreSQL", "Node.js", "Foundation 6", "CSS", "APIs", "Web Search Integration"],
-    },
-    {
-        id: 3,
-        title: "Lizzy's Unique Palate Website",
-        description:
-            "Foundation 6 website for a pastry & event planning business featuring a custom full-screen gallery, smooth animations, and a secure contact form integrated with Formspree.",
-        imgUrl: lizzysunique.src,
-        skillsUsed: ["HTML", "CSS", "Foundation 6", "JavaScript", "Formspree", "SEO"],
-    },
-    
-    {
-        id: 2,
-        title: "UNIBEN Clearance Assistant",
-        description:
-            "Web platform designed to assist 100-level UNIBEN students with the clearance process, offering user-friendly navigation, responsive design, and simplified administrative steps.",
-        imgUrl: unibenClearance.src,
-        skillsUsed: ["HTML", "CSS", "Foundation 6", "JavaScript", "Responsive Design", "UI/UX"],
-    },
-    {
-        id: 1,
-        title: "Destiny Art Website",
-        description:
-            "Foundation 6 website for an art business, featuring a responsive portfolio gallery, smooth image animations, SEO optimization, and fast page load performance.",
-        imgUrl: destinyArt.src,
-        skillsUsed: ["HTML", "CSS", "Foundation 6", "JavaScript", "SEO"],
-    },
-];
+import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
     title: "Ohiocheoya Alabi - Portfolio",
