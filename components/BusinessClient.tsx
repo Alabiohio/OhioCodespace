@@ -49,7 +49,7 @@ const BusinessClient: React.FC = () => {
                                 <span className="text-accent font-bold tracking-widest uppercase text-xs" data-aos="fade-left" data-aos-duration="1200">Business Optimization</span>
                             </div>
 
-                            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter" data-aos="zoom-out" data-aos-duration="1400">
+                            <h1 className="text-5xl md:text-7xl font-acme font-black mb-8 leading-[1.1] tracking-tighter" data-aos="zoom-out" data-aos-duration="1400">
                                 Driving <span className="text-foreground">Business Growth</span> with <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">Smart Websites</span>
                             </h1>
 
@@ -156,9 +156,9 @@ const BusinessClient: React.FC = () => {
                             <h2
                                 data-aos="zoom-out"
                                 data-aos-delay="100"
-                                className="text-5xl md:text-6xl font-black mb-6 tracking-tight"
+                                className="text-5xl md:text-6xl font-acme font-black mb-6 tracking-tight"
                             >
-                                How We <span className="text-accent italic font-serif" style={{ fontFamily: 'var(--font-familyIII)' }}>Measure</span> Growth
+                                How We <span className="text-accent italic font-nova" style={{ fontFamily: 'var(--font-familyIII)' }}>Measure</span> Growth
                             </h2>
                             <p
                                 data-aos="fade-up"

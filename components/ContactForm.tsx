@@ -14,15 +14,103 @@ const ContactForm: React.FC = () => {
         setIsSubmitting(true);
         setStatus(null);
 
-        const formData = new FormData(event.currentTarget);
-        const result = await sendContactMessage(formData);
+        const form = event.currentTarget;
+        const formData = new FormData(form);
 
-        setIsSubmitting(false);
-        if (result.error) {
-            setStatus({ type: "error", message: result.error });
-        } else {
-            setStatus({ type: "success", message: result.success || "Message sent!" });
-            (event.target as HTMLFormElement).reset();
+        try {
+            // Send to Supabase (via Server Action)
+            const result = await sendContactMessage(formData);
+
+            if (result.error) {
+                setStatus({ type: "error", message: result.error });
+                setIsSubmitting(false);
+                return;
+            }
+
+            // ── EmailJS Configuration ──────────────────────────────────────
+            const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+            const adminTemplateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+            const autoReplyTemplateId = process.env.NEXT_PUBLIC_EMAILJS_AUTO_REPLY_TEMPLATE_ID;
+            const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+            if (!serviceId || !adminTemplateId || !publicKey) {
+                console.error("EmailJS Configuration Missing:", { serviceId, adminTemplateId, publicKey });
+                throw new Error("EmailJS configuration is incomplete.");
+            }
+
+            const emailjs = (await import("@emailjs/browser")).default;
+
+            const userEmail = formData.get("email") as string;
+            const name = formData.get("name") as string;
+            const message = formData.get("message") as string;
+
+            const sentAt = new Date().toLocaleString("en-US", {
+                weekday: "long", year: "numeric", month: "long",
+                day: "numeric", hour: "2-digit", minute: "2-digit", timeZoneName: "short",
+            });
+
+            // 1️⃣  Notify admin (ohiocodespace@gmail.com)
+            const adminParams = {
+                // Routing
+                to_email: "ohiocodespace@gmail.com",
+                reply_to: userEmail,               // ← Hit "Reply" in Gmail to respond directly
+                // Content
+                from_name: name,
+                to_name: "Ohio Codespace",
+                subject: `New Contact Message from ${name}`,
+                message,
+                type: "General Contact",
+                // Meta
+                user_email: userEmail,
+                sent_at: sentAt,
+                site_name: "Ohio Codespace",
+                // Legacy aliases (in case template references these)
+                name,
+                email: "ohiocodespace@gmail.com",
+                title: `New Contact Message from ${name}`,
+            };
+            await emailjs.send(serviceId, adminTemplateId, adminParams, publicKey);
+
+            // 2️⃣  Send confirmation / auto-reply back to the user
+            if (autoReplyTemplateId) {
+                const userParams = {
+                    // Routing
+                    to_email: userEmail,
+                    reply_to: "ohiocodespace@gmail.com",
+                    // Content
+                    from_name: "Ohio Codespace",
+                    to_name: name,
+                    subject: "We received your message – Ohio Codespace",
+                    message,
+                    type: "General Contact",
+                    // Meta
+                    user_email: userEmail,
+                    sent_at: sentAt,
+                    site_name: "Ohio Codespace",
+                    // Legacy aliases
+                    name,
+                    email: userEmail,
+                    title: "your message!",
+                };
+                await emailjs.send(serviceId, autoReplyTemplateId, userParams, publicKey);
+            } else {
+                console.warn("Auto-reply template ID not configured. Skipping confirmation email.");
+            }
+
+            setStatus({ type: "success", message: result.success || "Message sent successfully!" });
+            form.reset();
+        } catch (error: any) {
+            console.error("Detailed EmailJS Error:", {
+                message: error?.message,
+                status: error?.status,
+                text: error?.text,
+                fullError: error
+            });
+            // Even if EmailJS fails, the data is already in Supabase.
+            setStatus({ type: "success", message: "Message received! Our team will get back to you soon." });
+            form.reset();
+        } finally {
+            setIsSubmitting(false);
         }
     }
 
@@ -33,8 +121,8 @@ const ContactForm: React.FC = () => {
                     <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-bold uppercase tracking-[0.2em]" data-aos="fade-down">
                         Get In Touch
                     </div>
-                    <h2 className="text-5xl md:text-6xl font-black mb-6 tracking-tighter" data-aos="zoom-out">
-                        Let's Start a <span className="text-foreground italic font-serif" style={{ fontFamily: 'var(--font-familyIII)' }}>Conversation</span>
+                    <h2 className="text-5xl md:text-6xl font-acme font-black mb-6 tracking-tighter" data-aos="zoom-out">
+                        Let's Start a <span className="text-foreground italic font-nova" style={{ fontFamily: 'var(--font-familyIII)' }}>Conversation</span>
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed" data-aos="fade-up">
                         Interested in collaborating or have a question? Kindly send a message.
@@ -70,7 +158,7 @@ const ContactForm: React.FC = () => {
                                     required
                                     placeholder="Your Email"
                                     data-aos="zoom-in"
-                                    data-aos-duration="1200"    
+                                    data-aos-duration="1200"
                                     className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all"
                                 />
                             </div>

@@ -27,11 +27,11 @@ const Navbar: React.FC = () => {
                 {/* Logo */}
                 <div className="flex items-center gap-3">
                     <div className="relative group">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-accent to-secondary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                        <div className="absolute -inset-1 rounded-full blur opacity-25"></div>
                         <Image src={hdIc} alt="Ohio Codespace" className="relative h-10 w-10 object-contain" />
                     </div>
-                    <span className="text-2xl font-bold text-foreground tracking-tight">
-                        OHIO<span className="text-accent">Codespace</span>
+                    <span className="text-2xl font-acme font-bold text-foreground tracking-tight">
+                        OHIO<span className="text-accent"> Codespace</span>
                     </span>
                 </div>
 
@@ -59,6 +59,14 @@ const Navbar: React.FC = () => {
                         activeClassName="!text-accent font-bold !bg-accent/20"
                     >
                         Business Solutions
+                    </NavLink>
+
+                    <NavLink
+                        href="/inquiry"
+                        className="text-muted-foreground hover:text-accent font-medium transition-colors px-3 py-1.5 rounded-lg"
+                        activeClassName="!text-accent font-bold !bg-accent/20"
+                    >
+                        Inquiry
                     </NavLink>
 
                     <a
@@ -116,6 +124,15 @@ const Navbar: React.FC = () => {
                         activeClassName="text-accent font-bold bg-accent/10 border-l-4 border-accent"
                     >
                         Business Solutions
+                    </NavLink>
+
+                    <NavLink
+                        href="/inquiry"
+                        onClick={() => setIsOpen(false)}
+                        className="block text-xl text-muted-foreground py-3 px-4 transition-all duration-300 rounded-xl"
+                        activeClassName="text-accent font-bold bg-accent/10 border-l-4 border-accent"
+                    >
+                        Inquiry
                     </NavLink>
 
                     <a

@@ -74,7 +74,7 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                             data-aos-duration="600"
                                         />
                                         <div>
-                                            <h3 className="text-2xl font-black text-foreground mb-1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="50">Ohiocheoya Alabi</h3>
+                                            <h3 className="text-2xl font-acme font-black text-foreground mb-1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="50">Ohiocheoya Alabi</h3>
                                             <p className="text-accent font-mono text-sm" data-aos="fade-left" data-aos-duration="2000">Full-Stack Developer</p>
                                         </div>
                                     </div>
