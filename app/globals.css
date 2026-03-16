@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Acme&family=Nova+Slim&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -11,20 +10,23 @@
   --secondary: #0ea5e9;
   --secondary-rgb: 14, 165, 233;
   --card-bg: rgba(30, 41, 59, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-bg-hover: rgba(255, 255, 255, 0.06);
   --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-hover: rgba(16, 185, 129, 0.4);
   --border-color: rgba(255, 255, 255, 0.1);
   --fade-color: rgb(5, 20, 40);
-  --font-familyI: "Sansation", sans-serif;
-  --font-familyII: "Acme", sans-serif;
-  --font-familyIII: "Nova Slim", cursive;
-  --font-familyIV: "Sansation", sans-serif;
-  --font-sansation: "Sansation", sans-serif;
-  --font-acme: "Acme", sans-serif;
-  --font-nova: "Nova Slim", cursive;
-  --brImg-overlay: rgba(15, 23, 42, 0.85);
-  --introColor: #10b981;
-  --heroBg: #0f172a;
-  --btn1BgColor: #10b981;
+  
+  /* Font Variable Bridging (Leveraging Next.js Font Loader) */
+  --font-familyI: var(--font-exo);
+  --font-familyII: var(--font-righteous);
+  --font-familyIII: var(--font-bree);
+  --font-familyIV: var(--font-exo);
+
+  /* Tailwind CSS v4 Font Utilities Mapping */
+  --font-acme: var(--font-righteous);
+  --font-nova: var(--font-bree);
+  --font-sansation: var(--font-exo);
 }
 
 @theme inline {
@@ -34,11 +36,10 @@
   --color-accent: var(--accent);
   --color-secondary: var(--secondary);
   --color-card-bg: var(--card-bg);
+  --color-glass-bg: var(--glass-bg);
+  --color-glass-bg-hover: var(--glass-bg-hover);
   --color-glass-border: var(--glass-border);
-  --font-sans: var(--font-sansation);
-  --font-acme: var(--font-acme);
-  --font-nova: var(--font-nova);
-  --font-sansation: var(--font-sansation);
+  --color-glass-border-hover: var(--glass-border-hover);
 }
 
 @media (prefers-color-scheme: light) {
@@ -47,7 +48,10 @@
     --foreground: #0f172a;
     --muted-foreground: #64748b;
     --card-bg: rgba(255, 255, 255, 0.8);
-    --glass-border: rgba(0, 0, 0, 0.1);
+    --glass-bg: rgba(15, 23, 42, 0.02);
+    --glass-bg-hover: rgba(15, 23, 42, 0.05);
+    --glass-border: rgba(15, 23, 42, 0.08);
+    --glass-border-hover: rgba(16, 185, 129, 0.3);
     --border-color: rgba(0, 0, 0, 0.05);
     --fade-color: #f1f5f9;
     --brImg-overlay: rgba(248, 250, 252, 0.8);
@@ -57,12 +61,25 @@
 }
 
 /* Global Background: Adaptive - Performance Optimized */
+html,
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sansation);
   position: relative;
   overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent AOS from creating horizontal scrollbars */
+[data-aos] {
+  pointer-events: none;
+}
+
+.aos-animate {
+  pointer-events: auto;
 }
 
 /* Organic Nebula Glows - Simplified for Performance */
@@ -200,30 +217,31 @@ body::after {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: var(--accent);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
   box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.6), 0 0 30px rgba(var(--accent-rgb), 0.15);
   transform: translateY(-8px);
 }
 
 .icon-box {
-  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.2) 0%, transparent 100%);
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.2) 10%, transparent 100%);
   position: relative;
   overflow: hidden;
+  border: 1px solid var(--glass-border);
 }
 
 .icon-box::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(135deg, transparent, rgba(var(--accent-rgb), 0.1), transparent);
   transform: translateX(-100%);
   transition: transform 0.6s ease;
 }

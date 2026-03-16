@@ -130,14 +130,14 @@ const ContactForm: React.FC = () => {
                 </div>
 
                 <div
-                    className="glass-card p-8 md:p-12 rounded-[2.5rem] border border-foreground/10 bg-foreground/[0.02] backdrop-blur-xl shadow-2xl"
+                    className="glass-card p-8 md:p-12 rounded-[2.5rem] border border-glass-border bg-glass-bg backdrop-blur-xl shadow-2xl"
                     data-aos="fade-up"
-                    data-aos-duration="1000"
+                    data-aos-duration="600"
                 >
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label htmlFor="name" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest" data-aos="fade-left" data-aos-duration="1000">Name</label>
+                                <label htmlFor="name" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest" data-aos="fade-left" data-aos-duration="600">Name</label>
                                 <input
                                     type="text"
                                     id="name"
@@ -145,12 +145,12 @@ const ContactForm: React.FC = () => {
                                     required
                                     placeholder="Your Name"
                                     data-aos="zoom-in"
-                                    data-aos-duration="1000"
-                                    className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all"
+                                    data-aos-duration="600"
+                                    className="w-full px-6 py-4 bg-glass-bg border border-glass-border rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-glass-bg-hover transition-all"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label htmlFor="email" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest" data-aos="fade-right" data-aos-duration="1200">Email</label>
+                                <label htmlFor="email" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest" data-aos="fade-right" data-aos-duration="700">Email</label>
                                 <input
                                     type="email"
                                     id="email"
@@ -158,13 +158,13 @@ const ContactForm: React.FC = () => {
                                     required
                                     placeholder="Your Email"
                                     data-aos="zoom-in"
-                                    data-aos-duration="1200"
-                                    className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all"
+                                    data-aos-duration="700"
+                                    className="w-full px-6 py-4 bg-glass-bg border border-glass-border rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-glass-bg-hover transition-all"
                                 />
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <label htmlFor="message" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest" data-aos="fade-up" data-aos-duration="1400">Message</label>
+                            <label htmlFor="message" className="text-sm font-bold text-muted-foreground ml-1 uppercase tracking-widest" data-aos="fade-up" data-aos-duration="800">Message</label>
                             <textarea
                                 id="message"
                                 name="message"
@@ -172,8 +172,8 @@ const ContactForm: React.FC = () => {
                                 rows={5}
                                 placeholder="Write a Message..."
                                 data-aos="zoom-in"
-                                data-aos-duration="1400"
-                                className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all resize-none"
+                                data-aos-duration="800"
+                                className="w-full px-6 py-4 bg-glass-bg border border-glass-border rounded-2xl text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-accent/50 focus:bg-glass-bg-hover transition-all resize-none"
                             ></textarea>
                         </div>
 
@@ -181,7 +181,7 @@ const ContactForm: React.FC = () => {
                             type="submit"
                             disabled={isSubmitting}
                             data-aos="fade-up"
-                            data-aos-duration="1600"
+                            data-aos-duration="900"
                             className="group w-full py-5 bg-accent text-accent-foreground rounded-2xl font-bold text-lg shadow-2xl shadow-accent/20 flex items-center justify-center gap-3 transition-all hover:scale-[1.02] active:scale-95 disabled:opacity-70 disabled:hover:scale-100"
                         >
                             {isSubmitting ? (

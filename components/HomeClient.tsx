@@ -96,7 +96,7 @@ const HomeClient: React.FC = () => {
     ];
 
     return (
-        <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-accent selection:text-accent-foreground relative">
+        <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-accent selection:text-accent-foreground relative overflow-x-hidden">
             {/* Background Layer */}
             <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
                 <div className="bg-noise" />
@@ -149,7 +149,6 @@ const HomeClient: React.FC = () => {
                             <span className="block text-foreground mb-2">Building</span>
                             <span
                                 className="bg-gradient-to-r from-accent via-sky-400 to-accent bg-[length:200%_auto] animate-gradient-x bg-clip-text text-transparent italic"
-                                style={{ fontFamily: "var(--font-familyIII)" }}
                             >
                                 Digital Experiences.
                             </span>
@@ -191,8 +190,8 @@ const HomeClient: React.FC = () => {
                     {/* Visual Hero Layer */}
                     <div
                         data-aos="fade-up"
-                        data-aos-duration="1200"
-                        data-aos-delay="300"
+                        data-aos-duration="700"
+                        data-aos-delay="200"
                         className="relative z-10 w-full max-w-screen-2xl mx-auto -mt-10 mb-[-10rem] pointer-events-none select-none"
                     >
                         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-20 h-full" />
@@ -231,14 +230,14 @@ const HomeClient: React.FC = () => {
                             {services.map((service, idx) => (
                                 <div
                                     key={idx}
-                                    className="service-card-enter group relative p-8 rounded-[2rem] border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] hover:border-accent/40 transition-all duration-500 overflow-hidden flex flex-col"
+                                    className="service-card-enter group relative p-8 rounded-[2rem] border border-glass-border bg-glass-bg hover:bg-glass-bg-hover hover:border-glass-border-hover transition-all duration-500 overflow-hidden flex flex-col"
                                     style={{ animationDelay: service.delay }}
                                 >
                                     {/* Corner radial */}
                                     <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl ${service.accent} blur-2xl rounded-full -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                                     {/* Icon */}
-                                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.accent} flex items-center justify-center mb-6 border border-white/5`}>
+                                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.accent} flex items-center justify-center mb-6 border border-glass-border`}>
                                         <FontAwesomeIcon icon={service.icon} className={`text-xl ${service.iconColor} group-hover:scale-110 transition-transform duration-500`} />
                                     </div>
 
@@ -306,7 +305,7 @@ const HomeClient: React.FC = () => {
                         {/* Right Column: Bento Grid */}
                         <div className="lg:col-span-12 xl:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-[160px]">
                             {/* Card 1: Large */}
-                            <div className="md:col-span-2 md:row-span-2 relative p-8 rounded-[2.5rem] bg-gradient-to-br from-white/[0.06] to-white/[0.02] border border-white/[0.08] overflow-hidden group hover:border-accent/30 transition-all duration-500">
+                            <div className="md:col-span-2 md:row-span-2 relative p-8 rounded-[2.5rem] bg-glass-bg border border-glass-border overflow-hidden group hover:border-glass-border-hover hover:bg-glass-bg-hover transition-all duration-500">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 blur-3xl -mr-32 -mt-32 group-hover:bg-accent/20 transition-all duration-700" />
                                 <div className="relative z-10 h-full flex flex-col justify-between">
                                     <div className="w-14 h-14 rounded-2xl bg-accent/20 border border-accent/20 flex items-center justify-center text-accent mb-6">
@@ -324,7 +323,7 @@ const HomeClient: React.FC = () => {
                             </div>
 
                             {/* Card 2: SEO */}
-                            <div className="relative p-6 rounded-[2.5rem] bg-white/[0.03] border border-white/[0.08] flex flex-col items-center justify-center text-center group hover:bg-emerald-500/5 hover:border-emerald-500/30 transition-all duration-300">
+                            <div className="relative p-6 rounded-[2.5rem] bg-glass-bg border border-glass-border flex flex-col items-center justify-center text-center group hover:bg-emerald-500/5 hover:border-emerald-500/30 transition-all duration-300">
                                 <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center mb-3">
                                     <FontAwesomeIcon icon={faChartLine} className="text-emerald-400 text-sm" />
                                 </div>
@@ -336,7 +335,7 @@ const HomeClient: React.FC = () => {
                             <div className="md:row-span-2 relative p-8 rounded-[2.5rem] bg-gradient-to-br from-accent to-accent/80 text-accent-foreground overflow-hidden group shadow-2xl shadow-accent/25">
                                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.2),_transparent)]" />
                                 <div className="relative z-10 h-full flex flex-col justify-between">
-                                    <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-4">
+                                    <div className="w-10 h-10 rounded-xl bg-accent-foreground/10 flex items-center justify-center mb-4">
                                         <FontAwesomeIcon icon={faUsersCog} className="text-sm" />
                                     </div>
                                     <div>
@@ -349,7 +348,7 @@ const HomeClient: React.FC = () => {
                             </div>
 
                             {/* Card 4: Wide */}
-                            <div className="md:col-span-2 relative p-6 rounded-[2.5rem] bg-white/[0.03] border border-white/[0.08] flex items-center gap-5 px-8 group hover:bg-blue-500/5 hover:border-blue-500/30 transition-all duration-300">
+                            <div className="md:col-span-2 relative p-6 rounded-[2.5rem] bg-glass-bg border border-glass-border flex items-center gap-5 px-8 group hover:bg-blue-500/5 hover:border-blue-500/30 transition-all duration-300">
                                 <div className="w-11 h-11 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
                                     <FontAwesomeIcon icon={faTachometerAlt} />
                                 </div>

@@ -6,10 +6,10 @@ import 'aos/dist/aos.css';
 export default function AOSInit() {
     useEffect(() => {
         AOS.init({
-            duration: 800,
+            duration: 600,
             once: true,
             easing: 'ease-out',
-            offset: 100,
+            offset: 80,
         });
     }, []);
 

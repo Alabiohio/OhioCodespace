@@ -81,12 +81,10 @@
 }
 
 #about {
-    background: linear-gradient(var(--fade-color), rgba(0, 0, 0, 0.65)), url('https://ohiocodespace.vercel.app/bg1.jpg') center/cover no-repeat;
     color: var(--foreground);
     padding: 5rem 1rem;
     overflow: hidden;
     position: relative;
-    background-blend-mode: darken;
 }
 
 
@@ -276,9 +274,6 @@
     overflow: hidden;
     padding: 2rem;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('https://ohiocodespace.vercel.app/bg1.jpg') center/cover no-repeat;
-
 }
 
 #service::before,
@@ -356,9 +351,6 @@
     overflow: hidden;
     padding: 2rem;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('https://ohiocodespace.vercel.app/bg1.jpg') center/cover no-repeat;
-
 }
 
 
@@ -509,9 +501,6 @@
 }
 
 .gmb-ads {
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-        url('https://ohiocodespace.vercel.app/asset/DCIM/bgii.jpg') center/cover no-repeat;
     padding: 2.5rem 1rem;
     border-radius: 10px;
     overflow: hidden;
@@ -718,9 +707,8 @@
 }
 
 .portfolio .hero {
-    background: var(--fade-color) url('https://ohiocodespace.vercel.app/bg1.jpg') center/cover no-repeat;
+    background: var(--heroBg);
     padding: 2rem 2rem;
-    background-blend-mode: multiply;
     position: relative;
     overflow: hidden;
 }

@@ -17,7 +17,7 @@ const Footer: React.FC<FooterProps> = ({ linkTo = "/business", linkText = "Busin
                     <div className="space-y-6">
                         <div className="flex items-center gap-3">
                             <span className="text-2xl font-bold text-foreground tracking-tight" data-aos="zoom-out" data-aos-duration="1600">
-                                OHIO<span className="text-accent">Codespace</span>
+                                OHIO<span className="text-accent"> Codespace</span>
                             </span>
                         </div>
                         <p className="text-muted-foreground max-w-xs leading-relaxed" data-aos="fade-up" data-aos-duration="1600">

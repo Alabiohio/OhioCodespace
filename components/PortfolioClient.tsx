@@ -19,7 +19,7 @@ interface PortfolioClientProps {
 
 const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
     return (
-        <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-accent selection:text-accent-foreground relative">
+        <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-accent selection:text-accent-foreground relative overflow-x-hidden">
             {/* Background Animations */}
             <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
                 <div className="bg-noise" />
@@ -46,7 +46,7 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                 {/* Portfolio Hero: Developer Spotlight */}
                 <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-32 pb-20 px-4">
                     <div className="absolute inset-0 z-0">
-                        <div className="absolute top-0 left-0 w-[40%] h-full bg-accent/5 backdrop-blur-[2px] border-r border-white/5" />
+                        <div className="absolute top-0 left-0 w-[40%] h-full bg-accent/5 backdrop-blur-[2px] border-r border-glass-border" />
                         <div className="absolute top-20 left-40 w-96 h-96 bg-accent/10 blur-[120px] rounded-full" />
                     </div>
 
@@ -54,10 +54,9 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                         {/* Left: Developer Profile Visual */}
                         <div
                             data-aos="fade-right"
-                            data-aos-duration="1000"
                             className="relative"
                         >
-                            <div className="relative p-1 rounded-[3rem] bg-gradient-to-br from-white/10 via-transparent to-accent/20 border border-white/10 backdrop-blur-xl overflow-hidden group">
+                            <div className="relative p-1 rounded-[3rem] bg-glass-bg border border-glass-border backdrop-blur-xl overflow-hidden group">
                                 <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
 
                                 {/* Mock Developer Card */}
@@ -70,24 +69,22 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                             height={96}
                                             priority
                                             className="w-24 h-24 rounded-full border-2 border-accent object-cover shrink-0"
-                                            data-aos="zoom-in"
-                                            data-aos-duration="600"
                                         />
                                         <div>
-                                            <h3 className="text-2xl font-acme font-black text-foreground mb-1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="50">Ohiocheoya Alabi</h3>
-                                            <p className="text-accent font-mono text-sm" data-aos="fade-left" data-aos-duration="2000">Full-Stack Developer</p>
+                                            <h3 className="text-2xl font-acme font-black text-foreground mb-1">Ohiocheoya Alabi</h3>
+                                            <p className="text-accent font-mono text-sm">Full-Stack Developer</p>
                                         </div>
                                     </div>
 
                                     <div className="space-y-4">
                                         {[
-                                            { label: "Specialization", value: "React & Next.js", aosLabel: "fade-left", aosDuration: "1500", },
-                                            { label: "Experience", value: "3+ Years", aosLabel: "fade-left", aosDuration: "1800", },
-                                            { label: "Portfolio", value: "15+ Completed", aosLabel: "fade-left", aosDuration: "2000", }
+                                            { label: "Specialization", value: "React & Next.js" },
+                                            { label: "Experience", value: "3+ Years" },
+                                            { label: "Portfolio", value: "15+ Completed" }
                                         ].map((item, i) => (
-                                            <div key={i} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 rounded-2xl bg-foreground/5 border border-foreground/5 gap-2 sm:gap-0">
-                                                <span className="text-sm text-muted-foreground uppercase tracking-wider" data-aos={item.aosLabel} data-aos-duration={item.aosDuration}>{item.label}</span>
-                                                <span className="font-bold text-foreground" data-aos="fade-right" data-aos-duration={item.aosDuration}>{item.value}</span>
+                                            <div key={i} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 rounded-2xl bg-glass-bg border border-glass-border gap-2 sm:gap-0">
+                                                <span className="text-sm text-muted-foreground uppercase tracking-wider">{item.label}</span>
+                                                <span className="font-bold text-foreground">{item.value}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -97,16 +94,12 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                             href="https://github.com/Alabiohio"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            data-aos="fade-right"
-                                            data-aos-duration="2000"
                                             className="flex-grow p-4 rounded-2xl bg-foreground/5 border border-foreground/10 hover:bg-foreground/10 transition-all text-center font-bold text-foreground flex items-center justify-center gap-2"
                                         >
                                             <FontAwesomeIcon icon={faGithub} /> GitHub
                                         </a>
                                         <a
                                             href="mailto:ohioalabi@gmail.com"
-                                            data-aos="fade-left"
-                                            data-aos-duration="2000"
                                             className="flex-grow p-4 rounded-2xl bg-accent text-accent-foreground text-center font-bold shadow-lg shadow-accent/20 hover:bg-accent/90 transition-all flex items-center justify-center gap-2"
                                         >
                                             <FontAwesomeIcon icon={faEnvelope} /> Email
@@ -117,21 +110,18 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                         </div>
 
                         {/* Right: Mission Statement */}
-                        <div>
-                            <div className="flex items-center gap-3 mb-8" data-aos="fade-left"
-                                data-aos-duration="1000">
+                        <div data-aos="fade-left">
+                            <div className="flex items-center gap-3 mb-8">
                                 <div className="w-10 h-[2px] bg-accent" />
                                 <span className="text-accent font-bold tracking-widest uppercase text-xs">Portfolio & Projects</span>
                             </div>
 
-                            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[1.1] tracking-tighter" data-aos="zoom-out"
-                                data-aos-duration="1000">
+                            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[1.1] tracking-tighter">
                                 Building <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">Web Experiences</span> Users Love
                             </h1>
 
 
-                            <p className="text-xl text-muted-foreground mb-12 max-w-xl leading-relaxed" data-aos="fade-up"
-                                data-aos-duration="1000">
+                            <p className="text-xl text-muted-foreground mb-12 max-w-xl leading-relaxed">
                                 I help businesses elevate their online presence with
                                 <span className="text-foreground font-medium"> clean, responsive websites </span>
                                 that captivate users and drive meaningful results. Each project blends modern design with technical precision.
@@ -141,16 +131,12 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                             <div className="flex flex-col sm:flex-row gap-6">
                                 <a
                                     href="#projects"
-                                    data-aos="fade-up"
-                                    data-aos-duration="1000"
                                     className="px-10 py-5 bg-accent text-accent-foreground rounded-2xl font-bold text-lg shadow-2xl shadow-accent/30 text-center transition-all hover:scale-105 active:scale-95"
                                 >
                                     View My Work
                                 </a>
                                 <a
                                     href="#about"
-                                    data-aos="fade-up"
-                                    data-aos-duration="1300"
                                     className="px-10 py-5 bg-foreground/5 border border-foreground/10 text-foreground rounded-2xl font-bold text-lg hover:bg-foreground/10 transition-all text-center backdrop-blur-sm"
                                 >
                                     Learn More
@@ -162,25 +148,23 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
 
                 {/* About Section */}
                 <section className="py-24 px-4">
-                    <div className="max-w-4xl mx-auto text-center">
+                    <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
                         <div>
-                            <h2 className="text-accent font-semibold tracking-widest uppercase text-sm mb-3" data-aos="zoom-out"
-                                data-aos-duration="1000">About Me</h2>
+                            <h2 className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">About Me</h2>
 
-                            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-12 max-w-3xl mx-auto" data-aos="fade-up"
-                                data-aos-duration="1000">
+                            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-12 max-w-3xl mx-auto">
                                 I help businesses grow online through web development, graphic design, and Google My Business optimization. My solutions range from responsive websites to eye-catching visuals and enhanced GMB profiles that drive engagement and visibility.
                             </p>
                             {/* Stats */}
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-12 border-t border-foreground/5">
                                 {[
-                                    { label: "Experience", value: "3+ Years", aos: "fade-up-right", aosDuration: "1000" },
-                                    { label: "Completed", value: "15+ Projects", aos: "fade-up", aosDuration: "1300" },
-                                    { label: "Satisfaction", value: "100% Client Focus", aos: "fade-down", aosDuration: "1600" }
+                                    { label: "Experience", value: "3+ Years" },
+                                    { label: "Completed", value: "15+ Projects" },
+                                    { label: "Satisfaction", value: "100% Client Focus" }
                                 ].map((stat, i) => (
                                     <div key={i}>
-                                        <div className="text-3xl font-black text-foreground mb-1" data-aos={stat.aos} data-aos-duration={stat.aosDuration}>{stat.value}</div>
-                                        <div className="text-xs text-muted-foreground uppercase tracking-widest" data-aos={stat.aos} data-aos-duration={stat.aosDuration}>{stat.label}</div>
+                                        <div className="text-3xl font-black text-foreground mb-1">{stat.value}</div>
+                                        <div className="text-xs text-muted-foreground uppercase tracking-widest">{stat.label}</div>
                                     </div>
                                 ))}
                             </div>
@@ -199,15 +183,15 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
 
                         <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-accent/20 before:to-transparent">
                             {[
-                                { title: "Freelance Full-Stack Developer", company: "Ohio Codespace", date: "2023 - Present", desc: "Building performant, accessible, and scalable web applications for a variety of businesses and startups." },
-                                { title: "Frontend Developer", company: "Various Clients", date: "2021 - 2023", desc: "Developed responsive landing pages, e-commerce solutions, and digital portfolios, driving increased client engagement." },
-                                { title: "Graphic Designer & Web Consultant", company: "Local Businesses", date: "2020 - 2021", desc: "Helped small businesses establish their initial digital footprint through branding, graphic design, and simple websites." }
+                                { title: "Freelance Full-Stack Developer", company: "Ohio Codespace", desc: "Building performant, accessible, and scalable web applications for a variety of businesses and startups." },
+                                { title: "Frontend Developer", company: "Various Clients", desc: "Developed responsive landing pages, e-commerce solutions, and digital portfolios, driving increased client engagement." },
+                                { title: "Graphic Designer & Web Consultant", company: "Local Businesses", desc: "Helped businesses establish their initial digital footprint through branding, graphic design, and simple websites." }
                             ].map((job, index) => (
-                                <div key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-duration="1000">
+                                <div key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up">
                                     <div className="flex items-center justify-center w-10 h-10 rounded-full border border-accent/20 bg-background text-accent shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 ring-4 ring-background z-10 transition-transform duration-500 group-hover:scale-110">
                                         <div className="w-2 h-2 rounded-full bg-accent"></div>
                                     </div>
-                                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-8 rounded-3xl bg-foreground/5 border border-foreground/10 hover:border-accent/30 hover:bg-foreground/10 transition-all duration-300 shadow-xl">
+                                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-8 rounded-3xl bg-glass-bg border border-glass-border hover:border-glass-border-hover hover:bg-glass-bg-hover transition-all duration-300 shadow-xl">
                                         <div className="mb-3">
                                             <h4 className="font-bold text-xl text-foreground group-hover:text-accent transition-colors">{job.title}</h4>
                                         </div>
@@ -244,46 +228,38 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                         </div>
                     </div>
 
-                    <div className="max-w-7xl mx-auto relative z-10">
+                    <div className="max-w-7xl mx-auto relative z-10" data-aos="fade-up">
                         <div className="text-center mb-24">
-                            <div
-                                className="inline-block px-5 py-2 mb-8 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-bold uppercase tracking-[0.4em] backdrop-blur-md"
-                                data-aos="fade-down"
-                                data-aos-duration="1000"
-                            >
-                                Tech Ecosystem
-                            </div>
-                            <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter" data-aos="zoom-out" data-aos-duration="1300">
+                            <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter">
                                 Engineered with <span className="text-foreground italic font-serif" style={{ fontFamily: 'var(--font-familyIII)' }}>Precision</span>
                             </h2>
-                            <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light" data-aos="fade-up" data-aos-duration="1500">
+                            <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light">
                                 A curated selection of modern technologies and architectural patterns used to build high-performance, scalable digital experiences.
                             </p>
-                            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mt-12 rounded-full" data-aos="fade-left" data-aos-duration="1600" />
+                            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mt-12 rounded-full" />
                         </div>
 
-                        <div className="space-y-32">
+                        <div className="space-y-16 lg:space-y-32">
                             {[
                                 {
                                     title: "Core Technologies",
-                                    aosTitle: "fade-left",
-                                    aosDuration: "1000",
                                     skills: ["React", "Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "JavaScript", "HTML", "CSS", "Foundation 6", "Bootstrap"],
                                     accent: "bg-accent/5"
                                 },
                                 {
                                     title: "Specialized Expertise",
-                                    aosTitle: "fade-left",
-                                    aosDuration: "1300",
                                     skills: ["UI/UX Principles", "SEO Optimization", "Chatbot Development", "Performance Tuning"],
                                     accent: "bg-secondary/5"
                                 },
                                 {
                                     title: "Tools & Workflow",
-                                    aosTitle: "fade-left",
-                                    aosDuration: "1600",
-                                    skills: ["Git / GitHub", "Vercel", "Firebase", "Adobe Creative Suite"],
-                                    accent: "bg-white/5"
+                                    skills: ["Git / GitHub", "Vercel", "Supabase", "Firebase", "Google Search Console", "Bing Search Console", "Google Analytics", "Adobe Photoshop", "Adobe Illustrator", "Adobe After Effects"],
+                                    accent: "bg-glass-bg"
+                                },
+                                {
+                                    title: "Soft Skills",
+                                    skills: ["Communication", "Teamwork & Collaboration", "Problem Solving", "Time Management", "Critical Thinking", "Leadership"],
+                                    accent: "bg-accent/5"
                                 }
                             ].map((group, i) => (
                                 <div
@@ -291,13 +267,12 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                     className="relative px-4"
                                 >
                                     {/* Group Background Accent */}
-                                    <div className={`absolute -inset-8 ${group.accent} rounded-[4rem] blur-3xl -z-10 opacity-30`} />
+                                    <div className={`absolute -inset-4 md:-inset-8 ${group.accent} rounded-[2rem] md:rounded-[4rem] blur-2xl md:blur-3xl -z-10 opacity-30`} />
 
-                                    <h4 className="text-foreground font-bold text-center mb-16 text-xs md:text-sm tracking-[0.5em] uppercase" data-aos={group.aosTitle}
-                                        data-aos-duration={group.aosDuration}>
-                                        <span className="px-8 py-3 border-x border-foreground/10 bg-background/20 backdrop-blur-sm rounded-sm">{group.title}</span>
+                                    <h4 className="text-foreground font-bold text-center mb-8 md:mb-16 text-[10px] md:text-sm tracking-[0.4em] md:tracking-[0.5em] uppercase">
+                                        <span className="px-4 py-2 md:px-8 md:py-3 border-x border-glass-border bg-glass-bg backdrop-blur-sm rounded-sm">{group.title}</span>
                                     </h4>
-                                    <div className="flex flex-wrap gap-10 md:gap-20 justify-center items-center">
+                                    <div className="grid grid-cols-3 sm:grid-cols-4 lg:flex lg:flex-wrap gap-2 sm:gap-8 lg:gap-20 justify-center items-center justify-items-center">
                                         {group.skills.map((skill) => (
                                             <SkillBadge
                                                 key={skill}
@@ -316,9 +291,9 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                 <section id="projects" className="py-32 px-4 bg-accent/5 relative overflow-hidden">
                     <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-20">
-                            <h2 className="text-accent font-semibold tracking-widest uppercase text-sm mb-3" data-aos="fade-up" data-aos-duration="1600">Selected Works</h2>
-                            <h3 className="text-4xl md:text-5xl font-bold mb-6" data-aos="zoom-out" data-aos-duration="1600">Featured Case Studies</h3>
-                            <div className="w-20 h-1.5 bg-accent mx-auto rounded-full" data-aos="fade-left" data-aos-duration="1600" />
+                            <h2 className="text-accent font-semibold tracking-widest uppercase text-sm mb-3" data-aos="fade-up" data-aos-duration="800">Selected Works</h2>
+                            <h3 className="text-4xl md:text-5xl font-bold mb-6" data-aos="zoom-out" data-aos-duration="800">Featured Case Studies</h3>
+                            <div className="w-20 h-1.5 bg-accent mx-auto rounded-full" data-aos="fade-left" data-aos-duration="800" />
                         </div>
 
                         {/* Featured Projects - Big Cards */}
@@ -358,17 +333,17 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
 
                 {/* Final CTA: Let's Connect */}
                 <section className="py-24 px-4 bg-background">
-                    <div className="max-w-6xl mx-auto overflow-hidden rounded-[3rem] border border-foreground/10 bg-gradient-to-br from-accent/10 via-transparent to-secondary/10">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-12 md:p-16">
+                    <div className="max-w-6xl mx-auto overflow-hidden rounded-[3rem] border border-glass-border bg-gradient-to-br from-accent/10 via-transparent to-secondary/10">
+                        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 p-8 sm:p-12 md:p-16">
                             {/* Left: Message */}
                             <div
                                 data-aos="fade-right"
                                 className="flex flex-col justify-center"
                             >
-                                <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight" data-aos="zoom-out" data-aos-duration="1600">
+                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 leading-tight" data-aos="zoom-out" data-aos-duration="900">
                                     Let&apos;s Build Something <span className="text-accent">Amazing</span>
                                 </h2>
-                                <p className="text-lg text-muted-foreground mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1600">
+                                <p className="text-lg text-muted-foreground mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="900">
                                     Have a project in mind? Whether it&apos;s a new website, a redesign, or custom development work, I&apos;m here to help bring your vision to life.
                                 </p>
 
@@ -390,7 +365,7 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                         href="https://github.com/Alabiohio"
                                         target="_blank"
                                         data-aos="fade-up"
-                                        data-aos-duration="1600"
+                                        data-aos-duration="900"
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-4 p-5 bg-foreground/5 border border-foreground/10 text-foreground rounded-2xl font-bold hover:bg-foreground/10 transition-all"
                                     >
@@ -409,21 +384,21 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                 className="flex flex-col justify-center space-y-6"
                             >
                                 <div className="text-center lg:text-left mb-4">
-                                    <h3 className="text-2xl font-bold text-foreground mb-2" data-aos="zoom-out" data-aos-duration="1600">Why Work With Me?</h3>
-                                    <p className="text-muted-foreground text-sm" data-aos="fade-up" data-aos-duration="1600">Proven results and dedicated service</p>
+                                    <h3 className="text-2xl font-bold text-foreground mb-2" data-aos="zoom-out" data-aos-duration="900">Why Work With Me?</h3>
+                                    <p className="text-muted-foreground text-sm" data-aos="fade-up" data-aos-duration="900">Proven results and dedicated service</p>
                                 </div>
 
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-2 gap-4 sm:gap-6">
                                     {[
                                         { icon: "⚡", label: "Fast Delivery", value: "On Time" },
                                         { icon: "💎", label: "Quality Code", value: "Clean & Tested" },
                                         { icon: "🎯", label: "Client Focus", value: "100%" },
                                         { icon: "🚀", label: "Modern Stack", value: "Latest Tech" }
                                     ].map((item, i) => (
-                                        <div key={i} className="p-6 rounded-2xl bg-foreground/5 border border-foreground/10 text-center hover:bg-foreground/10 transition-all">
-                                            <div className="text-3xl mb-2" data-aos="fade-up" data-aos-duration="1600">{item.icon}</div>
-                                            <div className="text-xs text-muted-foreground uppercase tracking-wider mb-1" data-aos="fade-left" data-aos-duration="1600">{item.label}</div>
-                                            <div className="font-bold text-foreground text-sm" data-aos="fade-up" data-aos-duration="1600">{item.value}</div>
+                                        <div key={i} className="p-4 sm:p-6 rounded-2xl sm:rounded-[2rem] bg-glass-bg border border-glass-border text-center hover:bg-glass-bg-hover transition-all">
+                                            <div className="text-2xl sm:text-3xl mb-2">{item.icon}</div>
+                                            <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider mb-1 leading-tight">{item.label}</div>
+                                            <div className="font-bold text-foreground text-xs sm:text-sm">{item.value}</div>
                                         </div>
                                     ))}
                                 </div>

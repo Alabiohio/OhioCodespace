@@ -144,7 +144,7 @@ const InquiryClient: React.FC = () => {
     ];
 
     return (
-        <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-accent selection:text-accent-foreground relative">
+        <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-accent selection:text-accent-foreground relative overflow-x-hidden">
             {/* Background Decorations */}
             <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
                 <div className="bg-noise" />
@@ -182,7 +182,7 @@ const InquiryClient: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                         {/* Information Sidebar */}
                         <div className="lg:col-span-4 space-y-6" data-aos="fade-right">
-                            <div className="glass-card p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl">
+                            <div className="glass-card p-8 rounded-3xl border border-glass-border bg-glass-bg backdrop-blur-xl">
                                 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                                     <FontAwesomeIcon icon={faLifeRing} className="text-accent" />
                                     Support Guidelines
@@ -202,7 +202,7 @@ const InquiryClient: React.FC = () => {
                                 </ul>
                             </div>
 
-                            <div className="glass-card p-8 rounded-3xl border border-white/10 bg-gradient-to-br from-accent/10 to-transparent">
+                            <div className="glass-card p-8 rounded-3xl border border-glass-border bg-gradient-to-br from-accent/10 to-transparent">
                                 <h3 className="text-lg font-bold mb-3">Direct Contact</h3>
                                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                                     Prefer direct email? You can reach our support desk at:
@@ -218,7 +218,7 @@ const InquiryClient: React.FC = () => {
 
                         {/* Inquiry Form */}
                         <div className="lg:col-span-8" data-aos="fade-left">
-                            <div className="glass-card p-8 md:p-12 rounded-[2.5rem] border border-foreground/10 bg-foreground/[0.02] backdrop-blur-xl shadow-2xl overflow-hidden relative">
+                            <div className="glass-card p-8 md:p-12 rounded-[2.5rem] border border-glass-border bg-glass-bg backdrop-blur-xl shadow-2xl overflow-hidden relative">
                                 {/* Gradient blobs inside the card */}
                                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/5 blur-3xl rounded-full" />
                                 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/5 blur-3xl rounded-full" />
@@ -233,7 +233,7 @@ const InquiryClient: React.FC = () => {
                                                 name="name"
                                                 required
                                                 placeholder="e.g. John Doe"
-                                                className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all"
+                                                className="w-full px-6 py-4 bg-glass-bg border border-glass-border rounded-2xl text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-accent/50 focus:bg-glass-bg-hover transition-all"
                                             />
                                         </div>
                                         <div className="space-y-3">
@@ -244,7 +244,7 @@ const InquiryClient: React.FC = () => {
                                                 name="email"
                                                 required
                                                 placeholder="e.g. john@example.com"
-                                                className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all"
+                                                className="w-full px-6 py-4 bg-glass-bg border border-glass-border rounded-2xl text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-accent/50 focus:bg-glass-bg-hover transition-all"
                                             />
                                         </div>
                                     </div>
@@ -264,7 +264,7 @@ const InquiryClient: React.FC = () => {
                                                     />
                                                     <label
                                                         htmlFor={`type-${type.id}`}
-                                                        className="flex flex-col items-center justify-center gap-3 p-4 rounded-2xl bg-foreground/5 border border-foreground/10 cursor-pointer transition-all peer-checked:bg-accent/10 peer-checked:border-accent/50 hover:bg-foreground/[0.08]"
+                                                        className="flex flex-col items-center justify-center gap-3 p-4 rounded-2xl bg-glass-bg border border-glass-border cursor-pointer transition-all peer-checked:bg-accent/10 peer-checked:border-accent/50 hover:bg-glass-bg-hover"
                                                     >
                                                         <FontAwesomeIcon icon={type.icon} className={`text-xl ${type.color}`} />
                                                         <span className="text-[10px] font-bold text-center uppercase tracking-wider">{type.label}</span>
@@ -282,7 +282,7 @@ const InquiryClient: React.FC = () => {
                                             name="subject"
                                             required
                                             placeholder="What is this regarding?"
-                                            className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all"
+                                            className="w-full px-6 py-4 bg-glass-bg border border-glass-border rounded-2xl text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-accent/50 focus:bg-glass-bg-hover transition-all"
                                         />
                                     </div>
 
@@ -294,7 +294,7 @@ const InquiryClient: React.FC = () => {
                                             required
                                             rows={6}
                                             placeholder="Provide as much detail as possible..."
-                                            className="w-full px-6 py-4 bg-foreground/5 border border-foreground/10 rounded-2xl text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-accent/50 focus:bg-foreground/[0.08] transition-all resize-none"
+                                            className="w-full px-6 py-4 bg-glass-bg border border-glass-border rounded-2xl text-foreground placeholder:text-muted-foreground/30 focus:outline-none focus:border-accent/50 focus:bg-glass-bg-hover transition-all resize-none"
                                         ></textarea>
                                     </div>
 
