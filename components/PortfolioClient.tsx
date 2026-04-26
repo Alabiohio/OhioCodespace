@@ -248,7 +248,7 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                 },
                                 {
                                     title: "Specialized Expertise",
-                                    skills: ["UI/UX Principles", "SEO Optimization", "Chatbot Development", "Performance Tuning"],
+                                    skills: ["UI/UX Principles", "SEO Optimization", "Chatbot Development", "Performance Tuning", "Three.js"],
                                     accent: "bg-secondary/5"
                                 },
                                 {

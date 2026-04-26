@@ -8,5 +8,7 @@ export interface Project {
     liveUrl?: string;
     githubUrl?: string;
     role?: string;
+    images?: string[];
     isFeatured?: boolean;
+    status?: "ongoing" | "completed";
 }
