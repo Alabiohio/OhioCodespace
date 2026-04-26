@@ -80,7 +80,6 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                         {[
                                             { label: "Specialization", value: "React & Next.js" },
                                             { label: "Experience", value: "3+ Years" },
-                                            { label: "Portfolio", value: "15+ Completed" }
                                         ].map((item, i) => (
                                             <div key={i} className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 rounded-2xl bg-glass-bg border border-glass-border gap-2 sm:gap-0">
                                                 <span className="text-sm text-muted-foreground uppercase tracking-wider">{item.label}</span>
