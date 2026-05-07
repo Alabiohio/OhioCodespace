@@ -5,12 +5,16 @@ import unibenClearance from '@/assets/img/uniben-clearance.png';
 import destinyArt from '@/assets/img/destiny-art.png';
 import engineBlog from '@/assets/img/engineBlog.png';
 import creativeGene from '@/assets/img/creativegene.png';
-import ccbSite from '@/assets/img/ccbSite.png';
-import ccbDashboard from '@/assets/img/ccbDashboard.png';
+import ccbHero from '@/assets/img/ccb/hero.png';
+import ccbDashboard from '@/assets/img/ccb/ccbDashboard.png';
+import ccbComp from '@/assets/img/ccb/comp1.png';
 import bciHero from '@/assets/img/bci/hero.png';
 import bciFooter from '@/assets/img/bci/footer.png';
 import bciPrograms from '@/assets/img/bci/programs.png';
+import bciDashboard from '@/assets/img/bci/dashboard.png';
+import bciEdit from '@/assets/img/bci/edit.png';
 import bthHero from '@/assets/img/bth/hero.png';
+import bthCta from '@/assets/img/bth/cta.png';
 
 
 export const projects: Project[] = [
@@ -30,10 +34,10 @@ export const projects: Project[] = [
             "Developed dynamic components including a real-time countdown timer, event roadmap, and interactive FAQ."
         ],
         imgUrl: bthHero.src,
+        images: [bthHero.src, bthCta.src],
         skillsUsed: ["React", "Next.js", "Typescript", "Tailwind CSS", "Three.js", "Responsive Design", "UI/UX"],
         liveUrl: "",
         isFeatured: true,
-        status: "ongoing",
     },
     {
         id: 7,
@@ -49,12 +53,11 @@ export const projects: Project[] = [
             "Engineered a robust admin dashboard for managing orders, products, and price catalogs",
             "Implemented automated professional email communication pipelines for order confirmations"
         ],
-        imgUrl: ccbSite.src,
-        images: [ccbSite.src, ccbDashboard.src],
+        imgUrl: ccbHero.src,
+        images: [ccbHero.src, ccbDashboard.src, ccbComp.src],
         skillsUsed: ["React", "Next.js", "Typescript", "Tailwind CSS", "PostgreSQL", "Responsive Design", "UI/UX"],
         liveUrl: "",
         isFeatured: true,
-        status: "ongoing",
     },
     {
         id: 8,
@@ -71,11 +74,10 @@ export const projects: Project[] = [
             "Optimized performance and SEO for global environmental advocacy"
         ],
         imgUrl: bciHero.src,
-        images: [bciHero.src, bciFooter.src, bciPrograms.src],
+        images: [bciHero.src, bciPrograms.src, bciFooter.src, bciDashboard.src, bciEdit.src],
         skillsUsed: ["React", "Next.js", "Typescript", "Tailwind CSS", "Framer Motion", "Responsive Design", "UI/UX"],
         liveUrl: "",
         isFeatured: true,
-        status: "ongoing",
     },
     {
         id: 6,
