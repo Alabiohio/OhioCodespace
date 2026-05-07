@@ -126,7 +126,7 @@ const BusinessClient: React.FC = () => {
                                     <div className="pt-6 border-t border-foreground/5 flex gap-4">
                                         <div className="flex-grow p-4 rounded-2xl bg-foreground/5 border border-foreground/5 text-center">
                                             <div className="text-[10px] uppercase text-muted-foreground mb-1">Client Support</div>
-                                            <div className="text-xl font-black text-foreground">24/7 Active</div>
+                                            <div className="text-xl font-black text-foreground">Active</div>
                                         </div>
                                         <div className="flex-grow p-4 rounded-2xl bg-accent text-accent-foreground text-center shadow-lg shadow-accent/20">
                                             <div className="text-[10px] uppercase opacity-60 mb-1">Performance</div>
@@ -147,7 +147,7 @@ const BusinessClient: React.FC = () => {
                 </section>
 
                 {/* Business Solutions: Premium Feature Grid */}
-                <section className="py-32 px-4 bg-background relative overflow-hidden">
+                <section className="py-18 px-4 bg-background relative overflow-hidden">
                     <div className="absolute top-1/2 right-0 w-96 h-96 bg-secondary/5 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
                     <div className="max-w-7xl mx-auto">
@@ -159,13 +159,6 @@ const BusinessClient: React.FC = () => {
                             transition={{ duration: 0.6 }}
                             className="text-center mb-20"
                         >
-                            <div
-                               
-                                className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-xs uppercase tracking-widest mb-6"
-                            >
-                                <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                                Business Solutions
-                            </div>
                             <h2
                                
                                
