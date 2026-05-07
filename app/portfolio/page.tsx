@@ -5,7 +5,7 @@ import { projects } from "@/data/projects";
 export const metadata: Metadata = {
     title: "Ohiocheoya Alabi - Portfolio",
     description:
-        "Explore a curated portfolio featuring responsive business websites, AI-driven apps, and sleek UI/UX designs crafted to deliver results.",
+        "Full-Stack Developer specializing in React & Next.js — building fast, scalable websites that drives growth.",
 
     keywords: [
         "Ohiocheoya Alabi",
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Ohiocheoya Alabi — Portfolio",
         description:
-            "Showcasing professional web solutions: responsive business websites, AI-powered applications, and modern UI/UX designs built for performance and engagement.",
-        url: "https://ohiocodespace.vercel.app/portfolio",
+            "Full-Stack Developer specializing in React & Next.js — building fast, scalable websites that drives growth.",
+        url: "assets/images/profile.png",
         siteName: "Ohio Codespace",
         images: [
             {
-                url: "https://ohiocodespace.vercel.app/ogImg.jpeg",
+                url: "assets/images/profile.png",
                 width: 1200,
                 height: 630,
                 alt: "Og image",
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Ohiocheoya Alabi — Portfolio",
         description:
-            "Explore a curated portfolio featuring responsive business websites, AI-driven apps, and sleek UI/UX designs crafted to deliver results.",
-        images: ["https://ohiocodespace.vercel.app/ogImg.jpeg"],
+            "Full-Stack Developer specializing in React & Next.js — building fast, scalable websites that drives growth.",
+        images: ["assets/images/profile.png"],
     },
 
     robots: {
