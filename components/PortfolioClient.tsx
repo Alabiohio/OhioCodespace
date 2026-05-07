@@ -171,7 +171,7 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                     </div>
                 </section>
 
-                {/* ─── EXPERIENCE ───────────────────────────────────────── */}
+                {/* ─── EXPERIENCE ───────────────────────────────────────── 
                 <section className="py-8 px-4 bg-background">
                     <div className="max-w-3xl mx-auto">
                         <motion.div {...fadeUp(0)} className="mb-12">
@@ -235,7 +235,7 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                             ))}
                         </div>
 
-                        {/* Resume CTA */}
+                        {/* Resume CTA 
                         <motion.div {...fadeUp(0.3)} className="mt-10 text-center">
                             <a
                                 href="/assets/docs/Ohiocheoya_Alabi_CV.pdf"
@@ -247,7 +247,7 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                             </a>
                         </motion.div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* ─── SKILLS ───────────────────────────────────────────── */}
                 <section className="py-14 px-4 relative overflow-hidden">
