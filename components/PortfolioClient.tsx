@@ -98,7 +98,7 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                                 View My Work <FontAwesomeIcon icon={faArrowRight} className="text-sm" />
                             </a>
                             <a
-                                href="/cv.pdf"
+                                href="/assets/docs/Ohiocheoya_Alabi_CV.pdf"
                                 download
                                 className="px-8 py-4 bg-foreground/5 border border-foreground/15 text-foreground rounded-2xl font-bold text-base hover:bg-foreground/10 transition-all text-center flex items-center justify-center gap-2 backdrop-blur-sm"
                             >
@@ -238,7 +238,7 @@ const PortfolioClient: React.FC<PortfolioClientProps> = ({ projects }) => {
                         {/* Resume CTA */}
                         <motion.div {...fadeUp(0.3)} className="mt-10 text-center">
                             <a
-                                href="/cv.pdf"
+                                href="/assets/docs/Ohiocheoya_Alabi_CV.pdf"
                                 download
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-foreground/5 border border-foreground/15 text-foreground rounded-2xl font-bold hover:bg-foreground/10 transition-all"
                             >
