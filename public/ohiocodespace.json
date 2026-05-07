@@ -1,0 +1,74 @@
+{
+  "brand": {
+    "name": "Ohio Codespace",
+    "slogan": "Driving Business Growth with Smart Websites",
+    "mission": "We deliver high-impact digital solutions that combine modern aesthetics with robust engineering to help businesses outperform competitors.",
+    "email": "ohiocodespace@gmail.com",
+    "website": "https://ohiocodespace.vercel.app",
+    "icon": "/assets/images/logo/logo.png"
+  },
+  "coreSolutions": [
+    {
+      "id": "speed-performance",
+      "title": "Speed & Performance",
+      "description": "Fast-loading pages that reduce bounce rates and keep visitors engaged.",
+    },
+    {
+      "id": "mobile-optimization",
+      "title": "Mobile Optimization",
+      "description": "Designed for mobile users first, ensuring a smooth experience on every screen size.",
+      "metric": "+100% Mobile Engagement"
+    },
+    {
+      "id": "local-seo",
+      "title": "Local SEO Visibility",
+      "description": "Structured to improve local search rankings and help customers find you faster.",
+      "metric": "Top Search Results"
+    },
+    {
+      "id": "e-commerce",
+      "title": "Online Sales Enablement",
+      "description": "Simple, secure checkout flows that make it easy for customers to take action.",
+      "metric": "Optimized Conversions"
+    }
+  ],
+  "expertise": {
+    "webDevelopment": ["Next.js", "React", "TypeScript", "Node.js"],
+    "database": ["PostgreSQL", "Supabase", "Sanity CMS"],
+    "visibility": ["Google My Business", "SEO", "Local Citations"],
+    "design": ["UI/UX", "Graphics Design", "Motion Design"]
+  },
+  "serviceProcess": [
+    {
+      "step": 1,
+      "title": "Discovery",
+      "description": "Understanding your business goals and audience."
+    },
+    {
+      "step": 2,
+      "title": "Strategic Design",
+      "description": "Crafting a visual identity and user flow that converts."
+    },
+    {
+      "step": 3,
+      "title": "Modern Engineering",
+      "description": "Building a high-performance, scalable website."
+    },
+    {
+      "step": 4,
+      "title": "Launch & Optimization",
+      "description": "Deploying and fine-tuning for maximum impact."
+    }
+  ],
+  "stats": {
+    "firstResponseTime": "48hrs",
+    "clientSatisfaction": "98%",
+    "support": "24/7 Active",
+    "projectTypes": ["E-commerce", "NGOs", "Corporate", "Landing Pages"]
+  },
+  "socials": {
+    "email": "ohiocodespace@gmail.com",
+    "whatsapp": "Available on request",
+    "github": "https://github.com/Alabiohio"
+  }
+}

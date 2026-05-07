@@ -32,6 +32,7 @@ const Footer: React.FC<FooterProps> = ({ linkTo = "/business", linkText = "Busin
                             <li><Link href="/" className="text-muted-foreground hover:text-accent transition-colors">Home</Link></li>
                             <li><Link href="/portfolio" className="text-muted-foreground hover:text-accent transition-colors">Portfolio</Link></li>
                             <li><Link href="/business" className="text-muted-foreground hover:text-accent transition-colors">Business Solutions</Link></li>
+                            <li><Link href="/docs/api" className="text-muted-foreground hover:text-accent transition-colors">API Documentation</Link></li>
                             <li><Link href="/inquiry" className="text-muted-foreground hover:text-accent transition-colors">Support & Inquiry</Link></li>
                         </ul>
                     </div>

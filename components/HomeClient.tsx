@@ -356,13 +356,6 @@ const HomeClient: React.FC = () => {
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_0%_0%,rgba(180,138,90,0.18),transparent_60%)] pointer-events-none" />
 
                         <div className="p-12 md:p-20 flex flex-col justify-center items-start text-left relative z-10">
-                            <div className="flex items-center gap-3 mb-8">
-                                <span className="relative flex h-3 w-3">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-accent" />
-                                </span>
-                                <span className="text-accent font-mono text-xs uppercase tracking-widest">Systems operational and ready for deployment</span>
-                            </div>
 
                             <h2 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter">
                                 Ready to Elevate{" "}

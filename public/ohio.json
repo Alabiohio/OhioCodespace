@@ -1,0 +1,93 @@
+{
+  "personalInfo": {
+    "name": "Ohiocheoya Alabi",
+    "brand": "Ohio Codespace",
+    "title": "Full-Stack Developer",
+    "specialization": "React & Next.js",
+    "location": "Nigeria",
+    "email1": "ohiocodespace@gmail.com",
+    "email2": "ohioalabi@gmail.com",
+    "description": "Full-Stack Developer specializing in React & Next.js — building fast, scalable websites that drive growth.",
+    "longDescription": "I craft high-performance digital experiences that combine modern aesthetics with robust engineering. Each project focuses on clean design, fast performance, and a seamless user experience.",
+    "avatar": "/assets/images/profile.png"
+  },
+  "businessHighlights": [
+    "Conversion-optimized layouts",
+    "Core Web Vitals excellence",
+    "Mobile-first responsive design",
+    "Clean, maintainable codebase",
+    "24/7 Active client support"
+  ],
+  "services": [
+    {
+      "title": "Frontend Engineering",
+      "description": "Responsive, high-performance web applications designed to engage users and drive results.",
+      "tags": ["React", "Next.js", "Tailwind CSS", "Framer Motion"]
+    },
+    {
+      "title": "Backend Development",
+      "description": "Secure, scalable backend systems powering APIs, databases, and core application logic.",
+      "tags": ["Node.js", "PostgreSQL", "Supabase", "Sanity CMS"]
+    },
+    {
+      "title": "Local SEO & GMB",
+      "description": "Google My Business profile optimization and local search visibility strategy to help customers find you.",
+      "tags": ["SEO", "GMB", "Local Citations"]
+    },
+    {
+      "title": "UI/UX Design",
+      "description": "Elegant, user-focused interface designs built for clarity, usability, and conversion.",
+      "tags": ["Figma", "Design Systems", "Prototyping"]
+    }
+  ],
+  "skills": {
+    "frontend": ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Three.js", "Framer Motion"],
+    "backend": ["Node.js", "PostgreSQL", "Supabase", "Sanity CMS", "Clerk Auth"],
+    "tools": ["Git", "Vercel", "Figma", "Postman", "Google Search Console"]
+  },
+  "projects": [
+    {
+      "id": 9,
+      "title": "Benin Tech Hangout 2.0",
+      "description": "A high-performance event landing page for Benin's largest tech gathering, featuring immersive 3D animations and a multi-path registration system.",
+      "role": "Lead Developer & UI Designer",
+      "category": "Event / Landing Page",
+      "skills": ["React", "Next.js", "Typescript", "Tailwind CSS", "Three.js"],
+      "featured": true
+    },
+    {
+      "id": 7,
+      "title": "CCB Farms",
+      "description": "A premium agricultural e-commerce platform with a sophisticated international booking engine and a comprehensive admin management system.",
+      "role": "Full-Stack Developer",
+      "category": "E-Commerce / Admin Dashboard",
+      "skills": ["React", "Next.js", "Typescript", "Tailwind CSS", "PostgreSQL"],
+      "featured": true
+    },
+    {
+      "id": 8,
+      "title": "Biome Conserve Initiative",
+      "description": "A professional NGO platform for environmental conservation and sustainable ecosystem management.",
+      "role": "Full-Stack Developer",
+      "category": "NGO / Non-Profit",
+      "skills": ["React", "Next.js", "Typescript", "Tailwind CSS", "Framer Motion"],
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "Engine Blog",
+      "description": "A modern, dynamic web platform designed to keep engineering students updated with campus news, academic resources, and opportunities.",
+      "role": "Full-Stack Developer",
+      "category": "Full-Stack Web App",
+      "skills": ["React", "Next.js", "Typescript", "Tailwind CSS", "PostgreSQL", "Sanity CMS", "Clerk"],
+      "featured": true
+    }
+  ],
+  "contact": {
+    "email": "ohiocodespace@gmail.com",
+    "links": {
+      "consultation": "mailto:ohiocodespace@gmail.com?subject=Free%20Consultation",
+      "review": "mailto:ohiocodespace@gmail.com?subject=Website%20Review"
+    }
+  }
+}

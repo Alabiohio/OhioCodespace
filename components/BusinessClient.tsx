@@ -256,7 +256,7 @@ const BusinessClient: React.FC = () => {
                                     className="grid grid-cols-2 gap-4 sm:gap-6"
                                 >
                                     {[
-                                        { label: "Performance Improvement", value: "3x Faster", icon: faBolt },
+                                        { label: "Performance Improvement", value: "Swift", icon: faBolt },
                                         { label: "Client Satisfaction", value: "98%", icon: faHandshake },
                                         { label: "Search Visibility", value: "Top Results", icon: faChartLine },
                                         { label: "Mobile Engagement", value: "+80%", icon: faMobileAlt }
