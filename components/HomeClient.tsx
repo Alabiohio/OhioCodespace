@@ -1,10 +1,11 @@
 "use client";
-import React from "react";
+
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 import {
     faChartLine,
     faTachometerAlt,
@@ -19,7 +20,6 @@ import {
     faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 
-import BookStackSidePerspective from "@/components/BookSlide";
 
 const HomeClient: React.FC = () => {
     const buttons = [
@@ -95,175 +95,138 @@ const HomeClient: React.FC = () => {
         "Clean, maintainable codebase",
     ];
 
-    return (
-        <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-accent selection:text-accent-foreground relative overflow-x-hidden">
-            {/* Background Layer */}
-            <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-                <div className="bg-noise" />
-                <div className="glow-spot glow-accent top-[-10%] left-[-10%] animate-float" />
-                <div className="glow-spot glow-secondary bottom-[-10%] right-[-10%] animate-float-reverse" />
+    const heroMetrics = [
+        { value: "48hr", label: "Typical first response" },
+        { value: "SEO-ready", label: "Structured for search visibility" },
+        { value: "Custom", label: "Designed around your business" },
+    ];
 
-                {/* Animated Background Beams */}
-                <div className="background-beams">
-                    <div className="beam left-[10%] animation-delay-0" style={{ animationDuration: '12s' }}></div>
-                    <div className="beam left-[30%] animation-delay-2" style={{ animationDuration: '8s' }}></div>
-                    <div className="beam left-[50%] animation-delay-5" style={{ animationDuration: '15s' }}></div>
-                    <div className="beam left-[80%] animation-delay-1" style={{ animationDuration: '10s' }}></div>
+    return (
+        <div className="w-full min-h-screen bg-background text-foreground selection:bg-accent selection:text-accent-foreground relative overflow-x-hidden">
+            <Navbar />
+
+            {/* Hero Section */}
+            <section className="relative w-full min-h-screen flex flex-col justify-center overflow-hidden pt-32 pb-16">
+                <div className="absolute inset-0 w-full h-full bg-cover bg-center z-0" style={{ backgroundImage: "url('/assets/images/bg-images/light_down1.png')" }} />
+                <div className="absolute inset-0 w-full h-full hero-scrim z-10" />
+
+                <div className="relative z-20 flex-grow flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto w-full">
+                    <motion.h1 
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                        className="text-3xl font-acme font-black leading-[1.05] tracking-tight text-white sm:text-5xl md:text-5xl xl:text-[3rem]"
+                    >
+                        Websites and digital products that make you stand out.
+                    </motion.h1>
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                        className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto"
+                    >
+                        {buttons.map((btn, idx) => (
+                            <a
+                                key={idx}
+                                href={btn.href}
+                                className={`group w-full sm:w-auto px-8 py-4 rounded-2xl font-bold transition-all text-center flex items-center justify-center gap-3 text-base ${btn.primary
+                                    ? "bg-accent text-accent-foreground shadow-[0_0_40px_-10px_rgba(var(--accent-rgb),0.5)] hover:bg-accent/80 hover:shadow-[0_0_60px_-15px_rgba(var(--accent-rgb),0.6)] hover:-translate-y-1"
+                                    : "bg-white/5 border border-white/10 text-white hover:bg-white/10 backdrop-blur-md hover:-translate-y-1"
+                                    }`}
+                            >
+                                <FontAwesomeIcon icon={btn.icon} className="transition-transform duration-300 group-hover:scale-110" />
+                                {btn.label}
+                            </a>
+                        ))}
+                    </motion.div>
                 </div>
 
-                {/* Floating Particles */}
-                {[
-                    { left: '15%', top: '20%', duration: 12 },
-                    { left: '75%', top: '15%', duration: 15 },
-                    { left: '25%', top: '65%', duration: 18 },
-                    { left: '85%', top: '75%', duration: 14 },
-                    { left: '45%', top: '35%', duration: 16 },
-                    { left: '60%', top: '85%', duration: 13 },
-                ].map((particle, i) => (
-                    <div
-                        key={i}
-                        className="absolute w-1.5 h-1.5 rounded-full bg-accent/20 animate-particle"
-                        style={{
-                            left: particle.left,
-                            top: particle.top,
-                            '--particle-duration': `${particle.duration}s`,
-                        } as React.CSSProperties}
-                    />
-                ))}
-            </div>
-
-            <header className="z-50 relative">
-                <Navbar />
-            </header>
-
-            <main className="flex-grow relative z-10">
-
-                {/* ── HERO ── */}
-                <section className="relative min-h-screen flex flex-col justify-center items-center px-4 overflow-hidden pt-32 pb-20">
-                    {/* Radial center glow */}
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(16,185,129,0.12),transparent)] pointer-events-none" />
-
-                    <div className="relative z-10 max-w-5xl mx-auto text-center hero-enter">
-
-                        <h1 className="text-6xl md:text-8xl font-acme font-black mb-8 tracking-tighter leading-none">
-                            <span className="block text-foreground mb-2">Building</span>
-                            <span
-                                className="bg-gradient-to-r from-accent via-sky-400 to-accent bg-[length:200%_auto] animate-gradient-x bg-clip-text text-transparent italic"
-                            >
-                                Digital Experiences.
-                            </span>
-                        </h1>
-
-                        <p className="text-xl md:text-2xl text-muted-foreground mb-14 max-w-3xl mx-auto leading-relaxed font-light">
-                            Ohio Codespace crafts{" "}
-                            <span className="text-foreground font-semibold">fast, responsive, and conversion-focused websites</span>{" "}
-                            for businesses and creators who want to stand out online.
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-20">
-                            {buttons.map((btn, idx) => (
-                                <a
-                                    key={idx}
-                                    href={btn.href}
-                                    className={`group px-10 py-4 rounded-2xl font-bold transition-all text-center flex items-center justify-center gap-3 text-base hover:scale-105 active:scale-95 hover:-translate-y-0.5 ${btn.primary
-                                        ? "bg-accent text-accent-foreground shadow-2xl shadow-accent/30 hover:shadow-accent/50 hover:bg-accent/90"
-                                        : "bg-foreground/5 border border-foreground/10 text-foreground hover:bg-foreground/10 backdrop-blur-sm"
-                                        }`}
-                                >
-                                    <FontAwesomeIcon icon={btn.icon} className="group-hover:rotate-12 transition-transform duration-300" />
-                                    {btn.label}
-                                </a>
-                            ))}
-                        </div>
-
-                        {/* Trusted stats strip */}
-                        <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-sm text-muted-foreground mb-6">
-                            {["No contracts", "Fast turnaround", "Satisfaction guaranteed"].map((t, i) => (
-                                <span key={i} className="flex items-center gap-2">
-                                    <FontAwesomeIcon icon={faCheck} className="text-accent text-xs" />
-                                    {t}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Visual Hero Layer */}
-                    <div
-                        data-aos="fade-up"
-                        data-aos-duration="700"
-                        data-aos-delay="200"
-                        className="relative z-10 w-full max-w-screen-2xl mx-auto -mt-10 mb-[-10rem] pointer-events-none select-none"
-                    >
-                        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-20 h-full" />
-                        <div className="scale-75 md:scale-95 lg:scale-100 opacity-80 hover:opacity-100 transition-opacity">
-                            <BookStackSidePerspective />
-                        </div>
-                    </div>
-                </section>
-
-                {/* ── SERVICES ── */}
-                <section id="services" className="py-32 px-4 relative z-10 overflow-hidden">
-                    {/* Layered glows */}
-                    <div className="absolute inset-0 z-0 pointer-events-none">
-                        <div className="absolute -top-24 -left-24 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-3xl" />
-                        <div className="absolute top-1/2 -right-24 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-3xl" />
-                        <div className="absolute -bottom-24 left-1/4 w-[600px] h-[600px] bg-rose-500/5 rounded-full blur-3xl" />
-                    </div>
-
-                    <div className="max-w-7xl mx-auto relative z-10">
-                        {/* Section header */}
-                        <div className="text-center mb-20" data-aos="fade-up" data-aos-duration="700">
-                            <div className="inline-block px-4 py-1.5 mb-5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-bold uppercase tracking-[0.2em]">
-                                Our Solutions
+                {/* Hero Metrics 
+                <div className="hero-enter relative z-20 w-full max-w-4xl mx-auto px-4" style={{ animationDelay: '400ms' }}>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 border-t border-white/10 pt-10">
+                        {heroMetrics.map((metric, idx) => (
+                            <div key={idx} className="flex flex-col items-center text-center">
+                                <span className="text-3xl md:text-4xl font-black text-white mb-2 font-acme tracking-tight">{metric.value}</span>
+                                <span className="text-[10px] md:text-xs uppercase tracking-widest text-white/50 font-bold">{metric.label}</span>
                             </div>
-                            <h2 className="text-5xl md:text-6xl font-acme font-black mb-6 tracking-tighter">
-                                Strategic <span className="text-foreground">Expertise</span> for the{" "}
-                                <span className="text-accent italic" style={{ fontFamily: "var(--font-familyIII)" }}>Modern</span> Web
-                            </h2>
-                            <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-                                We combine technical excellence with creative strategy to build digital ecosystems that outperform the competition.
-                            </p>
+                        ))}
+                    </div>
+                </div>*/}
+            </section>
+
+            <main className="relative z-10">
+                {/* Services Section */}
+                <section className="py-32 px-4 bg-background relative">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="flex flex-col md:flex-row justify-between items-end mb-20 border-b border-glass-border pb-10">
+                            <div>
+                                <h2 className="text-5xl md:text-6xl font-acme font-black tracking-tight mb-4">Our Expertise</h2>
+                                <p className="text-muted-foreground max-w-lg text-lg">We deliver high-impact digital solutions that combine modern aesthetics with robust engineering.</p>
+                            </div>
+                            <Link href="/portfolio" className="hidden md:inline-flex items-center gap-3 text-sm font-bold text-foreground hover:text-accent transition-colors group px-6 py-3 rounded-full border border-glass-border hover:bg-glass-bg mt-6 md:mt-0">
+                                Explore Portfolio <FontAwesomeIcon icon={faArrowRight} className="group-hover:translate-x-1 transition-transform" />
+                            </Link>
                         </div>
 
-                        {/* Cards */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 md:gap-x-12 md:gap-y-20 mt-12 md:mt-0">
                             {services.map((service, idx) => (
-                                <div
+                                <motion.div
                                     key={idx}
-                                    className="service-card-enter group relative p-8 rounded-[2rem] border border-glass-border bg-glass-bg hover:bg-glass-bg-hover hover:border-glass-border-hover transition-all duration-500 overflow-hidden flex flex-col"
-                                    style={{ animationDelay: service.delay }}
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-50px" }}
+                                    transition={{ duration: 0.7, delay: parseFloat(service.delay), ease: "easeOut" }}
+                                    className={`group relative flex flex-col overflow-hidden md:overflow-visible ${idx % 2 === 1 ? 'mt-10 md:mt-0' : ''}`}
                                 >
-                                    {/* Corner radial */}
-                                    <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl ${service.accent} blur-2xl rounded-full -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-
-                                    {/* Icon */}
-                                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.accent} flex items-center justify-center mb-6 border border-glass-border`}>
-                                        <FontAwesomeIcon icon={service.icon} className={`text-xl ${service.iconColor} group-hover:scale-110 transition-transform duration-500`} />
+                                    {/* Giant background icon (Desktop only) */}
+                                    <div className="hidden md:block absolute -top-8 -left-6 text-[8rem] leading-none text-foreground/[0.03] select-none group-hover:text-accent/[0.06] transition-colors duration-700 z-0 pointer-events-none">
+                                        <FontAwesomeIcon icon={service.icon} />
                                     </div>
 
-                                    <h4 className="text-xl font-bold mb-3 text-foreground group-hover:text-accent transition-colors duration-300">
-                                        {service.title}
-                                    </h4>
-                                    <p className="text-muted-foreground leading-relaxed text-sm flex-grow">
-                                        {service.description}
-                                    </p>
+                                    <div className="relative z-10 flex flex-col h-full">
+                                        {/* Gradient accent bar (Mobile only) */}
+                                        <div className="md:hidden h-[3px] w-10 rounded-full bg-gradient-to-r from-accent to-accent/20 group-hover:w-full transition-all duration-700 ease-out mb-5" />
 
-                                    {/* Bottom accent line */}
-                                    <div className="mt-6 h-px w-0 group-hover:w-full bg-gradient-to-r from-accent/60 to-transparent transition-all duration-500 rounded-full" />
-                                </div>
+                                        <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                                            <div className="hidden md:flex w-12 h-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-white/10 to-white/0 border border-white/10 group-hover:scale-110 group-hover:border-accent/30 transition-all duration-500 shadow-inner">
+                                                <FontAwesomeIcon icon={service.icon} className={`text-lg text-foreground group-hover:${service.iconColor} transition-colors duration-500`} />
+                                            </div>
+
+                                            {/* Small inline icon (Mobile only) */}
+                                            <div className="md:hidden text-accent/60 group-hover:text-accent transition-colors duration-500">
+                                                <FontAwesomeIcon icon={service.icon} className="text-base" />
+                                            </div>
+
+                                            <h4 className="text-[16px] md:text-2xl font-bold text-foreground group-hover:text-accent transition-colors duration-500 leading-tight">
+                                                {service.title}
+                                            </h4>
+                                        </div>
+
+                                        <p className="text-muted-foreground/80 leading-[1.75] text-[12px] md:text-base flex-grow md:pl-[4rem]">
+                                            {service.description}
+                                        </p>
+
+                                        <div className="hidden md:block w-full h-[2px] bg-glass-border mt-10 relative overflow-hidden md:ml-[4rem] md:w-[calc(100%-4rem)]">
+                                            <div className="absolute inset-y-0 left-0 w-0 bg-accent transition-all duration-700 ease-out md:group-hover:w-full" />
+                                        </div>
+                                    </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
                 </section>
 
-                {/* ── WHY US ── */}
                 <section className="py-32 px-4 relative overflow-hidden">
                     <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent/5 blur-[120px] rounded-full -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
                     <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-
-                        {/* Left Column */}
-                        <div className="lg:col-span-12 xl:col-span-5" data-aos="fade-right" data-aos-duration="700">
+                        <motion.div 
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.7 }}
+                            className="lg:col-span-12 xl:col-span-5"
+                        >
                             <div className="flex items-center gap-4 mb-6">
                                 <div className="w-10 h-px bg-accent" />
                                 <span className="text-accent font-bold tracking-[0.2em] uppercase text-xs">Why Ohio Codespace</span>
@@ -272,8 +235,7 @@ const HomeClient: React.FC = () => {
                             <h3 className="text-5xl md:text-6xl font-acme font-black mb-8 leading-[1.1] tracking-tighter">
                                 Creative{" "}
                                 <span className="text-accent italic" style={{ fontFamily: "var(--font-familyIII)" }}>Design</span>
-                                {" "}&amp;{" "}
-                                Smart{" "}
+                                {" "}&amp; Smart{" "}
                                 <span className="text-accent italic" style={{ fontFamily: "var(--font-familyIII)" }}>Development</span>
                             </h3>
 
@@ -281,14 +243,13 @@ const HomeClient: React.FC = () => {
                                 We build custom, high-performance websites designed to convert and deliver results. Each site focuses on clean design, fast performance, and a seamless user experience.
                             </p>
 
-                            {/* Highlights */}
                             <ul className="space-y-3 mb-12">
-                                {highlights.map((h, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-sm text-muted-foreground">
+                                {highlights.map((item, index) => (
+                                    <li key={index} className="flex items-center gap-3 text-sm text-muted-foreground">
                                         <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/15 border border-accent/30 flex items-center justify-center">
                                             <FontAwesomeIcon icon={faCheck} className="text-accent text-[10px]" />
                                         </div>
-                                        {h}
+                                        {item}
                                     </li>
                                 ))}
                             </ul>
@@ -300,12 +261,16 @@ const HomeClient: React.FC = () => {
                                 <span>View Our Work</span>
                                 <FontAwesomeIcon icon={faArrowRight} className="group-hover:translate-x-1 transition-transform" />
                             </Link>
-                        </div>
+                        </motion.div>
 
-                        {/* Right Column: Bento Grid */}
                         <div className="lg:col-span-12 xl:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-[160px]">
-                            {/* Card 1: Large */}
-                            <div className="md:col-span-2 md:row-span-2 relative p-8 rounded-[2.5rem] bg-glass-bg border border-glass-border overflow-hidden group hover:border-glass-border-hover hover:bg-glass-bg-hover transition-all duration-500">
+                            <motion.div 
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.6, delay: 0.1 }}
+                                className="md:col-span-2 md:row-span-2 relative p-8 rounded-[2.5rem] bg-glass-bg border border-glass-border overflow-hidden group hover:border-glass-border-hover hover:bg-glass-bg-hover transition-all duration-500"
+                            >
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 blur-3xl -mr-32 -mt-32 group-hover:bg-accent/20 transition-all duration-700" />
                                 <div className="relative z-10 h-full flex flex-col justify-between">
                                     <div className="w-14 h-14 rounded-2xl bg-accent/20 border border-accent/20 flex items-center justify-center text-accent mb-6">
@@ -316,23 +281,33 @@ const HomeClient: React.FC = () => {
                                             Uncompromising Premium UI
                                         </h4>
                                         <p className="text-muted-foreground leading-relaxed text-sm">
-                                            Custom interfaces designed for clarity, elegance, and seamless interaction—setting a high standard for modern web experiences.
+                                            Custom interfaces designed for clarity, elegance, and seamless interaction, setting a high standard for modern web experiences.
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            {/* Card 2: SEO */}
-                            <div className="relative p-6 rounded-[2.5rem] bg-glass-bg border border-glass-border flex flex-col items-center justify-center text-center group hover:bg-emerald-500/5 hover:border-emerald-500/30 transition-all duration-300">
+                            <motion.div 
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.6, delay: 0.2 }}
+                                className="relative p-6 rounded-[2.5rem] bg-glass-bg border border-glass-border flex flex-col items-center justify-center text-center group hover:bg-emerald-500/5 hover:border-emerald-500/30 transition-all duration-300"
+                            >
                                 <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center mb-3">
                                     <FontAwesomeIcon icon={faChartLine} className="text-emerald-400 text-sm" />
                                 </div>
                                 <span className="font-bold text-foreground text-sm block">SEO Excellence</span>
-                                <span className="text-xs text-emerald-400/70 mt-1 uppercase tracking-widest font-mono">+420% Visibility</span>
-                            </div>
+                                <span className="text-xs text-emerald-400/70 mt-1 uppercase tracking-widest font-mono">+100% Visibility</span>
+                            </motion.div>
 
-                            {/* Card 3: Accent tall */}
-                            <div className="md:row-span-2 relative p-8 rounded-[2.5rem] bg-gradient-to-br from-accent to-accent/80 text-accent-foreground overflow-hidden group shadow-2xl shadow-accent/25">
+                            <motion.div 
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.6, delay: 0.3 }}
+                                className="md:row-span-2 relative p-8 rounded-[2.5rem] bg-gradient-to-br from-accent to-accent/80 text-accent-foreground overflow-hidden group shadow-2xl shadow-accent/25"
+                            >
                                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.2),_transparent)]" />
                                 <div className="relative z-10 h-full flex flex-col justify-between">
                                     <div className="w-10 h-10 rounded-xl bg-accent-foreground/10 flex items-center justify-center mb-4">
@@ -345,10 +320,15 @@ const HomeClient: React.FC = () => {
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            {/* Card 4: Wide */}
-                            <div className="md:col-span-2 relative p-6 rounded-[2.5rem] bg-glass-bg border border-glass-border flex items-center gap-5 px-8 group hover:bg-blue-500/5 hover:border-blue-500/30 transition-all duration-300">
+                            <motion.div 
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.6, delay: 0.4 }}
+                                className="md:col-span-2 relative p-6 rounded-[2.5rem] bg-glass-bg border border-glass-border flex items-center gap-5 px-8 group hover:bg-blue-500/5 hover:border-blue-500/30 transition-all duration-300"
+                            >
                                 <div className="w-11 h-11 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
                                     <FontAwesomeIcon icon={faTachometerAlt} />
                                 </div>
@@ -356,21 +336,24 @@ const HomeClient: React.FC = () => {
                                     <span className="font-bold text-foreground block text-sm">Accelerated Delivery</span>
                                     <span className="text-xs text-muted-foreground">Production-ready websites, delivered fast.</span>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
 
                 <ContactForm />
 
-                {/* ── FINAL CTA ── */}
                 <section className="py-24 px-4 bg-background relative overflow-hidden">
-                    {/* Subtle noise */}
                     <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.12] pointer-events-none" />
 
-                    <div className="max-w-7xl mx-auto overflow-hidden rounded-[3rem] border border-accent/15 bg-gradient-to-br from-accent/10 via-transparent to-sky-500/5 relative">
-                        {/* Inner glow */}
-                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_0%_0%,rgba(16,185,129,0.15),transparent_60%)] pointer-events-none" />
+                    <motion.div 
+                        initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="max-w-7xl mx-auto overflow-hidden rounded-[3rem] border border-accent/15 bg-gradient-to-br from-accent/10 via-transparent to-sky-500/5 relative"
+                    >
+                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_0%_0%,rgba(180,138,90,0.18),transparent_60%)] pointer-events-none" />
 
                         <div className="p-12 md:p-20 flex flex-col justify-center items-start text-left relative z-10">
                             <div className="flex items-center gap-3 mb-8">
@@ -378,7 +361,7 @@ const HomeClient: React.FC = () => {
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
                                     <span className="relative inline-flex rounded-full h-3 w-3 bg-accent" />
                                 </span>
-                                <span className="text-accent font-mono text-xs uppercase tracking-widest">Systems Operational · Ready for Deployment</span>
+                                <span className="text-accent font-mono text-xs uppercase tracking-widest">Systems operational and ready for deployment</span>
                             </div>
 
                             <h2 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter">
@@ -406,7 +389,7 @@ const HomeClient: React.FC = () => {
                                 </Link>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </section>
             </main>
 

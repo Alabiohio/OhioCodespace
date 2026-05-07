@@ -16,6 +16,7 @@ import {
     faUserShield
 } from "@fortawesome/free-solid-svg-icons";
 import { sendInquiry } from "@/app/actions/inquiry";
+import { motion } from "framer-motion";
 
 const InquiryClient: React.FC = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -121,11 +122,12 @@ const InquiryClient: React.FC = () => {
 
             setStatus({ type: "success", message: result.success || "Message sent successfully!" });
             form.reset();
-        } catch (error: any) {
+        } catch (error: unknown) {
+            const details = error as { message?: string; status?: number; text?: string };
             console.error("Detailed EmailJS Error:", {
-                message: error?.message,
-                status: error?.status,
-                text: error?.text,
+                message: details?.message,
+                status: details?.status,
+                text: details?.text,
                 fullError: error
             });
             // Even if EmailJS fails, the data is already in Supabase.
@@ -181,7 +183,7 @@ const InquiryClient: React.FC = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                         {/* Information Sidebar */}
-                        <div className="lg:col-span-4 space-y-6" data-aos="fade-right">
+                        <div className="lg:col-span-4 space-y-6">
                             <div className="glass-card p-8 rounded-3xl border border-glass-border bg-glass-bg backdrop-blur-xl">
                                 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                                     <FontAwesomeIcon icon={faLifeRing} className="text-accent" />
@@ -217,7 +219,7 @@ const InquiryClient: React.FC = () => {
                         </div>
 
                         {/* Inquiry Form */}
-                        <div className="lg:col-span-8" data-aos="fade-left">
+                        <div className="lg:col-span-8">
                             <div className="glass-card p-8 md:p-12 rounded-[2.5rem] border border-glass-border bg-glass-bg backdrop-blur-xl shadow-2xl overflow-hidden relative">
                                 {/* Gradient blobs inside the card */}
                                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/5 blur-3xl rounded-full" />
@@ -340,3 +342,4 @@ const InquiryClient: React.FC = () => {
 };
 
 export default InquiryClient;
+

@@ -36,22 +36,22 @@ export default function NotFound() {
                         </h1>
                         <div
                             className="absolute inset-0 flex items-center justify-center text-7xl md:text-9xl font-acme font-black bg-gradient-to-b from-accent to-emerald-600 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(16,185,129,0.3)]"
-                            data-aos="zoom-in"
-                            data-aos-duration="1000"
+                           
+                           
                         >
                             404
                         </div>
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl font-acme font-bold mb-4 tracking-tight" data-aos="fade-up" data-aos-delay="200">
+                    <h2 className="text-3xl md:text-4xl font-acme font-bold mb-4 tracking-tight">
                         Lost in <span className="text-accent italic font-nova">Digital Space?</span>
                     </h2>
 
-                    <p className="text-muted-foreground text-lg mb-12 max-w-md mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="400">
-                        The page you are looking for has been moved, deleted, or never existed in the first place. Let's get you back on track.
+                    <p className="text-muted-foreground text-lg mb-12 max-w-md mx-auto leading-relaxed">
+                        The page you are looking for has been moved, deleted, or never existed in the first place. Let&apos;s get you back on track.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-5" data-aos="fade-up" data-aos-delay="600">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
                         <Link
                             href="/"
                             className="group px-10 py-4 bg-accent text-accent-foreground rounded-2xl font-bold text-base shadow-2xl shadow-accent/25 flex items-center justify-center gap-3 transition-all hover:scale-105 active:scale-95 hover:bg-accent/90"
@@ -74,3 +74,4 @@ export default function NotFound() {
         </div>
     );
 }
+

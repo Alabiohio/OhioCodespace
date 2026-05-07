@@ -21,9 +21,7 @@ const BookStackSidePerspective: React.FC = () => {
             key={i}
             src={img.src}
             alt={`side-${i}`}
-            className="w-56 lg:w-72 h-80 lg:h-96 object-cover rounded-xl shadow-xl transition-transform duration-700 hover:scale-110"
-            data-aos={fromRight ? "fade-left" : "fade-right"}
-            data-aos-delay={i * 200}
+            className="w-56 lg:w-72 h-80 lg:h-96 object-cover rounded-xl shadow-xl transition-transform duration-700 hover:scale-[1.04]"
             style={{
               transform: `rotateY(${fromRight ? -20 : 20}deg)`,
               perspective: '1000px'

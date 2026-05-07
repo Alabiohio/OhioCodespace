@@ -1,21 +1,51 @@
 @import "tailwindcss";
 
+@property --accent {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #0047FF;
+}
+
+@keyframes accent-switch {
+  0%, 15% {
+    --accent: #0047FF;
+    --accent-rgb: 0, 71, 255;
+  }
+  25%, 40% {
+    --accent: #10b981;
+    --accent-rgb: 16, 185, 129;
+  }
+  50%, 65% {
+    --accent: #b48a5a;
+    --accent-rgb: 180, 138, 90;
+  }
+  75%, 90% {
+    --accent: #8b5cf6;
+    --accent-rgb: 139, 92, 246;
+  }
+  100% {
+    --accent: #0047FF;
+    --accent-rgb: 0, 71, 255;
+  }
+}
+
 :root {
-  --background: #0f172a;
-  --foreground: #f8fafc;
-  --muted-foreground: #94a3b8;
-  --accent: #10b981;
-  --accent-rgb: 16, 185, 129;
-  --accent-foreground: #064e3b;
-  --secondary: #0ea5e9;
-  --secondary-rgb: 14, 165, 233;
-  --card-bg: rgba(30, 41, 59, 0.7);
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-bg-hover: rgba(255, 255, 255, 0.06);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-border-hover: rgba(16, 185, 129, 0.4);
-  --border-color: rgba(255, 255, 255, 0.1);
-  --fade-color: rgb(5, 20, 40);
+  animation: accent-switch 20s infinite;
+  --background: #121110;
+  --foreground: #f2ede6;
+  --muted-foreground: #b7aea2;
+  --accent: #0047FF;
+  --accent-rgb: 0, 71, 255;
+  --accent-foreground: #ffffff;
+  --secondary: #b48a5a;
+  --secondary-rgb: 180, 138, 90;
+  --card-bg: rgba(26, 24, 22, 0.78);
+  --glass-bg: rgba(255, 248, 240, 0.04);
+  --glass-bg-hover: rgba(255, 248, 240, 0.08);
+  --glass-border: rgba(255, 244, 230, 0.1);
+  --glass-border-hover: rgba(180, 138, 90, 0.35);
+  --border-color: rgba(255, 244, 230, 0.08);
+  --fade-color: rgb(18, 17, 16);
   
   /* Font Variable Bridging (Leveraging Next.js Font Loader) */
   --font-familyI: var(--font-exo);
@@ -44,19 +74,19 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #f8fafc;
-    --foreground: #0f172a;
-    --muted-foreground: #64748b;
-    --card-bg: rgba(255, 255, 255, 0.8);
-    --glass-bg: rgba(15, 23, 42, 0.02);
-    --glass-bg-hover: rgba(15, 23, 42, 0.05);
-    --glass-border: rgba(15, 23, 42, 0.08);
-    --glass-border-hover: rgba(16, 185, 129, 0.3);
-    --border-color: rgba(0, 0, 0, 0.05);
-    --fade-color: #f1f5f9;
-    --brImg-overlay: rgba(248, 250, 252, 0.8);
-    --introColor: #047857;
-    --heroBg: #f1f5f9;
+    --background: #f7f2eb;
+    --foreground: #1d1a17;
+    --muted-foreground: #6e6358;
+    --card-bg: rgba(255, 252, 247, 0.86);
+    --glass-bg: rgba(29, 26, 23, 0.03);
+    --glass-bg-hover: rgba(29, 26, 23, 0.06);
+    --glass-border: rgba(29, 26, 23, 0.08);
+    --glass-border-hover: rgba(180, 138, 90, 0.25);
+    --border-color: rgba(29, 26, 23, 0.08);
+    --fade-color: #f7f2eb;
+    --brImg-overlay: rgba(247, 242, 235, 0.82);
+    --introColor: #8b6841;
+    --heroBg: #efe7dc;
   }
 }
 
@@ -73,15 +103,6 @@ body {
   padding: 0;
 }
 
-/* Prevent AOS from creating horizontal scrollbars */
-[data-aos] {
-  pointer-events: none;
-}
-
-.aos-animate {
-  pointer-events: auto;
-}
-
 /* Organic Nebula Glows - Simplified for Performance */
 body::before {
   content: "";
@@ -89,9 +110,9 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(circle at 10% 10%, rgba(var(--accent-rgb), 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 90% 10%, rgba(var(--secondary-rgb), 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 50% 90%, rgba(var(--accent-rgb), 0.02) 0%, transparent 50%);
+    radial-gradient(circle at 10% 10%, rgba(var(--accent-rgb), 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(var(--secondary-rgb), 0.04) 0%, transparent 42%),
+    radial-gradient(circle at 50% 90%, rgba(var(--accent-rgb), 0.03) 0%, transparent 48%);
   pointer-events: none;
 }
 
@@ -101,7 +122,7 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(circle at 50% 0%, var(--glass-border) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(var(--accent-rgb), 0.08) 0%, transparent 68%);
   pointer-events: none;
 }
 
@@ -110,7 +131,7 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: -1;
-  opacity: 0.03;
+  opacity: 0.025;
   pointer-events: none;
   background-image: url("https://grainy-gradients.vercel.app/noise.svg");
 }
@@ -122,7 +143,7 @@ body::after {
   height: 40vw;
   border-radius: 50%;
   background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-  opacity: 0.05;
+  opacity: 0.035;
   pointer-events: none;
   z-index: -2;
 }
@@ -143,7 +164,7 @@ body::after {
   }
 
   50% {
-    opacity: 0.1;
+    opacity: 0.06;
   }
 
   100% {
@@ -204,18 +225,6 @@ body::after {
   animation: bounce-slow 4s ease-in-out infinite;
 }
 
-[data-aos="progress-grow"] {
-  width: 0% !important;
-  opacity: 0;
-  transition-property: width, opacity;
-}
-
-[data-aos="progress-grow"].aos-animate {
-  width: 100% !important;
-  /* This will be overridden by the inline style if needed, but here we rely on the class width */
-  opacity: 1;
-}
-
 .glass-card {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
@@ -226,8 +235,7 @@ body::after {
 .glass-card:hover {
   background: var(--glass-bg-hover);
   border-color: var(--glass-border-hover);
-  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.6), 0 0 30px rgba(var(--accent-rgb), 0.15);
-  transform: translateY(-8px);
+  transform: translateY(-6px);
 }
 
 .icon-box {
@@ -284,6 +292,16 @@ body::after {
 .service-card-enter {
   opacity: 0;
   animation: service-card-enter 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-scrim {
+  background:
+    linear-gradient(90deg, rgba(12, 11, 10, 0.86) 0%, rgba(12, 11, 10, 0.68) 42%, rgba(12, 11, 10, 0.4) 100%),
+    radial-gradient(circle at top right, rgba(var(--accent-rgb), 0.18), transparent 36%);
+}
+
+.section-kicker {
+  letter-spacing: 0.24em;
 }
 
 #brImg {

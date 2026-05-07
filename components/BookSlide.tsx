@@ -19,8 +19,8 @@ const BookStackSidePerspective: React.FC = () => {
                     src={img.src}
                     alt={`stacked-${i}`}
                     className="w-56 lg:w-72 h-80 lg:h-96 object-cover rounded-xl shadow-xl transition-transform duration-700 hover:scale-110"
-                    data-aos="fade-left"
-                    data-aos-delay={i * 200}
+                   
+                   
                     style={{
                         transform: 'rotateY(-20deg)',
                         perspective: '1000px'
@@ -32,3 +32,4 @@ const BookStackSidePerspective: React.FC = () => {
 };
 
 export default BookStackSidePerspective;
+

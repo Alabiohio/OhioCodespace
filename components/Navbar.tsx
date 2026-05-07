@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import NavLink from "@/components/NavLink";
-import hdIc from "@/assets/img/ohio.png";
+
 import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarsStaggered, faXmark, faHome, faBriefcase, faRocket, faPaperPlane, faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
                 <div className="flex items-center gap-3">
                     <div className="relative group">
                         <div className="absolute -inset-1 rounded-full blur opacity-25"></div>
-                        <Image src={hdIc} alt="Ohio Codespace" className="relative h-10 w-10 object-contain" />
+                        <Image src="/assets/images/logo/logo.png" alt="Ohio Codespace" width={40} height={40} className="relative h-10 w-10 object-contain" />
                     </div>
                     <span className="text-2xl font-acme font-bold text-foreground tracking-tight">
                         OHIO<span className="text-accent"> Codespace</span>
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
                 </div>
 
                 {/* Desktop Links */}
-                <div className="hidden md:flex gap-8 items-center">
+                <div className="hidden lg:flex gap-8 items-center">
                     <NavLink
                         href="/"
                         className="text-muted-foreground hover:text-accent font-medium transition-colors px-3 py-1.5 rounded-lg"
@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
                 </div>
 
                 {/* Mobile Button */}
-                <div className="md:hidden">
+                <div className="lg:hidden">
                     <button
                         type="button"
                         title={isOpen ? "Close Menu" : "Open Menu"}
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
 
             {/* Mobile Menu Drawer */}
             <div
-                className={`fixed inset-0 z-[100] md:hidden transition-all duration-500 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
+                className={`fixed inset-0 z-[100] lg:hidden transition-all duration-500 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
             >
                 {/* Backdrop */}
                 <div
@@ -125,7 +125,7 @@ const Navbar: React.FC = () => {
                         {/* Header */}
                         <div className="flex items-center justify-between mb-12">
                             <div className="flex items-center gap-2">
-                                <Image src={hdIc} alt="Ohio Codespace" className="h-8 w-8 object-contain" />
+                                <Image src="/assets/images/logo/logo.png" alt="Ohio Codespace" width={32} height={32} className="h-8 w-8 object-contain" />
                                 <span className="text-xl font-black tracking-tighter">OHIO</span>
                             </div>
                             <button

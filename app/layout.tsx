@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "@/styles/App.css";
-import AOSInit from "./AOSInit";
 import { Righteous, Exo_2, Bree_Serif, Instrument_Serif } from "next/font/google";
 
 const instrumentSerif = Instrument_Serif({
@@ -51,7 +50,6 @@ export default function RootLayout({
       <body
         className="antialiased"
       >
-        <AOSInit />
         {children}
       </body>
     </html>

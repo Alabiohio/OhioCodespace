@@ -4,9 +4,9 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
-import exeImg from "@/assets/img/exe.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocket, faBolt, faMobileAlt, faChartLine, faShoppingCart, faHandshake, faBullseye, faDotCircle } from '@fortawesome/free-solid-svg-icons';
+import { motion } from "framer-motion";
 
 
 const BusinessClient: React.FC = () => {
@@ -16,10 +16,10 @@ const BusinessClient: React.FC = () => {
             <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
                 <div className="bg-noise" />
                 <div
-                    className="glow-spot glow-secondary top-[-10%] right-[-10%] animate-float"
+                    className="glow-spot glow-secondary top-[-10%] right-[-10%]"
                 />
                 <div
-                    className="glow-spot glow-accent bottom-[-10%] left-[-10%] animate-float-reverse"
+                    className="glow-spot glow-accent bottom-[-10%] left-[-10%]"
                 />
 
                 {/* Animated Background Beams */}
@@ -43,24 +43,28 @@ const BusinessClient: React.FC = () => {
 
                     <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
                         {/* Left: Business Growth Engine */}
-                        <div data-aos="fade-right" data-aos-duration="600">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                        >
                             <div className="flex items-center gap-3 mb-8">
-                                <div className="w-10 h-[2px] bg-accent" data-aos="fade-right" data-aos-duration="600" />
-                                <span className="text-accent font-bold tracking-widest uppercase text-xs" data-aos="fade-left" data-aos-duration="700">Business Optimization</span>
+                                <div className="w-10 h-[2px] bg-accent" />
+                                <span className="text-accent font-bold tracking-widest uppercase text-xs">Business Optimization</span>
                             </div>
 
-                            <h1 className="text-5xl md:text-7xl font-acme font-black mb-8 leading-[1.1] tracking-tighter" data-aos="zoom-out" data-aos-duration="700">
+                            <h1 className="text-5xl md:text-7xl font-acme font-black mb-8 leading-[1.1] tracking-tighter">
                                 Driving <span className="text-foreground">Business Growth</span> with <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">Smart Websites</span>
                             </h1>
 
-                            <p className="text-xl text-muted-foreground mb-12 max-w-xl leading-relaxed" data-aos="fade-up" data-aos-duration="800">
+                            <p className="text-xl text-muted-foreground mb-12 max-w-xl leading-relaxed">
                                 Every website we build is engineered for <span className="text-foreground font-medium">performance, visibility, and conversions</span>. From local SEO to Google Business integration, we create digital solutions that help businesses grow, attract customers, and outperform competitors.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-6">
                                 <a
                                     href="mailto:ohiocodespace@gmail.com?subject=Boost%20My%20Business"
-                                    data-aos="fade-up" data-aos-duration="600"
+                                   
                                     className="px-10 py-5 bg-accent text-accent-foreground rounded-2xl font-bold text-lg shadow-2xl shadow-accent/30 flex items-center justify-center gap-3 transition-all hover:scale-105 active:scale-95 group"
                                 >
                                     <FontAwesomeIcon icon={faRocket} className="group-hover:translate-y-[-2px] transition-transform" />
@@ -68,16 +72,21 @@ const BusinessClient: React.FC = () => {
                                 </a>
                                 <a
                                     href="#gmb-section"
-                                    data-aos="fade-up" data-aos-duration="700"
+                                   
                                     className="px-10 py-5 bg-foreground/5 border border-foreground/10 text-foreground rounded-2xl font-bold text-lg backdrop-blur-sm transition-all text-center flex items-center justify-center gap-3 hover:bg-foreground/10"
                                 >
                                     <FontAwesomeIcon icon={faBullseye} /> Local SEO Focus
                                 </a>
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Right: Performance Dashboard Visual */}
-                        <div data-aos="zoom-in" data-aos-duration="800" className="relative">
+                        <motion.div 
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                            className="relative"
+                        >
                             <div className="relative p-1 rounded-[3rem] bg-glass-bg border border-glass-border backdrop-blur-xl group overflow-hidden">
                                 <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
 
@@ -99,14 +108,14 @@ const BusinessClient: React.FC = () => {
                                         ].map((stat, i) => (
                                             <div key={i} className="space-y-2">
                                                 <div className="flex justify-between text-sm">
-                                                    <span className="text-muted-foreground" data-aos="fade-up" data-aos-duration="600">{stat.label}</span>
-                                                    <span className={`font-bold ${stat.color}`} data-aos="fade-left" data-aos-duration="700">{stat.value}</span>
+                                                    <span className="text-muted-foreground">{stat.label}</span>
+                                                    <span className={`font-bold ${stat.color}`}>{stat.value}</span>
                                                 </div>
                                                 <div className="h-2 w-full bg-foreground/5 rounded-full overflow-hidden">
                                                     <div
                                                         className={`h-full bg-accent/40 rounded-full transition-all duration-1000 ${stat.width}`}
-                                                        style={{ width: '0%', opacity: 0 }}
-                                                        data-aos="progress-grow"
+                                                        style={{ width: '100%', opacity: 1 }}
+                                                       
                                                     />
                                                 </div>
                                             </div>
@@ -117,11 +126,11 @@ const BusinessClient: React.FC = () => {
                                     <div className="pt-6 border-t border-foreground/5 flex gap-4">
                                         <div className="flex-grow p-4 rounded-2xl bg-foreground/5 border border-foreground/5 text-center">
                                             <div className="text-[10px] uppercase text-muted-foreground mb-1">Client Support</div>
-                                            <div className="text-xl font-black text-foreground" data-aos="fade-left" data-aos-duration="800">24/7 Active</div>
+                                            <div className="text-xl font-black text-foreground">24/7 Active</div>
                                         </div>
                                         <div className="flex-grow p-4 rounded-2xl bg-accent text-accent-foreground text-center shadow-lg shadow-accent/20">
                                             <div className="text-[10px] uppercase opacity-60 mb-1">Performance</div>
-                                            <div className="text-xl font-black italic" data-aos="fade-right" data-aos-duration="800">Optimized</div>
+                                            <div className="text-xl font-black italic">Optimized</div>
                                         </div>
                                     </div>
                                 </div>
@@ -131,7 +140,7 @@ const BusinessClient: React.FC = () => {
                                     <FontAwesomeIcon icon={faChartLine} className="text-white text-3xl" />
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
                     </div>
 
@@ -143,29 +152,35 @@ const BusinessClient: React.FC = () => {
 
                     <div className="max-w-7xl mx-auto">
                         {/* Section Header */}
-                        <div className="text-center mb-20">
+                        <motion.div 
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.6 }}
+                            className="text-center mb-20"
+                        >
                             <div
-                                data-aos="fade-up"
+                               
                                 className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-xs uppercase tracking-widest mb-6"
                             >
                                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                                 Business Solutions
                             </div>
                             <h2
-                                data-aos="zoom-out"
-                                data-aos-delay="100"
+                               
+                               
                                 className="text-5xl md:text-6xl font-acme font-black mb-6 tracking-tight"
                             >
                                 How We <span className="text-accent italic font-nova" style={{ fontFamily: 'var(--font-familyIII)' }}>Measure</span> Growth
                             </h2>
                             <p
-                                data-aos="fade-up"
-                                data-aos-delay="200"
+                               
+                               
                                 className="text-xl text-muted-foreground max-w-3xl mx-auto"
                             >
                                 Every decision is focused on performance, visibility, and conversion — so your website supports real business goals, not just aesthetics.
                             </p>
-                        </div>
+                        </motion.div>
 
                         {/* Feature Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -175,55 +190,71 @@ const BusinessClient: React.FC = () => {
                                 { icon: faChartLine, title: "Local SEO Visibility", desc: "Structured to improve local search rankings and help customers find you faster.", color: "from-emerald-500/20 to-green-500/20", iconColor: "text-emerald-400" },
                                 { icon: faShoppingCart, title: "Online Sales Enablement", desc: "Simple, secure checkout flows that make it easy for customers to take action.", color: "from-purple-500/20 to-pink-500/20", iconColor: "text-purple-400" }
                             ].map((item, i) => (
-                                <div
+                                <motion.div
                                     key={i}
-                                    data-aos="fade-up"
-                                    data-aos-delay={i * 100}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-50px" }}
+                                    transition={{ duration: 0.6, delay: i * 0.1 }}
+                                   
+                                   
                                     className="group relative p-8 rounded-[2.5rem] bg-glass-bg border border-glass-border hover:border-glass-border-hover transition-all overflow-hidden hover:-translate-y-2 hover:scale-[1.02]"
                                 >
                                     <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-100 transition-opacity`} />
                                     <div className="relative z-10">
-                                        <div className={`w-14 h-14 rounded-2xl bg-foreground/5 flex items-center justify-center ${item.iconColor} mb-6 group-hover:scale-110 transition-transform`} data-aos="zoom-in" data-aos-duration="600">
+                                        <div className={`w-14 h-14 rounded-2xl bg-foreground/5 flex items-center justify-center ${item.iconColor} mb-6 group-hover:scale-110 transition-transform`}>
                                             <FontAwesomeIcon icon={item.icon} size="lg" />
                                         </div>
-                                        <h4 className="text-xl font-bold text-foreground mb-3" data-aos="fade-left" data-aos-duration="600">{item.title}</h4>
-                                        <p className="text-sm text-muted-foreground leading-relaxed" data-aos="fade-up" data-aos-duration="800">{item.desc}</p>
+                                        <h4 className="text-xl font-bold text-foreground mb-3">{item.title}</h4>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
 
                         {/* CTA Card */}
                         <div
-                            data-aos="fade-up"
+                           
                             className="relative overflow-hidden rounded-[3rem] border border-glass-border bg-gradient-to-br from-accent/10 via-transparent to-secondary/10"
                         >
                             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 pointer-events-none" />
 
                             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 p-8 sm:p-12 md:p-16">
                                 {/* Left: Message */}
-                                <div className="flex flex-col justify-center">
-                                    <h3 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 leading-tight" data-aos="fade-left" data-aos-duration="1200">
+                                <motion.div 
+                                    initial={{ opacity: 0, x: -30 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true, margin: "-50px" }}
+                                    transition={{ duration: 0.7 }}
+                                    className="flex flex-col justify-center"
+                                >
+                                    <h3 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 leading-tight">
                                         Ready to <span className="text-accent">Strengthen </span> Your Online Presence?
                                     </h3>
-                                    <p className="text-lg text-muted-foreground mb-8 leading-relaxed" data-aos="fade-up" data-aos-duration="1400">
+                                    <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                                         Work with a focused development partner to build a website that supports growth, improves visibility, and converts visitors into customers.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4">
                                         <a
                                             href="mailto:ohiocodespace@gmail.com?subject=Business%20Growth%20Consultation"
-                                            data-aos="fade-up"
-                                            data-aos-duration="800"
+                                           
+                                           
                                             className="px-8 py-4 bg-accent text-accent-foreground rounded-2xl font-bold text-lg shadow-2xl shadow-accent/20 flex items-center justify-center gap-3 transition-all hover:scale-105 active:scale-95 group"
                                         >
                                             <FontAwesomeIcon icon={faHandshake} className="group-hover:rotate-12 transition-transform" />
                                             Book Consultation
                                         </a>
                                     </div>
-                                </div>
+                                </motion.div>
 
                                 {/* Right: Stats Grid */}
-                                <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                                <motion.div 
+                                    initial={{ opacity: 0, x: 30 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true, margin: "-50px" }}
+                                    transition={{ duration: 0.7, delay: 0.2 }}
+                                    className="grid grid-cols-2 gap-4 sm:gap-6"
+                                >
                                     {[
                                         { label: "Performance Improvement", value: "3x Faster", icon: faBolt },
                                         { label: "Client Satisfaction", value: "98%", icon: faHandshake },
@@ -231,12 +262,12 @@ const BusinessClient: React.FC = () => {
                                         { label: "Mobile Engagement", value: "+80%", icon: faMobileAlt }
                                     ].map((stat, i) => (
                                         <div key={i} className="p-4 sm:p-6 rounded-2xl sm:rounded-[2rem] bg-glass-bg border border-glass-border backdrop-blur-sm text-center">
-                                            <FontAwesomeIcon icon={stat.icon} className="text-accent text-xl sm:text-2xl mb-3" data-aos="fade-left" data-aos-duration="800" />
-                                            <div className="text-xl sm:text-2xl font-black text-foreground mb-1" data-aos="zoom-out" data-aos-duration="700">{stat.value}</div>
-                                            <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider leading-tight" data-aos="fade-up" data-aos-duration="800">{stat.label}</div>
+                                            <FontAwesomeIcon icon={stat.icon} className="text-accent text-xl sm:text-2xl mb-3" />
+                                            <div className="text-xl sm:text-2xl font-black text-foreground mb-1">{stat.value}</div>
+                                            <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider leading-tight">{stat.label}</div>
                                         </div>
                                     ))}
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
@@ -246,12 +277,15 @@ const BusinessClient: React.FC = () => {
                 <section id="gmb-section" className="py-24 px-4 bg-accent/5 overflow-hidden">
                     <div className="max-w-6xl mx-auto">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                            <div
-                                data-aos="fade-right"
+                            <motion.div
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.7 }}
                             >
                                 <h3
                                     className="text-3xl md:text-5xl font-black mb-8 leading-tight"
-                                    data-aos="zoom-out"
+                                   
                                 >
                                     Stand Out in <span className="text-accent underline decoration-accent/30">Local Search Results</span>
                                 </h3>
@@ -271,30 +305,34 @@ const BusinessClient: React.FC = () => {
                                         }
                                     ].map((point, i) => (
                                         <div key={i} className="flex gap-4">
-                                            <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent" data-aos="zoom-in" data-aos-duration="600">
+                                            <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent">
                                                 <FontAwesomeIcon icon={faDotCircle} className="text-[10px]" />
                                             </div>
                                             <div>
-                                                <h4 className="font-bold text-foreground mb-1" data-aos="zoom-in" data-aos-duration="600">{point.title}</h4>
-                                                <p className="text-sm text-muted-foreground" data-aos="zoom-in" data-aos-duration="600">{point.text}</p>
+                                                <h4 className="font-bold text-foreground mb-1">{point.title}</h4>
+                                                <p className="text-sm text-muted-foreground">{point.text}</p>
                                             </div>
                                         </div>
                                     ))}
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div
-                                data-aos="fade-left"
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
+                                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
                                 className="relative flex justify-center"
                             >
                                 <div className="absolute -inset-4 bg-accent/20 blur-3xl rounded-full" />
                                 <Image
-                                    src={exeImg}
+                                    src="/assets/images/imgs/seoSample.jpg"
                                     alt="Google Business Example"
-                                    data-aos="fade-left"
+                                    width={600}
+                                    height={600}
                                     className="relative w-full max-w-sm drop-shadow-2xl transition-all duration-500"
                                 />
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
@@ -308,3 +346,4 @@ const BusinessClient: React.FC = () => {
 };
 
 export default BusinessClient;
+

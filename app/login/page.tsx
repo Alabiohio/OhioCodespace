@@ -39,7 +39,7 @@ export default function LoginPage() {
             <main className="flex-grow flex items-center justify-center px-4 relative z-10 py-32">
                 <div
                     className="w-full max-w-md"
-                    data-aos="fade-up"
+                   
                 >
                     <div className="text-center mb-10">
                         <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-bold uppercase tracking-[0.2em]">
@@ -108,3 +108,4 @@ export default function LoginPage() {
         </div>
     );
 }
+
